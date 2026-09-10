@@ -3265,6 +3265,10 @@
       btn.disabled = true;
       btn.textContent = '⏳ Đang gửi thông tin...';
 
+      const tinh_pct = res.sT !== undefined ? Math.round(res.sT / 12 * 100) : 0;
+      const khi_pct = res.sK !== undefined ? Math.round(res.sK / 12 * 100) : 0;
+      const than_pct = res.sS !== undefined ? Math.round(res.sS / 12 * 100) : 0;
+
       const payload = {
         timestamp: new Date().toLocaleString('vi-VN'),
         hs: (user && user.hs) || '',
@@ -3275,9 +3279,9 @@
         occ: (user && user.occ) || '',
         phone: phone,
         tranid: tranid || (user && user.hs) || '',
-        tinh_pct: res.scores ? res.scores.tinh.pct : (res.pct || 0),
-        khi_pct: res.scores ? res.scores.khi.pct : 0,
-        than_pct: res.scores ? res.scores.than.pct : 0,
+        tinh_pct: tinh_pct,
+        khi_pct: khi_pct,
+        than_pct: than_pct,
         zone: res.zone || '',
         top5: res.top5 ? res.top5.map(x => x.txt).join('; ') : ''
       };
@@ -3286,7 +3290,7 @@
         fetch(GOOGLE_SCRIPT_URL, {
           method: 'POST',
           mode: 'no-cors',
-          headers: { 'Content-Type': 'application/json' },
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
           body: JSON.stringify(payload)
         }).catch(err => console.error('Sheet submit error:', err));
       }
