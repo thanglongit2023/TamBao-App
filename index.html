@@ -2515,12 +2515,12 @@
             </div>
             <div class="qr-section">
               <div class="qr-box">
-                <img id="vietQrImg" src="https://img.vietqr.io/image/BIDV-702098685-compact2.png?amount=99000&addInfo=TAMBAO&accountName=TRAN%20THANG%20LONG" alt="VietQR BIDV 702098685" style="width:100%;height:100%;object-fit:contain;border-radius:4px">
+                <img id="vietQrImg" src="https://img.vietqr.io/image/BIDV-70210000098685-compact2.png?amount=99000&addInfo=TAMBAO&accountName=TRAN%20THANG%20LONG" alt="VietQR BIDV 70210000098685" style="width:100%;height:100%;object-fit:contain;border-radius:4px">
               </div>
               <div class="qr-info">
                 <div class="bank-detail">
                   <div class="bank-row"><span class="bank-key" data-i18n="pw.bank">Ngân hàng</span><span class="bank-val">BIDV</span></div>
-                  <div class="bank-row"><span class="bank-key" data-i18n="pw.acct">Số TK</span><span class="bank-val">702098685</span></div>
+                  <div class="bank-row"><span class="bank-key" data-i18n="pw.acct">Số TK</span><span class="bank-val">7020098685</span></div>
                   <div class="bank-row"><span class="bank-key" data-i18n="pw.name">Tên TK</span><span class="bank-val">TRẦN THĂNG LONG</span></div>
                   <div class="bank-row"><span class="bank-key" data-i18n="pw.ref">Nội dung</span><span class="bank-val" id="payNote">TAMBAO-xxxx</span></div>
                   <div class="bank-row"><span class="bank-key" data-i18n="pw.amount">Số tiền</span><span class="bank-val" style="color:var(--gold)">99.000đ</span></div>
@@ -3054,7 +3054,7 @@
       document.getElementById('payNote').textContent = noteCode;
       const qrImg = document.getElementById('vietQrImg');
       if (qrImg) {
-        qrImg.src = `https://img.vietqr.io/image/BIDV-702098685-compact2.png?amount=99000&addInfo=${encodeURIComponent(noteCode)}&accountName=TRAN%20THANG%20LONG`;
+        qrImg.src = `https://img.vietqr.io/image/BIDV-70210000098685-compact2.png?amount=99000&addInfo=${encodeURIComponent(noteCode)}&accountName=TRAN%20THANG%20LONG`;
       }
       ans = {};
       renderTest();
