@@ -1,0 +1,80 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2709
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Edited index.html\
+Edited index.html\
+Viewed index.html:2510-2545\
+Viewed index.html:25-45\
+\
+D\uc0\u432 \u7899 i \u273 \'e2y l\'e0 **H\u432 \u7899 ng d\u7851 n chi ti\u7871 t t\u7915 ng b\u432 \u7899 c** \u273 \u7875  b\u7841 n t\u7841 o t\'e0i kho\u7843 n Google Analytics 4 (GA4) v\'e0 \u273 \u432 a m\'e3 \u273 o l\u432 \u7901 ng v\'e0o Web App.\
+\
+---\
+\
+### \uc0\u55357 \u56524  B\u431 \u7898 C 1: L\u7845 y M\'e3 \u272 o L\u432 \u7901 ng (Measurement ID) t\u7915  Google Analytics 4\
+\
+1. Truy c\uc0\u7853 p v\'e0o **[Google Analytics](https://analytics.google.com/)** v\'e0 \u273 \u259 ng nh\u7853 p b\u7857 ng t\'e0i kho\u7843 n Gmail c\u7911 a b\u7841 n.\
+2. N\uc0\u7871 u ch\u432 a c\'f3 t\'e0i kho\u7843 n GA4:\
+   - Nh\uc0\u7845 n **B\u7855 t \u273 \u7847 u \u273 o l\u432 \u7901 ng (Start measuring)**.\
+   - Nh\uc0\u7853 p **T\'ean t\'e0i kho\u7843 n** (v\'ed d\u7909 : `Tam B\u7843 o Health`).\
+   - Nh\uc0\u7853 p **T\'ean thu\u7897 c t\'ednh (Property name)**: `Tam Bao Web App`.\
+   - Ch\uc0\u7885 n M\'fai gi\u7901 : **Vi\u7879 t Nam (GMT+7)** v\'e0 Ti\u7873 n t\u7879 : **Vi\u7879 t Nam \u272 \u7891 ng (VND)**.\
+3. Ch\uc0\u7885 n lu\u7891 ng d\u7919  li\u7879 u (Data Stream):\
+   - Ch\uc0\u7885 n n\u7873 n t\u7843 ng l\'e0 **Web**.\
+   - Nh\uc0\u7853 p **URL trang web** c\u7911 a b\u7841 n (v\'ed d\u7909 : `https://tambao.yourdomain.com` ho\u7863 c t\u7841 m \u273 \u7875  `localhost`).\
+   - Nh\uc0\u7853 p **T\'ean lu\u7891 ng**: `Tam Bao App`.\
+   - B\uc0\u7845 m **T\u7841 o lu\u7891 ng (Create stream)**.\
+4. Sau khi t\uc0\u7841 o xong, m\'e0n h\'ecnh s\u7869  hi\u7875 n th\u7883  **Chi ti\u7871 t lu\u7891 ng Web (Web stream details)**.\
+5. T\'ecm m\uc0\u7909 c **M\'c3 \u272 O L\u431 \u7900 NG (MEASUREMENT ID)** \u7903  g\'f3c tr\'ean b\'ean ph\u7843 i (c\'f3 \u273 \u7883 nh d\u7841 ng b\u7855 t \u273 \u7847 u b\u7857 ng ch\u7919  `G-`, v\'ed d\u7909 : `G-3X9K8L7M2N`). **H\'e3y sao ch\'e9p (copy) m\'e3 n\'e0y.**\
+\
+---\
+\
+### \uc0\u55357 \u56524  B\u431 \u7898 C 2: D\'e1n M\'e3 GA4 V\'e0o Web App `index.html`\
+\
+1. M\uc0\u7903  file [index.html](file:///Users/user/My%20Drive/Obsidian/Obsidian%20Vault%20%28thanglongit%29/04%20-%20KINH%20DOANH/TamBao-App/index.html).\
+2. T\'ecm \uc0\u273 \u7871 n kho\u7843 ng d\'f2ng **37 - 44** (trong th\u7867  `<head>`):\
+\
+```html\
+<!-- Google Analytics 4 (GA4) -->\
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>\
+<script>\
+  window.dataLayer = window.dataLayer || [];\
+  function gtag() \{ dataLayer.push(arguments); \}\
+  gtag('js', new Date());\
+\
+  // H\uc0\u431 \u7898 NG D\u7850 N: Thay 'G-XXXXXXXXXX' b\u7857 ng m\'e3 GA4 th\u7921 c t\u7871  c\u7911 a b\u7841 n\
+  const GA_MEASUREMENT_ID = 'G-3X9K8L7M2N'; // <--- S\uc0\u7916 A T\u7840 I 2 D\'d2NG N\'c0Y\
+\
+  if (GA_MEASUREMENT_ID !== 'G-XXXXXXXXXX') \{\
+    gtag('config', GA_MEASUREMENT_ID);\
+  \}\
+</script>\
+```\
+3. Thay c\uc0\u7843  2 v\u7883  tr\'ed `G-XXXXXXXXXX` (\u7903  d\'f2ng `src="..."` v\'e0 d\'f2ng `const GA_MEASUREMENT_ID = '...'`) th\'e0nh m\'e3 `G-` th\u7921 c t\u7871  b\u7841 n v\u7915 a l\u7845 y \u273 \u432 \u7907 c.\
+\
+---\
+\
+### \uc0\u55357 \u56524  B\u431 \u7898 C 3: C\'e1c S\u7921  Ki\u7879 n Ph\u7877 u (Events) \u272 \u432 \u7907 c Theo D\'f5i T\u7921  \u272 \u7897 ng\
+\
+M\'e3 ngu\uc0\u7891 n Web App **\u273 \'e3 \u273 \u432 \u7907 c c\'e0i \u273 \u7863 t s\u7861 n** c\'e1c h\'e0m t\u7921  \u273 \u7897 ng b\u7855 n s\u7921  ki\u7879 n v\u7873  GA4 theo t\u7915 ng b\u432 \u7899 c c\u7911 a kh\'e1ch h\'e0ng m\'e0 b\u7841 n kh\'f4ng c\u7847 n ph\u7843 i vi\u7871 t th\'eam code:\
+\
+| T\'ean S\uc0\u7921  Ki\u7879 n trong GA4 | H\'e0nh Vi Kh\'e1ch H\'e0ng K\'edch Ho\u7841 t | \'dd Ngh\u297 a Trong Ph\u7877 u |\
+| :--- | :--- | :--- |\
+| `begin_assessment` | B\uc0\u7845 m n\'fat "B\u7855 t \u273 \u7847 u \u273 \'e1nh gi\'e1 ngay" tr\'ean Trang ch\u7911  | Kh\'e1ch b\u432 \u7899 c v\'e0o ph\u7877 u |\
+| `start_questions` | Nh\uc0\u7853 p xong H\u7885  t\'ean/N\u259 m sinh v\'e0 chuy\u7875 n sang l\'e0m test | Kh\'e1ch b\u7855 t \u273 \u7847 u tr\u7843  l\u7901 i 18 c\'e2u |\
+| `complete_assessment` | Tr\uc0\u7843  l\u7901 i xong c\'e2u 18 v\'e0 b\u7845 m "Xem b\'e1o c\'e1o" | Ho\'e0n th\'e0nh l\'e0m test |\
+| `view_paywall` | M\uc0\u7903  m\'e0n h\'ecnh Preview 4 trang + B\u7843 ng gi\'e1 99k | Kh\'e1ch ti\u7871 p c\u7853 n trang b\'e1n h\'e0ng |\
+| `show_exit_intent` | R\'ea chu\uc0\u7897 t \u273 \u7883 nh tho\'e1t trang l\'e0m n\u7843 y Popup \u432 u \u273 \'e3i 69k | Gi\u7919  ch\'e2n kh\'e1ch r\u7901 i ph\u7877 u |\
+| `begin_checkout` | B\uc0\u7845 m n\'fat "T\'f4i \u273 \'e3 chuy\u7875 n kho\u7843 n" / M\u7903  form \u273 i\u7873 n S\u272 T Zalo | Kh\'e1ch chu\u7849 n b\u7883  tr\u7843  ti\u7873 n |\
+| `purchase` | \uc0\u272 i\u7873 n xong S\u272 T Zalo v\'e0 chuy\u7875 n sang trang C\u7843 m \u417 n | **Chuy\u7875 n \u273 \u7893 i th\'e0nh c\'f4ng!** |\
+\
+---\
+\
+### \uc0\u55357 \u56524  B\u431 \u7898 C 4: Ki\u7875 m Tra Nhanh Xem GA4 \u272 \'e3 Nh\u7853 n S\u7921  Ki\u7879 n Ch\u432 a\
+\
+1. M\uc0\u7903  trang Google Analytics \u8594  Ch\u7885 n m\u7909 c **B\'e1o c\'e1o (Reports)** \u8594  **Th\u7901 i gian th\u7921 c (Realtime)**.\
+2. M\uc0\u7903  Web App tr\'ean tr\'ecnh duy\u7879 t v\'e0 th\u7917  th\u7921 c hi\u7879 n 1 l\u432 \u7907 t l\'e0m test t\u7915  \u273 \u7847 u \u273 \u7871 n cu\u7889 i.\
+3. Nh\'ecn v\'e0o m\'e0n h\'ecnh **Realtime** tr\'ean Google Analytics: B\uc0\u7841 n s\u7869  th\u7845 y xu\u7845 t hi\u7879 n ngay 1 ng\u432 \u7901 i d\'f9ng \u273 ang online t\u7841 i Vi\u7879 t Nam v\'e0 c\'e1c s\u7921  ki\u7879 n `begin_assessment`, `complete_assessment`, `purchase` n\u7843 y l\'ean theo t\u7915 ng thao t\'e1c c\u7911 a b\u7841 n!}

@@ -1,0 +1,3480 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="meta.title">Giải Mã Nguy Cơ Sinh Học Tam Bảo | Y Học Tích Hợp Đông–Tây</title>
+  <meta name="description" content="Hệ thống đánh giá sức khỏe cá nhân hóa theo Ma Trận Tam Bảo (Tinh–Khí–Thần)">
+
+  <!-- Favicon & Touch Icon -->
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+
+  <!-- Open Graph / Social Media Preview (Zalo, Facebook) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Giải Mã Nguy Cơ Sinh Học Tam Bảo | Y Học Tích Hợp Đông–Tây">
+  <meta property="og:description"
+    content="Hệ thống đánh giá sức khỏe cá nhân hóa theo Ma Trận Tam Bảo (Tinh–Khí–Thần). Nhận báo cáo phân tích nguy cơ sinh học 10 trang.">
+  <meta property="og:image" content="og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Giải Mã Nguy Cơ Sinh Học Tam Bảo">
+  <meta name="twitter:description"
+    content="Hệ thống đánh giá sức khỏe cá nhân hóa theo Ma Trận Tam Bảo (Tinh–Khí–Thần)">
+  <meta name="twitter:image" content="og-image.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Be+Vietnam+Pro:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <!-- Tally Form Widget Embed -->
+  <script src="https://tally.so/widgets/embed.js"></script>
+  <!-- Google Analytics 4 (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    // HƯỚNG DẪN: Thay 'G-XXXXXXXXXX' bằng mã GA4 thực tế của bạn
+    const GA_MEASUREMENT_ID = 'G-XXXXXXXXXX';
+    if (GA_MEASUREMENT_ID !== 'G-XXXXXXXXXX') {
+      gtag('config', GA_MEASUREMENT_ID);
+    }
+    function trackEvent(name, params = {}) {
+      if (typeof gtag === 'function' && GA_MEASUREMENT_ID !== 'G-XXXXXXXXXX') {
+        gtag('event', name, params);
+      }
+    }
+  </script>
+  <style>
+    /* ============================================================
+       DESIGN TOKENS – DARK (default)
+    ============================================================ */
+    :root {
+      --jade: hsl(168, 65%, 38%);
+      --jade-light: hsl(168, 60%, 55%);
+      --jade-glow: hsl(168, 70%, 65%);
+      --violet: hsl(265, 55%, 55%);
+      --violet-dark: hsl(265, 60%, 40%);
+      --violet-glow: hsl(265, 80%, 70%);
+      --gold: hsl(42, 95%, 60%);
+      --gold-dark: hsl(38, 90%, 45%);
+      --safe: hsl(142, 60%, 42%);
+      --yellow: hsl(50, 95%, 55%);
+      --orange: hsl(28, 90%, 55%);
+      --red: hsl(0, 72%, 51%);
+      --bg-deep: hsl(220, 30%, 6%);
+      --bg-dark: hsl(220, 25%, 10%);
+      --bg-card: hsl(220, 22%, 14%);
+      --bg-glass: hsla(220, 22%, 16%, 0.75);
+      --text-bright: hsl(0, 0%, 98%);
+      --text-main: hsl(220, 15%, 85%);
+      --text-muted: hsl(220, 12%, 60%);
+      --border: hsla(220, 20%, 30%, 0.5);
+      --border-glow: hsla(168, 65%, 38%, 0.4);
+      --blob-opacity: 0.12;
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --radius-xl: 32px;
+      --shadow-card: 0 8px 32px hsla(220, 30%, 4%, 0.6);
+      --shadow-glow: 0 0 40px hsla(168, 65%, 38%, 0.25);
+      --font-head: 'Outfit', sans-serif;
+      --font-body: 'Be Vietnam Pro', sans-serif;
+      --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* ============================================================
+       LIGHT MODE OVERRIDES
+    ============================================================ */
+    [data-theme="light"] {
+      --bg-deep: hsl(210, 30%, 97%);
+      --bg-dark: hsl(210, 25%, 92%);
+      --bg-card: hsl(0, 0%, 100%);
+      --bg-glass: hsla(0, 0%, 100%, 0.85);
+      --text-bright: hsl(220, 30%, 10%);
+      --text-main: hsl(220, 20%, 22%);
+      --text-muted: hsl(220, 12%, 48%);
+      --border: hsla(220, 20%, 65%, 0.5);
+      --border-glow: hsla(168, 65%, 38%, 0.35);
+      --shadow-card: 0 4px 24px hsla(220, 20%, 60%, 0.18);
+      --shadow-glow: 0 0 40px hsla(168, 65%, 38%, 0.18);
+      --blob-opacity: 0.07;
+      --jade-light: hsl(168, 60%, 35%);
+      --jade-glow: hsl(168, 60%, 38%);
+      --violet-glow: hsl(265, 55%, 50%);
+      --safe: hsl(142, 55%, 35%);
+    }
+
+    html {
+      transition: background 0.4s ease, color 0.4s ease;
+    }
+
+    /* ============================================================
+       RESET & BASE
+    ============================================================ */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--bg-deep);
+      color: var(--text-main);
+      min-height: 100vh;
+      overflow-x: hidden;
+      line-height: 1.65;
+      transition: background var(--transition), color var(--transition)
+    }
+
+    button {
+      cursor: pointer;
+      border: none;
+      outline: none;
+      font-family: var(--font-body)
+    }
+
+    input,
+    select {
+      font-family: var(--font-body)
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--bg-dark)
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--jade);
+      border-radius: 3px
+    }
+
+    /* ZH font override */
+    html[lang="zh"] body,
+    html[lang="zh"] .btn,
+    html[lang="zh"] input,
+    html[lang="zh"] select {
+      font-family: 'Noto Sans SC', sans-serif;
+    }
+
+    /* ============================================================
+       BACKGROUND BLOBS
+    ============================================================ */
+    .bg-blobs {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      overflow: hidden
+    }
+
+    .blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: var(--blob-opacity);
+      animation: blobFloat 12s ease-in-out infinite alternate
+    }
+
+    .blob-1 {
+      width: 600px;
+      height: 600px;
+      background: var(--jade);
+      top: -200px;
+      left: -200px
+    }
+
+    .blob-2 {
+      width: 500px;
+      height: 500px;
+      background: var(--violet);
+      bottom: -150px;
+      right: -150px;
+      animation-delay: -4s
+    }
+
+    .blob-3 {
+      width: 300px;
+      height: 300px;
+      background: var(--gold);
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation-delay: -8s;
+      opacity: calc(var(--blob-opacity)*0.5)
+    }
+
+    @keyframes blobFloat {
+      from {
+        transform: translate(0, 0) scale(1)
+      }
+
+      to {
+        transform: translate(30px, 20px) scale(1.08)
+      }
+    }
+
+    /* ============================================================
+       SCREENS
+    ============================================================ */
+    .screen {
+      position: relative;
+      z-index: 1;
+      min-height: 100vh;
+      display: none;
+      flex-direction: column;
+      animation: fsi 0.5s ease forwards
+    }
+
+    .screen.active {
+      display: flex
+    }
+
+    @keyframes fsi {
+      from {
+        opacity: 0;
+        transform: translateY(24px)
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0)
+      }
+    }
+
+    /* ============================================================
+       GLOBAL PROGRESS
+    ============================================================ */
+    .g-prog {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      height: 3px;
+      background: var(--bg-card)
+    }
+
+    .g-prog-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--jade), var(--violet));
+      transition: width 0.5s ease;
+      box-shadow: 0 0 12px var(--jade)
+    }
+
+    /* ============================================================
+       TOP NAV
+    ============================================================ */
+    .top-nav {
+      position: fixed;
+      top: 3px;
+      left: 0;
+      right: 0;
+      z-index: 99;
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: hsla(220, 30%, 6%, 0.88);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      transition: background var(--transition)
+    }
+
+    [data-theme="light"] .top-nav {
+      background: hsla(210, 30%, 97%, 0.92)
+    }
+
+    .nav-logo {
+      font-family: var(--font-head);
+      font-size: 1.05rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--jade-glow), var(--violet-glow));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-right: auto
+    }
+
+    /* Language switcher */
+    .lang-switcher {
+      display: flex;
+      gap: 4px;
+      align-items: center
+    }
+
+    .lang-btn {
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      background: transparent;
+      color: var(--text-muted);
+      border: 1px solid transparent;
+      transition: all 0.2s;
+      cursor: pointer
+    }
+
+    .lang-btn.active {
+      background: hsla(168, 65%, 38%, 0.15);
+      color: var(--jade-light);
+      border-color: var(--border-glow)
+    }
+
+    .lang-btn:hover:not(.active) {
+      color: var(--text-main);
+      border-color: var(--border)
+    }
+
+    /* Theme toggle */
+    .theme-toggle {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      font-size: 1rem;
+      transition: all 0.3s;
+      flex-shrink: 0
+    }
+
+    .theme-toggle:hover {
+      border-color: var(--jade);
+      transform: rotate(20deg)
+    }
+
+    /* ============================================================
+       BUTTONS
+    ============================================================ */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 16px 32px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1rem;
+      transition: all var(--transition);
+      position: relative;
+      overflow: hidden
+    }
+
+    .btn::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: white;
+      opacity: 0;
+      transition: opacity 0.2s
+    }
+
+    .btn:hover::after {
+      opacity: 0.08
+    }
+
+    .btn:active {
+      transform: scale(0.97)
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--jade), var(--violet));
+      color: white;
+      box-shadow: 0 8px 32px hsla(168, 65%, 38%, 0.4)
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 12px 40px hsla(168, 65%, 38%, 0.6);
+      transform: translateY(-2px)
+    }
+
+    .btn-ghost {
+      background: var(--bg-glass);
+      color: var(--text-main);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(10px)
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--jade);
+      color: var(--jade-light)
+    }
+
+    .btn-gold {
+      background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+      color: hsl(38, 80%, 15%);
+      box-shadow: 0 8px 32px hsla(42, 95%, 60%, 0.4);
+      font-weight: 800;
+      font-size: 1.1rem
+    }
+
+    .btn-gold:hover {
+      box-shadow: 0 12px 40px hsla(42, 95%, 60%, 0.6);
+      transform: translateY(-2px)
+    }
+
+    .btn-full {
+      width: 100%
+    }
+
+    .btn-lg {
+      padding: 20px 40px;
+      font-size: 1.15rem
+    }
+
+    .btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      transform: none !important
+    }
+
+    /* ============================================================
+       CARDS
+    ============================================================ */
+    .card {
+      background: var(--bg-glass);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      backdrop-filter: blur(20px);
+      box-shadow: var(--shadow-card);
+      transition: background var(--transition), border-color var(--transition)
+    }
+
+    /* ============================================================
+       SECTION LABEL
+    ============================================================ */
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--jade-light);
+      border: 1px solid var(--border-glow);
+      border-radius: 20px;
+      padding: 6px 14px;
+      margin-bottom: 16px
+    }
+
+    .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--jade-light);
+      box-shadow: 0 0 8px var(--jade-light);
+      animation: pulse 2s ease infinite
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1)
+      }
+
+      50% {
+        opacity: 0.5;
+        transform: scale(0.8)
+      }
+    }
+
+    /* ============================================================
+       SCREEN 0 – LANDING
+    ============================================================ */
+    #screen-0 {
+      padding: 100px 0 60px;
+      align-items: center;
+      justify-content: center
+    }
+
+    .hero {
+      text-align: center;
+      padding: 0 20px;
+      max-width: 760px;
+      margin: 0 auto
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      color: var(--gold);
+      border: 1px solid hsla(42, 95%, 60%, 0.3);
+      padding: 8px 18px;
+      border-radius: 30px;
+      margin-bottom: 28px;
+      background: hsla(42, 95%, 60%, 0.08)
+    }
+
+    .hero h1 {
+      font-family: var(--font-head);
+      font-size: clamp(1.9rem, 5vw, 3.4rem);
+      font-weight: 900;
+      line-height: 1.15;
+      color: var(--text-bright);
+      margin-bottom: 20px
+    }
+
+    .highlight {
+      background: linear-gradient(135deg, var(--jade-glow), var(--violet-glow));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text
+    }
+
+    .hero-sub {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      max-width: 560px;
+      margin: 0 auto 36px;
+      line-height: 1.75
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 48px
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 28px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 56px
+    }
+
+    .stat-item {
+      text-align: center
+    }
+
+    .stat-value {
+      font-family: var(--font-head);
+      font-size: 2rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--jade-glow), var(--violet-glow));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      display: block
+    }
+
+    .stat-label {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-weight: 500
+    }
+
+    .pillars {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      width: 100%;
+      max-width: 760px
+    }
+
+    @media(max-width:540px) {
+      .pillars {
+        grid-template-columns: 1fr
+      }
+    }
+
+    .pillar {
+      padding: 28px 20px;
+      border-radius: var(--radius-lg);
+      text-align: center;
+      transition: transform var(--transition)
+    }
+
+    .pillar:hover {
+      transform: translateY(-6px)
+    }
+
+    .pillar-tinh {
+      background: linear-gradient(145deg, hsla(142, 50%, 20%, 0.45), hsla(142, 50%, 10%, 0.25));
+      border: 1px solid hsla(142, 60%, 42%, 0.3);
+      box-shadow: 0 8px 32px hsla(142, 60%, 42%, 0.12)
+    }
+
+    .pillar-khi {
+      background: linear-gradient(145deg, hsla(168, 50%, 20%, 0.45), hsla(168, 50%, 10%, 0.25));
+      border: 1px solid hsla(168, 65%, 38%, 0.3);
+      box-shadow: 0 8px 32px hsla(168, 65%, 38%, 0.12)
+    }
+
+    .pillar-than {
+      background: linear-gradient(145deg, hsla(265, 50%, 20%, 0.45), hsla(265, 50%, 10%, 0.25));
+      border: 1px solid hsla(265, 55%, 55%, 0.3);
+      box-shadow: 0 8px 32px hsla(265, 55%, 55%, 0.12)
+    }
+
+    [data-theme="light"] .pillar-tinh {
+      background: linear-gradient(145deg, hsla(142, 60%, 90%, 0.6), hsla(142, 60%, 95%, 0.4))
+    }
+
+    [data-theme="light"] .pillar-khi {
+      background: linear-gradient(145deg, hsla(168, 65%, 88%, 0.6), hsla(168, 65%, 95%, 0.4))
+    }
+
+    [data-theme="light"] .pillar-than {
+      background: linear-gradient(145deg, hsla(265, 55%, 90%, 0.6), hsla(265, 55%, 96%, 0.4))
+    }
+
+    .pillar-icon {
+      font-size: 2.4rem;
+      margin-bottom: 12px;
+      display: block
+    }
+
+    .pillar-name {
+      font-family: var(--font-head);
+      font-weight: 800;
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+      color: var(--text-bright)
+    }
+
+    .pillar-tinh .pillar-name {
+      color: var(--safe)
+    }
+
+    .pillar-khi .pillar-name {
+      color: var(--jade-glow)
+    }
+
+    .pillar-than .pillar-name {
+      color: var(--violet-glow)
+    }
+
+    [data-theme="light"] .pillar-tinh .pillar-name {
+      color: hsl(142, 55%, 28%)
+    }
+
+    [data-theme="light"] .pillar-khi .pillar-name {
+      color: hsl(168, 60%, 30%)
+    }
+
+    [data-theme="light"] .pillar-than .pillar-name {
+      color: hsl(265, 50%, 42%)
+    }
+
+    .pillar-desc {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.6
+    }
+
+    .pillar-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      justify-content: center;
+      margin-top: 14px
+    }
+
+    .pillar-tag {
+      font-size: 0.7rem;
+      padding: 3px 10px;
+      border-radius: 20px;
+      background: hsla(220, 20%, 25%, 0.5);
+      color: var(--text-muted);
+      font-weight: 600
+    }
+
+    [data-theme="light"] .pillar-tag {
+      background: hsla(220, 20%, 80%, 0.5)
+    }
+
+    .social-proof {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      justify-content: center;
+      margin-top: 20px;
+      font-size: 0.85rem;
+      color: var(--text-muted)
+    }
+
+    .avatar-stack {
+      display: flex
+    }
+
+    .avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 2px solid var(--bg-deep);
+      background: linear-gradient(135deg, var(--jade), var(--violet));
+      margin-left: -10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem
+    }
+
+    .avatar:first-child {
+      margin-left: 0
+    }
+
+    /* ============================================================
+       SCREEN 1 – INFO
+    ============================================================ */
+    #screen-1 {
+      padding: 100px 0 60px
+    }
+
+    .info-wrapper {
+      max-width: 560px;
+      margin: 0 auto;
+      padding: 0 20px
+    }
+
+    .screen-header {
+      text-align: center;
+      margin-bottom: 40px
+    }
+
+    .screen-title {
+      font-family: var(--font-head);
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      font-weight: 800;
+      color: var(--text-bright);
+      margin-bottom: 12px
+    }
+
+    .screen-sub {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      max-width: 460px;
+      margin: 0 auto
+    }
+
+    .form-card {
+      padding: 36px 32px
+    }
+
+    @media(max-width:480px) {
+      .form-card {
+        padding: 24px 20px
+      }
+    }
+
+    .form-group {
+      margin-bottom: 22px
+    }
+
+    .form-label {
+      display: block;
+      font-weight: 600;
+      font-size: 0.88rem;
+      color: var(--text-main);
+      margin-bottom: 8px
+    }
+
+    .req {
+      color: var(--jade-light);
+      margin-left: 4px
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 14px 18px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      color: var(--text-bright);
+      font-size: 0.95rem;
+      transition: border-color var(--transition), box-shadow var(--transition);
+      appearance: none
+    }
+
+    .form-input:focus {
+      outline: none;
+      border-color: var(--jade);
+      box-shadow: 0 0 0 3px hsla(168, 65%, 38%, 0.2)
+    }
+
+    .form-input::placeholder {
+      color: var(--text-muted)
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px
+    }
+
+    @media(max-width:400px) {
+      .form-row {
+        grid-template-columns: 1fr
+      }
+    }
+
+    .privacy-note {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 14px 16px;
+      border-radius: var(--radius-sm);
+      background: hsla(168, 65%, 38%, 0.08);
+      border: 1px solid hsla(168, 65%, 38%, 0.2);
+      margin-bottom: 24px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.6
+    }
+
+    /* ============================================================
+       SCREEN 2 – TEST
+    ============================================================ */
+    #screen-2 {
+      padding: 100px 0 80px
+    }
+
+    .test-wrapper {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 20px
+    }
+
+    .test-prog-bar {
+      background: var(--bg-card);
+      border-radius: 8px;
+      height: 8px;
+      margin-bottom: 32px;
+      overflow: hidden
+    }
+
+    .test-prog-fill {
+      height: 100%;
+      border-radius: 8px;
+      background: linear-gradient(90deg, var(--jade), var(--violet));
+      transition: width 0.4s ease;
+      box-shadow: 0 0 10px var(--jade)
+    }
+
+    .prog-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 10px
+    }
+
+    .group-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 20px 24px;
+      border-radius: var(--radius-md);
+      margin-bottom: 20px
+    }
+
+    .gh-tinh {
+      background: linear-gradient(135deg, hsla(142, 50%, 15%, 0.55), hsla(142, 50%, 8%, 0.35));
+      border: 1px solid hsla(142, 60%, 42%, 0.25)
+    }
+
+    .gh-khi {
+      background: linear-gradient(135deg, hsla(168, 50%, 15%, 0.55), hsla(168, 50%, 8%, 0.35));
+      border: 1px solid hsla(168, 65%, 38%, 0.25)
+    }
+
+    .gh-than {
+      background: linear-gradient(135deg, hsla(265, 50%, 18%, 0.55), hsla(265, 50%, 8%, 0.35));
+      border: 1px solid hsla(265, 55%, 55%, 0.25)
+    }
+
+    [data-theme="light"] .gh-tinh {
+      background: linear-gradient(135deg, hsla(142, 60%, 90%, 0.7), hsla(142, 60%, 96%, 0.5))
+    }
+
+    [data-theme="light"] .gh-khi {
+      background: linear-gradient(135deg, hsla(168, 65%, 88%, 0.7), hsla(168, 65%, 96%, 0.5))
+    }
+
+    [data-theme="light"] .gh-than {
+      background: linear-gradient(135deg, hsla(265, 55%, 90%, 0.7), hsla(265, 55%, 96%, 0.5))
+    }
+
+    .gh-icon {
+      font-size: 2rem
+    }
+
+    .gh-body {
+      flex: 1
+    }
+
+    .gh-title {
+      font-family: var(--font-head);
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--text-bright)
+    }
+
+    .gh-sub {
+      font-size: 0.82rem;
+      color: var(--text-muted)
+    }
+
+    .q-card {
+      padding: 24px;
+      margin-bottom: 14px;
+      border-radius: var(--radius-md);
+      background: var(--bg-glass);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(20px);
+      transition: border-color 0.2s, background var(--transition)
+    }
+
+    .q-card.answered {
+      border-color: var(--border-glow)
+    }
+
+    .q-head {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 18px
+    }
+
+    .q-num {
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: var(--bg-card);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-head);
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--text-muted)
+    }
+
+    .q-card.answered .q-num {
+      background: var(--jade);
+      color: white
+    }
+
+    .q-text {
+      font-size: 0.93rem;
+      line-height: 1.7;
+      color: var(--text-main);
+      flex: 1
+    }
+
+    .rf-badge {
+      flex-shrink: 0;
+      background: hsla(0, 72%, 51%, 0.15);
+      border: 1px solid hsla(0, 72%, 51%, 0.4);
+      border-radius: 20px;
+      padding: 3px 10px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--red);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      white-space: nowrap
+    }
+
+    .ans-opts {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px
+    }
+
+    @media(max-width:480px) {
+      .ans-opts {
+        grid-template-columns: 1fr
+      }
+    }
+
+    .ans-opt {
+      position: relative
+    }
+
+    .ans-opt input[type=radio] {
+      position: absolute;
+      opacity: 0;
+      width: 0;
+      height: 0
+    }
+
+    .ans-lbl {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      padding: 14px 10px;
+      border-radius: var(--radius-sm);
+      background: var(--bg-card);
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: all 0.2s;
+      text-align: center;
+      min-height: 70px;
+      justify-content: center
+    }
+
+    .ans-lbl:hover {
+      border-color: var(--jade);
+      background: hsla(168, 65%, 38%, 0.1)
+    }
+
+    .ans-icon {
+      font-size: 1.3rem
+    }
+
+    .ans-txt {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--text-muted)
+    }
+
+    .ans-sc {
+      font-size: 0.7rem;
+      color: var(--text-muted)
+    }
+
+    input[type=radio]:checked+.ans-lbl {
+      border-color: var(--jade);
+      background: hsla(168, 65%, 38%, 0.12);
+      box-shadow: 0 0 20px hsla(168, 65%, 38%, 0.15)
+    }
+
+    input[type=radio]:checked+.ans-lbl .ans-txt {
+      color: var(--jade-light)
+    }
+
+    .ans-opt:nth-child(2) input:checked+.ans-lbl {
+      border-color: var(--yellow);
+      background: hsla(50, 95%, 55%, 0.08)
+    }
+
+    .ans-opt:nth-child(2) input:checked+.ans-lbl .ans-txt {
+      color: var(--yellow)
+    }
+
+    .ans-opt:nth-child(3) input:checked+.ans-lbl {
+      border-color: var(--orange);
+      background: hsla(28, 90%, 55%, 0.08)
+    }
+
+    .ans-opt:nth-child(3) input:checked+.ans-lbl .ans-txt {
+      color: var(--orange)
+    }
+
+    .grp-sep {
+      margin: 32px 0 24px;
+      border: none;
+      border-top: 1px solid var(--border)
+    }
+
+    .test-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 32px;
+      flex-wrap: wrap;
+      gap: 16px
+    }
+
+    .ans-count {
+      font-size: 0.88rem;
+      color: var(--text-muted)
+    }
+
+    .ans-count strong {
+      color: var(--jade-light);
+      font-weight: 700
+    }
+
+    /* ============================================================
+       SCREEN 3 – REPORT
+    ============================================================ */
+    #screen-3 {
+      padding: 100px 0 60px
+    }
+
+    .rpt-wrapper {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 20px
+    }
+
+    .rpt-page {
+      margin-bottom: 24px;
+      border-radius: var(--radius-lg);
+      background: var(--bg-glass);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(20px);
+      overflow: hidden;
+      transition: background var(--transition), border-color var(--transition)
+    }
+
+    .rpt-ph {
+      padding: 18px 28px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-bottom: 1px solid var(--border)
+    }
+
+    .pg-num {
+      width: 28px;
+      height: 28px;
+      border-radius: 7px;
+      background: linear-gradient(135deg, var(--jade), var(--violet));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 800;
+      color: white;
+      font-family: var(--font-head)
+    }
+
+    .pg-title {
+      font-family: var(--font-head);
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-bright)
+    }
+
+    .free-tag {
+      margin-left: auto;
+      font-size: 0.75rem;
+      color: var(--safe);
+      background: hsla(142, 60%, 42%, 0.12);
+      padding: 3px 10px;
+      border-radius: 10px;
+      font-weight: 700
+    }
+
+    .rpt-body {
+      padding: 28px
+    }
+
+    .cover-hdr {
+      text-align: center;
+      padding: 28px;
+      background: linear-gradient(145deg, hsla(168, 65%, 38%, 0.1), hsla(265, 55%, 55%, 0.1));
+      border-radius: var(--radius-md);
+      margin-bottom: 24px
+    }
+
+    [data-theme="light"] .cover-hdr {
+      background: linear-gradient(145deg, hsla(168, 65%, 38%, 0.07), hsla(265, 55%, 55%, 0.07))
+    }
+
+    .cover-logo {
+      font-size: 2.5rem;
+      margin-bottom: 10px
+    }
+
+    .cover-title {
+      font-family: var(--font-head);
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--text-bright);
+      margin-bottom: 6px;
+      line-height: 1.3
+    }
+
+    .cover-sub {
+      font-size: 0.82rem;
+      color: var(--jade-light);
+      letter-spacing: 0.06em;
+      font-weight: 600
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 20px
+    }
+
+    @media(max-width:480px) {
+      .info-grid {
+        grid-template-columns: 1fr
+      }
+    }
+
+    .info-item {
+      padding: 14px 16px;
+      background: var(--bg-card);
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border)
+    }
+
+    .ii-label {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 4px
+    }
+
+    .ii-val {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-bright)
+    }
+
+    .disc-box {
+      padding: 14px 18px;
+      border-radius: var(--radius-sm);
+      background: hsla(42, 95%, 60%, 0.06);
+      border: 1px solid hsla(42, 95%, 60%, 0.2);
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      line-height: 1.6
+    }
+
+    /* Radar */
+    .radar-section {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      flex-wrap: wrap
+    }
+
+    @media(max-width:600px) {
+      .radar-section {
+        flex-direction: column;
+        align-items: center
+      }
+    }
+
+    canvas#radarChart {
+      display: block;
+      margin: 0 auto;
+      filter: drop-shadow(0 0 20px hsla(168, 65%, 38%, 0.25))
+    }
+
+    .radar-scores {
+      flex: 1;
+      min-width: 200px
+    }
+
+    .score-total {
+      margin-bottom: 24px
+    }
+
+    .score-num-big {
+      font-family: var(--font-head);
+      font-size: 3.5rem;
+      font-weight: 900;
+      line-height: 1;
+      display: block
+    }
+
+    .score-denom {
+      font-size: 1.2rem;
+      color: var(--text-muted)
+    }
+
+    .score-lbl {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 4px
+    }
+
+    .zone-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 18px;
+      border-radius: 30px;
+      font-weight: 800;
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+      font-family: var(--font-head)
+    }
+
+    .zone-xanh {
+      background: hsla(142, 60%, 42%, 0.15);
+      color: var(--safe);
+      border: 1px solid hsla(142, 60%, 42%, 0.4)
+    }
+
+    .zone-vang {
+      background: hsla(50, 95%, 55%, 0.12);
+      color: var(--yellow);
+      border: 1px solid hsla(50, 95%, 55%, 0.4)
+    }
+
+    [data-theme="light"] .zone-vang {
+      color: hsl(42, 90%, 35%)
+    }
+
+    .zone-cam {
+      background: hsla(28, 90%, 55%, 0.12);
+      color: var(--orange);
+      border: 1px solid hsla(28, 90%, 55%, 0.4)
+    }
+
+    .zone-do {
+      background: hsla(0, 72%, 51%, 0.12);
+      color: var(--red);
+      border: 1px solid hsla(0, 72%, 51%, 0.4)
+    }
+
+    .axis-scores {
+      display: flex;
+      flex-direction: column;
+      gap: 12px
+    }
+
+    .axis-item {
+      display: flex;
+      align-items: center;
+      gap: 12px
+    }
+
+    .axis-lbl {
+      font-size: 0.82rem;
+      font-weight: 700;
+      width: 56px;
+      flex-shrink: 0
+    }
+
+    .axis-bar {
+      flex: 1;
+      height: 8px;
+      background: var(--bg-card);
+      border-radius: 4px;
+      overflow: hidden
+    }
+
+    .axis-fill {
+      height: 100%;
+      border-radius: 4px;
+      transition: width 1s ease
+    }
+
+    .fill-tinh {
+      background: linear-gradient(90deg, hsl(142, 50%, 30%), var(--safe))
+    }
+
+    .fill-khi {
+      background: linear-gradient(90deg, hsl(168, 50%, 28%), var(--jade-glow))
+    }
+
+    .fill-than {
+      background: linear-gradient(90deg, hsl(265, 40%, 35%), var(--violet-glow))
+    }
+
+    .axis-sc {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      width: 36px;
+      text-align: right;
+      flex-shrink: 0
+    }
+
+    /* Strengths */
+    .str-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 12px
+    }
+
+    .str-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 14px 16px;
+      border-radius: var(--radius-sm);
+      background: hsla(142, 60%, 42%, 0.07);
+      border: 1px solid hsla(142, 60%, 42%, 0.2)
+    }
+
+    .str-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 9px;
+      flex-shrink: 0;
+      background: hsla(142, 60%, 42%, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem
+    }
+
+    .str-body h4 {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--safe);
+      margin-bottom: 3px
+    }
+
+    .str-body p {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.5
+    }
+
+    /* Weaknesses */
+    .wk-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px
+    }
+
+    .wk-item {
+      padding: 18px 20px;
+      border-radius: var(--radius-md);
+      position: relative;
+      overflow: hidden
+    }
+
+    .wk-item::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 4px
+    }
+
+    .wk-r1 {
+      background: hsla(0, 72%, 51%, 0.07);
+      border: 1px solid hsla(0, 72%, 51%, 0.22)
+    }
+
+    .wk-r1::before {
+      background: var(--red)
+    }
+
+    .wk-r2 {
+      background: hsla(28, 90%, 55%, 0.07);
+      border: 1px solid hsla(28, 90%, 55%, 0.22)
+    }
+
+    .wk-r2::before {
+      background: var(--orange)
+    }
+
+    .wk-r3 {
+      background: hsla(50, 95%, 55%, 0.05);
+      border: 1px solid hsla(50, 95%, 55%, 0.18)
+    }
+
+    .wk-r3::before {
+      background: var(--yellow)
+    }
+
+    .wk-hdr {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+      flex-wrap: wrap
+    }
+
+    .wk-pri {
+      font-family: var(--font-head);
+      font-size: 0.7rem;
+      font-weight: 800;
+      padding: 3px 10px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em
+    }
+
+    .pri-1 {
+      background: hsla(0, 72%, 51%, 0.2);
+      color: var(--red)
+    }
+
+    .pri-2 {
+      background: hsla(28, 90%, 55%, 0.2);
+      color: var(--orange)
+    }
+
+    .pri-3 {
+      background: hsla(50, 95%, 55%, 0.15);
+      color: var(--yellow)
+    }
+
+    [data-theme="light"] .pri-3 {
+      color: hsl(42, 90%, 35%)
+    }
+
+    .wk-name {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--text-bright);
+      flex: 1
+    }
+
+    .wk-rf {
+      font-size: 0.7rem;
+      padding: 2px 8px;
+      border-radius: 10px;
+      background: hsla(0, 72%, 51%, 0.15);
+      color: var(--red);
+      border: 1px solid hsla(0, 72%, 51%, 0.3);
+      font-weight: 700
+    }
+
+    .wk-body p {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.65
+    }
+
+    .mechanism {
+      margin-top: 8px;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      padding: 8px 12px;
+      border-radius: 6px;
+      background: var(--bg-card);
+      border-left: 3px solid var(--border);
+      font-style: italic
+    }
+
+    /* Paywall */
+    .paywall-section {
+      position: relative;
+      margin-top: 32px;
+      border-radius: var(--radius-lg);
+      overflow: hidden
+    }
+
+    .pw-blur {
+      filter: blur(4px);
+      opacity: 0.35;
+      pointer-events: none;
+      user-select: none
+    }
+
+    .pw-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, transparent 0%, var(--bg-deep) 45%);
+      pointer-events: none;
+      transition: background var(--transition)
+    }
+
+    .pw-card {
+      width: 100%;
+      pointer-events: all;
+      background: var(--bg-glass);
+      border: 1px solid var(--border-glow);
+      border-radius: var(--radius-xl);
+      backdrop-filter: blur(30px);
+      padding: 36px 32px;
+      box-shadow: var(--shadow-glow);
+      position: relative;
+      z-index: 10;
+      animation: pwrise 0.7s 0.3s ease both;
+      transition: background var(--transition), border-color var(--transition)
+    }
+
+    @keyframes pwrise {
+      from {
+        opacity: 0;
+        transform: translateY(40px)
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0)
+      }
+    }
+
+    @media(max-width:480px) {
+      .pw-card {
+        padding: 24px 20px
+      }
+    }
+
+    .pw-icon {
+      font-size: 2.5rem;
+      margin-bottom: 12px;
+      display: block;
+      text-align: center
+    }
+
+    .pw-title {
+      font-family: var(--font-head);
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: var(--text-bright);
+      text-align: center;
+      margin-bottom: 10px;
+      line-height: 1.3
+    }
+
+    .pw-desc {
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 28px;
+      line-height: 1.7
+    }
+
+    .pw-pages {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-bottom: 28px
+    }
+
+    @media(max-width:480px) {
+      .pw-pages {
+        grid-template-columns: 1fr 1fr
+      }
+    }
+
+    .pw-page {
+      padding: 12px 10px;
+      border-radius: var(--radius-sm);
+      text-align: center;
+      background: var(--bg-card);
+      border: 1px solid var(--border)
+    }
+
+    .pw-pg-num {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      margin-bottom: 4px
+    }
+
+    .pw-pg-name {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--text-main)
+    }
+
+    .price-block {
+      text-align: center;
+      margin-bottom: 24px
+    }
+
+    .price-old {
+      font-size: 1rem;
+      color: var(--text-muted);
+      text-decoration: line-through;
+      margin-bottom: 4px
+    }
+
+    .price-new {
+      font-family: var(--font-head);
+      font-size: 2.8rem;
+      font-weight: 900;
+      background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1
+    }
+
+    .price-tag {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-top: 6px
+    }
+
+    /* Countdown Bar */
+    .countdown-bar {
+      background: linear-gradient(135deg, rgba(239, 68, 68, 0.15), rgba(245, 158, 11, 0.15));
+      border: 1px solid rgba(245, 158, 11, 0.4);
+      border-radius: var(--radius-sm);
+      padding: 10px 16px;
+      margin: 16px 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-size: 0.88rem;
+      color: var(--text-bright)
+    }
+
+    .cd-timer {
+      font-family: var(--font-head);
+      font-weight: 800;
+      font-size: 1.1rem;
+      color: #f59e0b;
+      letter-spacing: 1px;
+      background: rgba(0, 0, 0, 0.3);
+      padding: 2px 10px;
+      border-radius: 6px;
+      border: 1px solid rgba(245, 158, 11, 0.3)
+    }
+
+    /* Exit Intent Modal */
+    .exit-modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(8px);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease
+    }
+
+    .exit-modal-overlay.active {
+      opacity: 1;
+      pointer-events: auto
+    }
+
+    .exit-modal {
+      background: var(--bg-card);
+      border: 1px solid var(--gold);
+      box-shadow: 0 0 50px rgba(245, 158, 11, 0.3);
+      border-radius: var(--radius-lg);
+      max-width: 480px;
+      width: 100%;
+      padding: 32px 24px;
+      text-align: center;
+      position: relative;
+      animation: modalBounce 0.4s ease-out
+    }
+
+    @keyframes modalBounce {
+      0% {
+        transform: scale(0.85);
+        opacity: 0
+      }
+
+      100% {
+        transform: scale(1);
+        opacity: 1
+      }
+    }
+
+    .exit-close {
+      position: absolute;
+      top: 12px;
+      right: 16px;
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      font-size: 1.6rem;
+      cursor: pointer;
+      line-height: 1
+    }
+
+    .exit-badge {
+      display: inline-block;
+      background: rgba(239, 68, 68, 0.2);
+      color: #ef4444;
+      border: 1px solid rgba(239, 68, 68, 0.4);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+      text-transform: uppercase
+    }
+
+    .exit-title {
+      font-family: var(--font-head);
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--text-bright);
+      margin-bottom: 10px;
+      line-height: 1.3
+    }
+
+    .exit-desc {
+      font-size: 0.88rem;
+      color: var(--text-main);
+      line-height: 1.5;
+      margin-bottom: 20px
+    }
+
+    .exit-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 10px
+    }
+
+    .qr-section {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 28px
+    }
+
+    .qr-box {
+      width: 140px;
+      height: 140px;
+      flex-shrink: 0;
+      background: white;
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px;
+      box-shadow: 0 4px 16px hsla(220, 20%, 50%, 0.2)
+    }
+
+    .qr-info {
+      flex: 1;
+      min-width: 180px
+    }
+
+    .bank-detail {
+      background: var(--bg-card);
+      border-radius: var(--radius-sm);
+      padding: 14px 16px;
+      margin-bottom: 12px;
+      border: 1px solid var(--border)
+    }
+
+    .bank-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+      font-size: 0.82rem
+    }
+
+    .bank-row:last-child {
+      margin-bottom: 0
+    }
+
+    .bank-key {
+      color: var(--text-muted)
+    }
+
+    .bank-val {
+      color: var(--text-bright);
+      font-weight: 700
+    }
+
+    .guarantee-box {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 14px 16px;
+      border-radius: var(--radius-sm);
+      background: hsla(142, 60%, 42%, 0.07);
+      border: 1px solid hsla(142, 60%, 42%, 0.2);
+      margin-bottom: 20px
+    }
+
+    .guarantee-icon {
+      font-size: 1.4rem;
+      flex-shrink: 0
+    }
+
+    .guarantee-body h4 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--safe);
+      margin-bottom: 3px
+    }
+
+    .guarantee-body p {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      line-height: 1.5
+    }
+
+    .paid-actions {
+      display: flex;
+      gap: 12px;
+      flex-direction: column;
+      align-items: center
+    }
+
+    .btn-paid {
+      background: var(--bg-card);
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: all 0.2s
+    }
+
+    .btn-paid:hover {
+      border-color: var(--jade);
+      color: var(--jade-light)
+    }
+
+    /* ============================================================
+       SCREEN 4 – SUCCESS
+    ============================================================ */
+    #screen-4 {
+      padding: 100px 0 80px
+    }
+
+    .suc-wrapper {
+      max-width: 660px;
+      margin: 0 auto;
+      padding: 0 20px
+    }
+
+    .suc-hdr {
+      text-align: center;
+      margin-bottom: 40px
+    }
+
+    .suc-icon {
+      font-size: 4rem;
+      margin-bottom: 16px
+    }
+
+    .suc-title {
+      font-family: var(--font-head);
+      font-size: 1.9rem;
+      font-weight: 900;
+      color: var(--text-bright);
+      margin-bottom: 12px
+    }
+
+    .suc-sub {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      max-width: 460px;
+      margin: 0 auto
+    }
+
+    .fp-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 14px 16px;
+      border-radius: var(--radius-sm);
+      background: hsla(168, 65%, 38%, 0.07);
+      border: 1px solid hsla(168, 65%, 38%, 0.18);
+      margin-bottom: 10px;
+      transition: background 0.2s
+    }
+
+    .fp-row:hover {
+      background: hsla(168, 65%, 38%, 0.12)
+    }
+
+    .fp-check {
+      width: 28px;
+      height: 28px;
+      border-radius: 7px;
+      flex-shrink: 0;
+      background: var(--jade);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem
+    }
+
+    .fp-text h4 {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--text-bright);
+      margin-bottom: 2px
+    }
+
+    .fp-text p {
+      font-size: 0.78rem;
+      color: var(--text-muted)
+    }
+
+    .fu-card {
+      padding: 24px;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(135deg, hsla(168, 65%, 38%, 0.10), hsla(265, 55%, 55%, 0.08));
+      border: 1px solid var(--border-glow);
+      margin-bottom: 24px
+    }
+
+    .fu-title {
+      font-family: var(--font-head);
+      font-weight: 700;
+      color: var(--text-bright);
+      margin-bottom: 16px
+    }
+
+    .fu-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px
+    }
+
+    .fu-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      background: var(--jade-light);
+      box-shadow: 0 0 8px var(--jade)
+    }
+
+    .fu-item span {
+      font-size: 0.85rem;
+      color: var(--text-muted)
+    }
+
+    .restart-sec {
+      text-align: center;
+      margin-top: 36px
+    }
+
+    .restart-sec p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 16px
+    }
+
+    /* TOAST */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      padding: 12px 24px;
+      font-size: 0.88rem;
+      color: var(--text-main);
+      box-shadow: var(--shadow-card);
+      transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      z-index: 999;
+      white-space: nowrap
+    }
+
+    .toast.show {
+      transform: translateX(-50%) translateY(0)
+    }
+
+    /* Utils */
+    .mt-16 {
+      margin-top: 16px
+    }
+
+    .mb-16 {
+      margin-bottom: 16px
+    }
+
+    .mb-24 {
+      margin-bottom: 24px
+    }
+
+    .flex-center {
+      display: flex;
+      justify-content: center
+    }
+
+    .bg-inline {
+      background: var(--bg-card);
+      border-radius: var(--radius-sm);
+      padding: 14px 18px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      border: 1px solid var(--border)
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="bg-blobs">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+
+  <div class="g-prog">
+    <div class="g-prog-fill" id="gProg" style="width:0%"></div>
+  </div>
+
+  <nav class="top-nav">
+    <div class="nav-logo">☯ TAM BẢO HEALTH</div>
+
+    <!-- Language switcher -->
+    <div class="lang-switcher">
+      <button class="lang-btn active" id="langVI" onclick="setLang('vi')">🇻🇳 VI</button>
+      <button class="lang-btn" id="langEN" onclick="setLang('en')">🇬🇧 EN</button>
+      <button class="lang-btn" id="langZH" onclick="setLang('zh')">🇨🇳 中</button>
+    </div>
+
+    <!-- Theme toggle -->
+    <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="Toggle theme">🌙</button>
+  </nav>
+
+  <div class="toast" id="toast"></div>
+
+  <!-- ===== SCREEN 0 – LANDING ===== -->
+  <section class="screen active" id="screen-0">
+    <div class="hero">
+      <div class="hero-badge" data-i18n="s0.badge">🏥 Hệ Thống Đánh Giá Sức Khỏe Cá Nhân Hóa · Miễn Phí</div>
+      <h1 data-i18n-html="s0.h1">Giải Mã <span class="highlight">Nguy Cơ Sinh Học</span><br>Theo Ma Trận Tam Bảo</h1>
+      <p class="hero-sub" data-i18n-html="s0.sub">Bài test 18 câu theo y học tích hợp Đông–Tây giúp bạn hiểu rõ tình
+        trạng <strong>Tinh – Khí – Thần</strong> và nguy cơ bệnh mãn tính tiềm ẩn chưa có triệu chứng rõ ràng.</p>
+      <div class="hero-cta">
+        <button class="btn btn-primary btn-lg" onclick="goTo(1)" data-i18n="s0.cta1">🚀 Bắt Đầu Đánh Giá Miễn
+          Phí</button>
+        <button class="btn btn-ghost" onclick="document.getElementById('pillars').scrollIntoView({behavior:'smooth'})"
+          data-i18n="s0.cta2">Tìm Hiểu Thêm ↓</button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item"><span class="stat-value">18</span><span class="stat-label" data-i18n="s0.stat1">Tiêu chí
+            lâm sàng</span></div>
+        <div class="stat-item"><span class="stat-value">3</span><span class="stat-label" data-i18n="s0.stat2">Tầng Tam
+            Bảo</span></div>
+        <div class="stat-item"><span class="stat-value">10</span><span class="stat-label" data-i18n="s0.stat3">Trang báo
+            cáo</span></div>
+        <div class="stat-item"><span class="stat-value">~5'</span><span class="stat-label" data-i18n="s0.stat4">Thời
+            gian làm bài</span></div>
+      </div>
+      <div class="pillars" id="pillars">
+        <div class="pillar pillar-tinh">
+          <span class="pillar-icon">🌿</span>
+          <div class="pillar-name" data-i18n="p.tinh.name">TINH</div>
+          <p class="pillar-desc" data-i18n="p.tinh.desc">Vật liệu & Chuyển hóa tế bào. Gian bào, ti thể, nội tiết tố,
+            chuyển hóa Lipid</p>
+          <div class="pillar-tags"><span class="pillar-tag" data-i18n="p.tinh.t1">Dinh dưỡng</span><span
+              class="pillar-tag" data-i18n="p.tinh.t2">Gan thận</span><span class="pillar-tag" data-i18n="p.tinh.t3">Mỡ
+              máu</span></div>
+        </div>
+        <div class="pillar pillar-khi">
+          <span class="pillar-icon">💨</span>
+          <div class="pillar-name" data-i18n="p.khi.name">KHÍ</div>
+          <p class="pillar-desc" data-i18n="p.khi.desc">Vi tuần hoàn & Mạc cơ. Lưu thông máu, oxy tế bào, điện sinh học
+            mô</p>
+          <div class="pillar-tags"><span class="pillar-tag" data-i18n="p.khi.t1">Tuần hoàn</span><span
+              class="pillar-tag" data-i18n="p.khi.t2">Cột sống</span><span class="pillar-tag" data-i18n="p.khi.t3">Vi
+              mạch</span></div>
+        </div>
+        <div class="pillar pillar-than">
+          <span class="pillar-icon">🧠</span>
+          <div class="pillar-name" data-i18n="p.than.name">THẦN</div>
+          <p class="pillar-desc" data-i18n="p.than.desc">Thần kinh & Giấc ngủ. Trục não–ruột, DMN, cortisol, đồng hồ
+            sinh học</p>
+          <div class="pillar-tags"><span class="pillar-tag" data-i18n="p.than.t1">Giấc ngủ</span><span
+              class="pillar-tag" data-i18n="p.than.t2">Stress</span><span class="pillar-tag" data-i18n="p.than.t3">Não
+              bộ</span></div>
+        </div>
+      </div>
+      <div class="social-proof" style="margin-top:32px">
+        <div class="avatar-stack">
+          <div class="avatar">👨‍⚕️</div>
+          <div class="avatar">👩</div>
+          <div class="avatar">🧑</div>
+          <div class="avatar">👴</div>
+        </div>
+        <span data-i18n="s0.proof">Phát triển bởi đội ngũ bác sĩ y học tích hợp · Chuẩn lâm sàng</span>
+      </div>
+      <button class="btn btn-primary btn-lg btn-full" style="max-width:400px;margin-top:36px" onclick="goTo(1)"
+        data-i18n="s0.cta3">✨ Nhận Báo Cáo Sức Khỏe Miễn Phí Ngay</button>
+    </div>
+  </section>
+
+  <!-- ===== SCREEN 1 – INFO ===== -->
+  <section class="screen" id="screen-1">
+    <div class="info-wrapper">
+      <div class="screen-header">
+        <div class="section-label"><span class="dot"></span><span data-i18n="s1.step">Bước 1/3 · Thông Tin Cá
+            Nhân</span></div>
+        <h2 class="screen-title" data-i18n-html="s1.title">Cá Nhân Hóa<br>Hồ Sơ Sức Khỏe</h2>
+        <p class="screen-sub" data-i18n="s1.sub">Thông tin của bạn chỉ dùng để tạo mã hồ sơ. Không gửi đến bất kỳ máy
+          chủ nào.</p>
+      </div>
+      <div class="card form-card">
+        <div class="form-group">
+          <label class="form-label" for="inp-name"><span data-i18n="s1.f.name">Họ và Tên</span><span
+              class="req">*</span></label>
+          <input type="text" id="inp-name" class="form-input" data-i18n-placeholder="s1.f.namePh"
+            placeholder="Nguyễn Văn An" autocomplete="name">
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="inp-year"><span data-i18n="s1.f.year">Năm Sinh</span><span
+                class="req">*</span></label>
+            <input type="number" id="inp-year" class="form-input" placeholder="1985" min="1930" max="2010">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="inp-gender"><span data-i18n="s1.f.gender">Giới Tính</span><span
+                class="req">*</span></label>
+            <select id="inp-gender" class="form-input">
+              <option value="" data-i18n="s1.f.genderPh">-- Chọn --</option>
+              <option value="Nam" data-i18n="s1.f.male">Nam</option>
+              <option value="Nữ" data-i18n="s1.f.female">Nữ</option>
+              <option value="Khác" data-i18n="s1.f.other">Khác</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="inp-occ"><span data-i18n="s1.f.occ">Nhóm Nghề Nghiệp</span><span
+              class="req">*</span></label>
+          <select id="inp-occ" class="form-input">
+            <option value="" data-i18n="s1.f.occPh">-- Chọn nhóm gần nhất --</option>
+            <option data-i18n="s1.f.occ1">Văn phòng / Làm việc máy tính</option>
+            <option data-i18n="s1.f.occ2">Quản lý / Lãnh đạo</option>
+            <option data-i18n="s1.f.occ3">Lái xe / Vận chuyển</option>
+            <option data-i18n="s1.f.occ4">Y tế / Chăm sóc sức khỏe</option>
+            <option data-i18n="s1.f.occ5">Giáo viên / Giảng viên</option>
+            <option data-i18n="s1.f.occ6">Kinh doanh / Buôn bán</option>
+            <option data-i18n="s1.f.occ7">Lao động thể chất / Công nhân</option>
+            <option data-i18n="s1.f.occ8">Nội trợ / Tự do</option>
+            <option data-i18n="s1.f.occ9">Khác</option>
+          </select>
+        </div>
+        <div class="privacy-note">
+          <span>🔒</span>
+          <span data-i18n="s1.privacy">Thông tin chỉ lưu trong phiên làm việc này, không gửi đến bất kỳ máy chủ nào. Hồ
+            sơ được mã hóa thành mã riêng của bạn.</span>
+        </div>
+        <button class="btn btn-primary btn-full" onclick="submitInfo()" data-i18n="s1.submit">Tiếp Tục → Bắt Đầu Bài
+          Test</button>
+      </div>
+      <div class="flex-center mt-16">
+        <button class="btn btn-ghost" onclick="goTo(0)" style="font-size:0.85rem;padding:10px 20px"
+          data-i18n="s1.back">← Quay lại</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SCREEN 2 – TEST ===== -->
+  <section class="screen" id="screen-2">
+    <div class="test-wrapper">
+      <div class="section-label"><span class="dot"></span><span data-i18n="s2.step">Bước 2/3 · Bài Đánh Giá 18 Tiêu
+          Chí</span></div>
+      <div class="prog-label">
+        <span data-i18n="s2.progress">Tiến độ hoàn thành</span>
+        <span id="progTxt">0 / 18</span>
+      </div>
+      <div class="test-prog-bar">
+        <div class="test-prog-fill" id="testFill" style="width:0%"></div>
+      </div>
+
+      <div class="group-header gh-tinh">
+        <span class="gh-icon">🌿</span>
+        <div class="gh-body">
+          <div class="gh-title" data-i18n="g.tinh.title">TẦNG TINH — Vật Liệu & Chuyển Hóa</div>
+          <div class="gh-sub" data-i18n="g.tinh.sub">Dinh dưỡng tế bào, chuyển hóa, và gian bào</div>
+        </div>
+        <div style="font-family:var(--font-head);font-weight:800;font-size:0.8rem;color:var(--safe);opacity:0.8"
+          data-i18n="g.count">6 câu</div>
+      </div>
+      <div id="q-tinh"></div>
+      <hr class="grp-sep">
+
+      <div class="group-header gh-khi">
+        <span class="gh-icon">💨</span>
+        <div class="gh-body">
+          <div class="gh-title" data-i18n="g.khi.title">TẦNG KHÍ — Vi Tuần Hoàn & Mạc Cơ</div>
+          <div class="gh-sub" data-i18n="g.khi.sub">Lưu thông máu, oxy mô, và điện sinh học chuỗi mạc cơ</div>
+        </div>
+        <div style="font-family:var(--font-head);font-weight:800;font-size:0.8rem;color:var(--jade-glow);opacity:0.8"
+          data-i18n="g.count">6 câu</div>
+      </div>
+      <div id="q-khi"></div>
+      <hr class="grp-sep">
+
+      <div class="group-header gh-than">
+        <span class="gh-icon">🧠</span>
+        <div class="gh-body">
+          <div class="gh-title" data-i18n="g.than.title">TẦNG THẦN — Thần Kinh & Giấc Ngủ</div>
+          <div class="gh-sub" data-i18n="g.than.sub">Cân bằng hệ thần kinh tự chủ, trục HPA, và chất lượng ngủ sâu</div>
+        </div>
+        <div style="font-family:var(--font-head);font-weight:800;font-size:0.8rem;color:var(--violet-glow);opacity:0.8"
+          data-i18n="g.count">6 câu</div>
+      </div>
+      <div id="q-than"></div>
+
+      <div class="test-footer">
+        <div class="ans-count"><span data-i18n="s2.answered">Đã trả lời:</span> <strong id="ansCnt">0</strong> / 18
+        </div>
+        <button class="btn btn-primary" id="btnCalc" onclick="calcResults()" disabled data-i18n="s2.btnCalc">Xem Kết Quả
+          →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SCREEN 3 – REPORT ===== -->
+  <section class="screen" id="screen-3">
+    <div class="rpt-wrapper">
+      <div class="section-label"><span class="dot"></span><span data-i18n="s3.step">Bước 3/3 · Báo Cáo Sức Khỏe Cá
+          Nhân</span></div>
+      <h2
+        style="font-family:var(--font-head);font-size:1.8rem;font-weight:800;color:var(--text-bright);margin-bottom:8px"
+        data-i18n="s3.title">Hồ Sơ Giải Mã Sinh Học</h2>
+      <p style="color:var(--text-muted);font-size:0.88rem;margin-bottom:32px" data-i18n="s3.sub">4 trang đầu miễn phí ·
+        Trang 5–10 cần mở khóa để nhận phác đồ hoàn chỉnh</p>
+
+      <!-- Page 1 -->
+      <div class="rpt-page">
+        <div class="rpt-ph">
+          <div class="pg-num">1</div>
+          <div class="pg-title" data-i18n="r1.title">Bìa & Lời Mở Đầu Chuyên Môn</div><span class="free-tag"
+            data-i18n="free">✓ Miễn Phí</span>
+        </div>
+        <div class="rpt-body">
+          <div class="cover-hdr">
+            <div class="cover-logo">☯</div>
+            <div class="cover-title" data-i18n="r1.coverTitle">HỒ SƠ GIẢI MÃ NGUY CƠ SINH HỌC & ĐIỀU HÒA NỀN TẢNG</div>
+            <div class="cover-sub" data-i18n="r1.coverSub">MA TRẬN TAM BẢO (TINH – KHÍ – THẦN)</div>
+          </div>
+          <div class="info-grid" id="coverGrid"></div>
+          <div class="disc-box" data-i18n-html="r1.disc">
+            <strong>⚕️ Tuyên Bố Y Tế:</strong> Tài liệu mang tính chất tham vấn y học lối sống và dinh dưỡng bổ trợ.
+            Không thay thế chẩn đoán cấp cứu của bệnh viện.
+          </div>
+          <div class="bg-inline" style="margin-top:20px">
+            <strong style="color:var(--jade-light)" data-i18n="r1.drLabel">Thông điệp từ Bác sĩ phụ trách:</strong><br>
+            <span data-i18n="r1.drMsg">Cơ thể con người là một hệ sinh thái tự điều chỉnh. Triệu chứng mỏi cổ, khó ngủ
+              hay tăng mỡ bụng là tín hiệu báo động khi ti thể và mạch máu bị quá tải. Báo cáo này là bản đồ dẫn đường
+              hỗ trợ điều chỉnh lối sống chủ động.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Page 2 -->
+      <div class="rpt-page">
+        <div class="rpt-ph">
+          <div class="pg-num">2</div>
+          <div class="pg-title" data-i18n="r2.title">Hồ Sơ Sinh Học Tam Bảo Tổng Thể</div><span class="free-tag"
+            data-i18n="free">✓ Miễn Phí</span>
+        </div>
+        <div class="rpt-body">
+          <div class="radar-section">
+            <canvas id="radarChart" width="240" height="240"></canvas>
+            <div class="radar-scores">
+              <div class="score-total">
+                <span class="score-num-big"><span id="scoreNum">0</span><span class="score-denom">/36</span></span>
+                <div class="score-lbl" data-i18n="r2.scoreLabel">Tổng điểm tích tụ rác sinh học</div>
+              </div>
+              <div id="zoneBadge" class="zone-badge zone-xanh"><span id="zoneText">🟢 VÙNG XANH</span></div>
+              <div class="axis-scores">
+                <div class="axis-item"><span class="axis-lbl" style="color:var(--safe)"
+                    data-i18n="p.tinh.name">TINH</span>
+                  <div class="axis-bar">
+                    <div class="axis-fill fill-tinh" id="barTinh" style="width:0%"></div>
+                  </div><span class="axis-sc" id="lTinh">0/12</span>
+                </div>
+                <div class="axis-item"><span class="axis-lbl" style="color:var(--jade-glow)"
+                    data-i18n="p.khi.name">KHÍ</span>
+                  <div class="axis-bar">
+                    <div class="axis-fill fill-khi" id="barKhi" style="width:0%"></div>
+                  </div><span class="axis-sc" id="lKhi">0/12</span>
+                </div>
+                <div class="axis-item"><span class="axis-lbl" style="color:var(--violet-glow)"
+                    data-i18n="p.than.name">THẦN</span>
+                  <div class="axis-bar">
+                    <div class="axis-fill fill-than" id="barThan" style="width:0%"></div>
+                  </div><span class="axis-sc" id="lThan">0/12</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-inline" style="margin-top:20px" id="assessSumm"></div>
+        </div>
+      </div>
+
+      <!-- Page 3 -->
+      <div class="rpt-page">
+        <div class="rpt-ph">
+          <div class="pg-num">3</div>
+          <div class="pg-title" data-i18n="r3.title">Điểm Mạnh Cơ Thể — Vốn Sinh Học Bảo Tồn</div><span class="free-tag"
+            data-i18n="free">✓ Miễn Phí</span>
+        </div>
+        <div class="rpt-body">
+          <div class="str-grid" id="strGrid"></div>
+          <div class="bg-inline"
+            style="margin-top:18px;background:hsla(142,60%,42%,0.07);border-color:hsla(142,60%,42%,0.2)">
+            💡 <strong style="color:var(--safe)" data-i18n="r3.note1">Ý nghĩa:</strong> <span data-i18n="r3.note2">Những
+              vùng còn bảo tồn tốt là nền tảng nội lực để cơ thể phục hồi. Nếu can thiệp đúng vào điểm nghẽn, các vùng
+              này sẽ khuếch đại hiệu quả phục hồi theo cấp số nhân.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Page 4 -->
+      <div class="rpt-page">
+        <div class="rpt-ph">
+          <div class="pg-num">4</div>
+          <div class="pg-title" data-i18n="r4.title">Điểm Yếu Gốc Rễ & Các Điểm Nghẽn Chính</div><span class="free-tag"
+            data-i18n="free">✓ Miễn Phí</span>
+        </div>
+        <div class="rpt-body">
+          <div class="wk-list" id="wkList"></div>
+        </div>
+      </div>
+
+      <!-- PAYWALL -->
+      <div class="paywall-section">
+        <div class="pw-blur">
+          <div class="rpt-page" style="margin-bottom:12px">
+            <div class="rpt-ph">
+              <div class="pg-num" style="background:var(--bg-card)">🔒</div>
+              <div class="pg-title" style="color:var(--text-muted)" data-i18n="pw.p5title">Bản Đồ Phân Tầng Nguy Cơ Bệnh
+                Lý</div>
+            </div>
+            <div class="rpt-body" style="filter:blur(3px)">
+              <div style="height:80px;background:var(--bg-card);border-radius:8px;margin-bottom:10px"></div>
+              <div style="height:60px;background:var(--bg-card);border-radius:8px"></div>
+            </div>
+          </div>
+          <div class="rpt-page">
+            <div class="rpt-ph">
+              <div class="pg-num" style="background:var(--bg-card)">🔒</div>
+              <div class="pg-title" style="color:var(--text-muted)" data-i18n="pw.p6title">Phác Đồ Hành Động 30/60/90
+                Ngày</div>
+            </div>
+            <div class="rpt-body" style="filter:blur(3px)">
+              <div style="height:100px;background:var(--bg-card);border-radius:8px;margin-bottom:10px"></div>
+              <div style="height:40px;background:var(--bg-card);border-radius:8px"></div>
+            </div>
+          </div>
+        </div>
+        <div class="pw-overlay"></div>
+        <div style="padding:0 0 40px;position:relative;z-index:20">
+          <div class="pw-card">
+            <span class="pw-icon">📋</span>
+            <div class="pw-title" data-i18n="pw.title">Bác Sĩ Đã Hoàn Thiện Phác Đồ Cá Nhân Của Bạn</div>
+            <p class="pw-desc" data-i18n-html="pw.desc">Dựa trên <strong style="color:var(--text-bright)">chỉ số sinh
+                học thực tế</strong> vừa đánh giá, hồ sơ 10 trang bao gồm lộ trình phục hồi 30/60/90 ngày, Top 5 hành
+              động ưu tiên và chỉ dẫn cận lâm sàng.</p>
+            <div class="pw-pages">
+              <div class="pw-page">
+                <div class="pw-pg-num" data-i18n="pw.pg5num">TRANG 5</div>
+                <div class="pw-pg-name" data-i18n="pw.pg5name">🗺️ Bản Đồ Nguy Cơ Bệnh Lý</div>
+              </div>
+              <div class="pw-page">
+                <div class="pw-pg-num" data-i18n="pw.pg6num">TRANG 6</div>
+                <div class="pw-pg-name" data-i18n="pw.pg6name">🏆 Top 5 Ưu Tiên Cải Thiện</div>
+              </div>
+              <div class="pw-page">
+                <div class="pw-pg-num" data-i18n="pw.pg7num">TRANG 7</div>
+                <div class="pw-pg-name" data-i18n="pw.pg7name">📅 Kế Hoạch 30 Ngày</div>
+              </div>
+              <div class="pw-page">
+                <div class="pw-pg-num" data-i18n="pw.pg8num">TRANG 8</div>
+                <div class="pw-pg-name" data-i18n="pw.pg8name">⚡ Phục Hồi 60 Ngày</div>
+              </div>
+              <div class="pw-page">
+                <div class="pw-pg-num" data-i18n="pw.pg9num">TRANG 9</div>
+                <div class="pw-pg-name" data-i18n="pw.pg9name">🛡️ Bền Vững 90 Ngày</div>
+              </div>
+              <div class="pw-page">
+                <div class="pw-pg-num" data-i18n="pw.pg10num">TRANG 10</div>
+                <div class="pw-pg-name" data-i18n="pw.pg10name">🩺 Cận Lâm Sàng & Bác Sĩ Duyệt</div>
+              </div>
+            </div>
+            <div class="price-block">
+              <div class="price-old" data-i18n="pw.priceOld">299.000đ</div>
+              <div class="price-new" data-i18n="pw.priceNew">99.000đ</div>
+              <div class="price-tag" data-i18n="pw.priceTag">🎁 Ra mắt ưu đãi · Trọn bộ 10 trang + Lời dặn Bác sĩ</div>
+            </div>
+            <div class="countdown-bar">
+              <span>⚡ Ưu đãi 99k kết thúc sau:</span>
+              <div class="cd-timer" id="cdTimer">23:59:59</div>
+            </div>
+            <div class="qr-section">
+              <div class="qr-box">
+                <svg width="120" height="120" viewBox="0 0 110 110" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="110" height="110" fill="white" />
+                  <rect x="5" y="5" width="30" height="30" fill="none" stroke="#000" stroke-width="3" />
+                  <rect x="10" y="10" width="20" height="20" fill="#000" />
+                  <rect x="75" y="5" width="30" height="30" fill="none" stroke="#000" stroke-width="3" />
+                  <rect x="80" y="10" width="20" height="20" fill="#000" />
+                  <rect x="5" y="75" width="30" height="30" fill="none" stroke="#000" stroke-width="3" />
+                  <rect x="10" y="80" width="20" height="20" fill="#000" />
+                  <rect x="40" y="5" width="5" height="5" fill="#000" />
+                  <rect x="50" y="5" width="5" height="5" fill="#000" />
+                  <rect x="60" y="5" width="5" height="5" fill="#000" />
+                  <rect x="40" y="15" width="5" height="5" fill="#000" />
+                  <rect x="55" y="15" width="5" height="5" fill="#000" />
+                  <rect x="40" y="25" width="5" height="5" fill="#000" />
+                  <rect x="50" y="25" width="5" height="5" fill="#000" />
+                  <rect x="60" y="25" width="5" height="5" fill="#000" />
+                  <rect x="5" y="40" width="5" height="5" fill="#000" />
+                  <rect x="15" y="40" width="5" height="5" fill="#000" />
+                  <rect x="25" y="40" width="5" height="5" fill="#000" />
+                  <rect x="40" y="40" width="5" height="5" fill="#000" />
+                  <rect x="50" y="40" width="5" height="5" fill="#000" />
+                  <rect x="60" y="40" width="5" height="5" fill="#000" />
+                  <rect x="70" y="40" width="5" height="5" fill="#000" />
+                  <rect x="80" y="40" width="5" height="5" fill="#000" />
+                  <rect x="90" y="40" width="5" height="5" fill="#000" />
+                  <rect x="100" y="40" width="5" height="5" fill="#000" />
+                  <rect x="5" y="50" width="5" height="5" fill="#000" />
+                  <rect x="20" y="50" width="5" height="5" fill="#000" />
+                  <rect x="35" y="50" width="5" height="5" fill="#000" />
+                  <rect x="45" y="50" width="5" height="5" fill="#000" />
+                  <rect x="55" y="50" width="5" height="5" fill="#000" />
+                  <rect x="65" y="50" width="5" height="5" fill="#000" />
+                  <rect x="75" y="50" width="5" height="5" fill="#000" />
+                  <rect x="85" y="50" width="5" height="5" fill="#000" />
+                  <rect x="95" y="50" width="5" height="5" fill="#000" />
+                  <rect x="5" y="60" width="5" height="5" fill="#000" />
+                  <rect x="15" y="60" width="5" height="5" fill="#000" />
+                  <rect x="30" y="60" width="5" height="5" fill="#000" />
+                  <rect x="45" y="60" width="5" height="5" fill="#000" />
+                  <rect x="60" y="60" width="5" height="5" fill="#000" />
+                  <rect x="70" y="60" width="5" height="5" fill="#000" />
+                  <rect x="80" y="60" width="5" height="5" fill="#000" />
+                  <rect x="100" y="60" width="5" height="5" fill="#000" />
+                  <rect x="40" y="75" width="5" height="5" fill="#000" />
+                  <rect x="55" y="75" width="5" height="5" fill="#000" />
+                  <rect x="65" y="75" width="5" height="5" fill="#000" />
+                  <rect x="75" y="75" width="5" height="5" fill="#000" />
+                  <rect x="40" y="85" width="5" height="5" fill="#000" />
+                  <rect x="50" y="85" width="5" height="5" fill="#000" />
+                  <rect x="70" y="85" width="5" height="5" fill="#000" />
+                  <rect x="85" y="85" width="5" height="5" fill="#000" />
+                  <rect x="95" y="85" width="5" height="5" fill="#000" />
+                  <rect x="40" y="95" width="5" height="5" fill="#000" />
+                  <rect x="60" y="95" width="5" height="5" fill="#000" />
+                  <rect x="80" y="95" width="5" height="5" fill="#000" />
+                  <rect x="100" y="95" width="5" height="5" fill="#000" />
+                  <rect x="48" y="48" width="14" height="14" fill="white" stroke="#000" stroke-width="1" />
+                  <text x="55" y="58" font-size="9" text-anchor="middle" fill="#000">☯</text>
+                </svg>
+              </div>
+              <div class="qr-info">
+                <div class="bank-detail">
+                  <div class="bank-row"><span class="bank-key" data-i18n="pw.bank">Ngân hàng</span><span
+                      class="bank-val">VietcomBank</span></div>
+                  <div class="bank-row"><span class="bank-key" data-i18n="pw.acct">Số TK</span><span
+                      class="bank-val">1234 5678 90</span></div>
+                  <div class="bank-row"><span class="bank-key" data-i18n="pw.name">Tên TK</span><span
+                      class="bank-val">NGUYEN VAN A</span></div>
+                  <div class="bank-row"><span class="bank-key" data-i18n="pw.ref">Nội dung</span><span class="bank-val"
+                      id="payNote">TAMBAO-xxxx</span></div>
+                  <div class="bank-row"><span class="bank-key" data-i18n="pw.amount">Số tiền</span><span
+                      class="bank-val" style="color:var(--gold)">99.000đ</span></div>
+                </div>
+                <div style="font-size:0.78rem;color:var(--text-muted);text-align:center;line-height:1.6"
+                  data-i18n-html="pw.qrNote">📱 Quét mã QR hoặc chuyển khoản<br>Nhận báo cáo qua Zalo trong 30 phút
+                </div>
+              </div>
+            </div>
+            <div class="guarantee-box">
+              <span class="guarantee-icon">🛡️</span>
+              <div class="guarantee-body">
+                <h4 data-i18n="pw.guarTitle">Cam Kết Hoàn Tiền 100% Trong 24 Giờ</h4>
+                <p data-i18n="pw.guarDesc">Nếu báo cáo không cá nhân hóa đúng với thông tin bạn đã cung cấp, chúng tôi
+                  hoàn tiền ngay lập tức.</p>
+              </div>
+            </div>
+            <div class="paid-actions">
+              <button class="btn btn-gold btn-full btn-lg" onclick="handlePaymentClick()" data-i18n="pw.btnPay">💳 Tôi
+                Đã Chuyển Khoản — Nhận Báo Cáo Ngay</button>
+              <button class="btn-paid" onclick="toast(T('pw.zalo'))" data-i18n="pw.btnZalo">Liên hệ hỗ trợ qua
+                Zalo</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SCREEN 4 – SUCCESS ===== -->
+  <section class="screen" id="screen-4">
+    <div class="suc-wrapper">
+      <div class="suc-hdr">
+        <div class="suc-icon">🎉</div>
+        <h2 class="suc-title" data-i18n="s4.title">Cảm Ơn Bạn Đã Tin Tưởng!</h2>
+        <p class="suc-sub" data-i18n="s4.sub">Chúng tôi đã nhận được thông báo và đang chuẩn bị hồ sơ. Bác sĩ sẽ kiểm
+          duyệt và gửi qua Zalo trong 30 phút.</p>
+      </div>
+      <div class="card" style="padding:28px;margin-bottom:24px">
+        <div style="margin-bottom:20px">
+          <div style="font-family:var(--font-head);font-weight:700;color:var(--text-bright);margin-bottom:4px"
+            data-i18n="s4.pkg">📦 Gói Hồ Sơ 10 Trang Sẽ Bao Gồm:</div>
+          <div style="font-size:0.82rem;color:var(--text-muted)" data-i18n="s4.pkgSub">Được Bác sĩ kiểm duyệt và cá nhân
+            hóa riêng</div>
+        </div>
+        <div class="fp-row">
+          <div class="fp-check">✓</div>
+          <div class="fp-text">
+            <h4 data-i18n="s4.p14">Trang 1–4: Preview Sức Khỏe Tổng Thể</h4>
+            <p data-i18n="s4.p14d">Đã xem · Radar chart, điểm mạnh và điểm yếu</p>
+          </div>
+        </div>
+        <div class="fp-row">
+          <div class="fp-check">✓</div>
+          <div class="fp-text">
+            <h4 data-i18n="s4.p5">Trang 5: Bản Đồ Phân Tầng Nguy Cơ</h4>
+            <p data-i18n="s4.p5d">4 cụm: Kháng Insulin, Vi mạch não, Cột sống, NK cells</p>
+          </div>
+        </div>
+        <div class="fp-row">
+          <div class="fp-check">✓</div>
+          <div class="fp-text">
+            <h4 data-i18n="s4.p6">Trang 6: Top 5 Ưu Tiên Cải Thiện</h4>
+            <p data-i18n="s4.p6d">5 hành động xếp theo thứ tự khẩn cấp cá nhân</p>
+          </div>
+        </div>
+        <div class="fp-row">
+          <div class="fp-check">✓</div>
+          <div class="fp-text">
+            <h4 data-i18n="s4.p7">Trang 7: Kế Hoạch 30 Ngày</h4>
+            <p data-i18n="s4.p7d">Lịch 24 giờ · Mục tiêu đo lường cụ thể</p>
+          </div>
+        </div>
+        <div class="fp-row">
+          <div class="fp-check">✓</div>
+          <div class="fp-text">
+            <h4 data-i18n="s4.p8">Trang 8: Phục Hồi 60 Ngày</h4>
+            <p data-i18n="s4.p8d">Dinh dưỡng chống oxy hóa, mạc cơ Sol/Gel</p>
+          </div>
+        </div>
+        <div class="fp-row">
+          <div class="fp-check">✓</div>
+          <div class="fp-text">
+            <h4 data-i18n="s4.p9">Trang 9: Bền Vững 90 Ngày</h4>
+            <p data-i18n="s4.p9d">Củng cố Chính Khí, chu kỳ thanh lọc, Re-test Delta</p>
+          </div>
+        </div>
+        <div class="fp-row">
+          <div class="fp-check">✓</div>
+          <div class="fp-text">
+            <h4 data-i18n="s4.p10">Trang 10: Cận Lâm Sàng & Lời Bác Sĩ</h4>
+            <p data-i18n="s4.p10d">Bộ xét nghiệm cụ thể + Lời dặn riêng từ Bác sĩ</p>
+          </div>
+        </div>
+      </div>
+      <div class="fu-card">
+        <div class="fu-title" data-i18n="s4.fu">📅 Lịch Chăm Sóc Tự Động Tiếp Theo</div>
+        <div class="fu-item">
+          <div class="fu-dot"></div><span data-i18n="s4.fu7">Ngày T+7: Check-in — Bạn đã áp dụng bài tập xả kẹp 2 phút
+            chưa?</span>
+        </div>
+        <div class="fu-item">
+          <div class="fu-dot"></div><span data-i18n="s4.fu14">Ngày T+14: Cẩm nang thở Đan Điền kích hoạt phó giao
+            cảm</span>
+        </div>
+        <div class="fu-item">
+          <div class="fu-dot"></div><span data-i18n="s4.fu25">Ngày T+25: Thông báo "Chỉ còn 5 ngày hoàn thành chặng
+            1"</span>
+        </div>
+        <div class="fu-item">
+          <div class="fu-dot" style="background:var(--gold)"></div><span data-i18n="s4.fu30">Ngày T+30: 🔄 Re-test nhanh
+            1 phút đo Delta cải thiện</span>
+        </div>
+      </div>
+      <div class="restart-sec">
+        <p data-i18n="s4.restart">Muốn làm bài test cho người thân?</p>
+        <button class="btn btn-ghost" onclick="restart()" data-i18n="s4.btnRestart">↩️ Bắt Đầu Lại Bài Test Mới</button>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // ============================================================
+    // TRANSLATIONS
+    // ============================================================
+    const I18N = {
+      vi: {
+        'meta.title': 'Giải Mã Nguy Cơ Sinh Học Tam Bảo | Y Học Tích Hợp',
+        's0.badge': '🏥 Hệ Thống Đánh Giá Sức Khỏe Cá Nhân Hóa · Miễn Phí',
+        's0.h1': 'Giải Mã <span class="highlight">Nguy Cơ Sinh Học</span><br>Theo Ma Trận Tam Bảo',
+        's0.sub': 'Bài test 18 câu theo y học tích hợp Đông–Tây giúp bạn hiểu rõ tình trạng <strong>Tinh – Khí – Thần</strong> và nguy cơ bệnh mãn tính tiềm ẩn.',
+        's0.cta1': '🚀 Bắt Đầu Đánh Giá Miễn Phí', 's0.cta2': 'Tìm Hiểu Thêm ↓', 's0.cta3': '✨ Nhận Báo Cáo Sức Khỏe Miễn Phí Ngay',
+        's0.stat1': 'Tiêu chí lâm sàng', 's0.stat2': 'Tầng Tam Bảo', 's0.stat3': 'Trang báo cáo', 's0.stat4': 'Thời gian làm bài',
+        's0.proof': 'Phát triển bởi đội ngũ bác sĩ y học tích hợp · Chuẩn lâm sàng',
+        'p.tinh.name': 'TINH', 'p.tinh.desc': 'Vật liệu & Chuyển hóa tế bào. Gian bào, ti thể, nội tiết tố, chuyển hóa Lipid', 'p.tinh.t1': 'Dinh dưỡng', 'p.tinh.t2': 'Gan thận', 'p.tinh.t3': 'Mỡ máu',
+        'p.khi.name': 'KHÍ', 'p.khi.desc': 'Vi tuần hoàn & Mạc cơ. Lưu thông máu, oxy tế bào, điện sinh học mô', 'p.khi.t1': 'Tuần hoàn', 'p.khi.t2': 'Cột sống', 'p.khi.t3': 'Vi mạch',
+        'p.than.name': 'THẦN', 'p.than.desc': 'Thần kinh & Giấc ngủ. Trục não–ruột, DMN, cortisol, đồng hồ sinh học', 'p.than.t1': 'Giấc ngủ', 'p.than.t2': 'Stress', 'p.than.t3': 'Não bộ',
+        's1.step': 'Bước 1/3 · Thông Tin Cá Nhân', 's1.title': 'Cá Nhân Hóa<br>Hồ Sơ Sức Khỏe', 's1.sub': 'Thông tin của bạn chỉ dùng để tạo mã hồ sơ. Không gửi đến bất kỳ máy chủ nào.',
+        's1.f.name': 'Họ và Tên', 's1.f.namePh': 'Nguyễn Văn An', 's1.f.year': 'Năm Sinh', 's1.f.gender': 'Giới Tính',
+        's1.f.genderPh': '-- Chọn --', 's1.f.male': 'Nam', 's1.f.female': 'Nữ', 's1.f.other': 'Khác',
+        's1.f.occ': 'Nhóm Nghề Nghiệp', 's1.f.occPh': '-- Chọn nhóm gần nhất --',
+        's1.f.occ1': 'Văn phòng / Làm việc máy tính', 's1.f.occ2': 'Quản lý / Lãnh đạo', 's1.f.occ3': 'Lái xe / Vận chuyển', 's1.f.occ4': 'Y tế / Chăm sóc sức khỏe', 's1.f.occ5': 'Giáo viên / Giảng viên', 's1.f.occ6': 'Kinh doanh / Buôn bán', 's1.f.occ7': 'Lao động thể chất', 's1.f.occ8': 'Nội trợ / Tự do', 's1.f.occ9': 'Khác',
+        's1.privacy': 'Thông tin chỉ lưu trong phiên làm việc này, không gửi đến bất kỳ máy chủ nào.', 's1.submit': 'Tiếp Tục → Bắt Đầu Bài Test', 's1.back': '← Quay lại',
+        's2.step': 'Bước 2/3 · Bài Đánh Giá 18 Tiêu Chí', 's2.progress': 'Tiến độ hoàn thành', 's2.answered': 'Đã trả lời:', 's2.btnCalc': 'Xem Kết Quả →',
+        'g.tinh.title': 'TẦNG TINH — Vật Liệu & Chuyển Hóa', 'g.tinh.sub': 'Dinh dưỡng tế bào, chuyển hóa, và gian bào',
+        'g.khi.title': 'TẦNG KHÍ — Vi Tuần Hoàn & Mạc Cơ', 'g.khi.sub': 'Lưu thông máu, oxy mô, và điện sinh học chuỗi mạc cơ',
+        'g.than.title': 'TẦNG THẦN — Thần Kinh & Giấc Ngủ', 'g.than.sub': 'Cân bằng hệ thần kinh tự chủ, trục HPA, và chất lượng ngủ sâu', 'g.count': '6 câu',
+        'ans.never': 'Không / Không bao giờ', 'ans.sometimes': 'Thỉnh thoảng (1–2 lần/tuần)', 'ans.often': 'Thường xuyên (≥3 lần/tuần)',
+        'ans.score0': '0 điểm', 'ans.score1': '1 điểm', 'ans.score2': '2 điểm', 'rf.label': '🚩 Tiêu chí quan trọng',
+        's3.step': 'Bước 3/3 · Báo Cáo Sức Khỏe Cá Nhân', 's3.title': 'Hồ Sơ Giải Mã Sinh Học',
+        's3.sub': '4 trang đầu miễn phí · Trang 5–10 cần mở khóa để nhận phác đồ hoàn chỉnh', 'free': '✓ Miễn Phí',
+        'r1.title': 'Bìa & Lời Mở Đầu Chuyên Môn', 'r1.coverTitle': 'HỒ SƠ GIẢI MÃ NGUY CƠ SINH HỌC & ĐIỀU HÒA NỀN TẢNG',
+        'r1.coverSub': 'MA TRẬN TAM BẢO (TINH – KHÍ – THẦN)',
+        'r1.disc': '<strong>⚕️ Tuyên Bố Y Tế:</strong> Tài liệu mang tính chất tham vấn y học lối sống và dinh dưỡng bổ trợ. Không thay thế chẩn đoán cấp cứu của bệnh viện.',
+        'r1.drLabel': 'Thông điệp từ Bác sĩ phụ trách:', 'r1.drMsg': 'Cơ thể con người là một hệ sinh thái tự điều chỉnh. Triệu chứng mỏi cổ, khó ngủ hay tăng mỡ bụng là tín hiệu báo động khi ti thể và mạch máu bị quá tải. Báo cáo này là bản đồ dẫn đường hỗ trợ điều chỉnh lối sống chủ động.',
+        'r2.title': 'Hồ Sơ Sinh Học Tam Bảo Tổng Thể', 'r2.scoreLabel': 'Tổng điểm tích tụ rác sinh học',
+        'r3.title': 'Điểm Mạnh Cơ Thể — Vốn Sinh Học Bảo Tồn', 'r3.note1': 'Ý nghĩa:', 'r3.note2': 'Những vùng còn bảo tồn tốt là nền tảng nội lực để cơ thể phục hồi. Nếu can thiệp đúng vào điểm nghẽn, các vùng này sẽ khuếch đại hiệu quả phục hồi theo cấp số nhân.',
+        'r4.title': 'Điểm Yếu Gốc Rễ & Các Điểm Nghẽn Chính',
+        'zone.xanh': '🟢 VÙNG XANH', 'zone.vang': '🟡 VÙNG VÀNG', 'zone.cam': '🟠 VÙNG CAM', 'zone.do': '🔴 VÙNG ĐỎ',
+        'zone.xanh.desc': 'Chính Khí Vững – Khả năng tự điều hòa tốt, gian bào sạch. Duy trì lối sống phòng ngừa.',
+        'zone.vang.desc': 'Khí Trệ Tiềm Ẩn – Bắt đầu tích lũy vi viêm và co cứng mạc cơ cục bộ. Cần giải tỏa sớm.',
+        'zone.cam.desc': 'Tiến Triển Mạn Tính – Kháng Insulin rõ nét, co kẹp mạch máu não, suy giảm tế bào miễn dịch NK.',
+        'zone.do.desc': 'Báo Động Biến Cố – Toan hóa gian bào sâu, nguy cơ đột quỵ thiếu máu não cục bộ hoặc biến tính mô.',
+        'rpt.axis': 'Trục chịu tải lớn nhất:', 'rpt.high': '⚠️ Tầng này cần ưu tiên can thiệp trước.', 'rpt.ok': 'Mức tải ở ngưỡng quản lý được.',
+        'rpt.summ': '📊 Nhận Định Tổng Thể:', 'rpt.no_strength': 'Tất cả tiêu chí đều có điểm. Ưu tiên phục hồi tầng cao nhất trước.',
+        'rpt.no_weak': '🎉 Không có điểm nghẽn đáng kể! Cơ thể đang trong trạng thái tốt.',
+        'rpt.pri1': 'ƯU TIÊN 1', 'rpt.pri2': 'ƯU TIÊN 2', 'rpt.pri3': 'ƯU TIÊN 3', 'rpt.rf': '🚩 Cờ Đỏ',
+        'rpt.frequent': '⚠️ Tần suất thường xuyên – cơ chế bệnh sinh đang hoạt động tích cực. Cần can thiệp sớm.',
+        'rpt.occasional': '⚡ Triệu chứng xuất hiện định kỳ – giai đoạn tích lũy. Đây là thời điểm lý tưởng để can thiệp lối sống.',
+        'rpt.mech': '⚗️ Cơ chế sinh học:',
+        'cov.name': 'Họ và Tên', 'cov.age': 'Tuổi', 'cov.gender': 'Giới Tính', 'cov.occ': 'Nghề Nghiệp', 'cov.code': 'Mã Hồ Sơ', 'cov.date': 'Ngày Đánh Giá',
+        'pw.p5title': 'Bản Đồ Phân Tầng Nguy Cơ Bệnh Lý', 'pw.p6title': 'Phác Đồ Hành Động 30/60/90 Ngày',
+        'pw.title': 'Bác Sĩ Đã Hoàn Thiện Phác Đồ Cá Nhân Của Bạn',
+        'pw.desc': 'Dựa trên <strong style="color:var(--text-bright)">chỉ số sinh học thực tế</strong> vừa đánh giá, hồ sơ 10 trang bao gồm lộ trình phục hồi 30/60/90 ngày, Top 5 hành động ưu tiên và chỉ dẫn cận lâm sàng.',
+        'pw.pg5num': 'TRANG 5', 'pw.pg5name': '🗺️ Bản Đồ Nguy Cơ Bệnh Lý',
+        'pw.pg6num': 'TRANG 6', 'pw.pg6name': '🏆 Top 5 Ưu Tiên Cải Thiện',
+        'pw.pg7num': 'TRANG 7', 'pw.pg7name': '📅 Kế Hoạch 30 Ngày',
+        'pw.pg8num': 'TRANG 8', 'pw.pg8name': '⚡ Phục Hồi 60 Ngày',
+        'pw.pg9num': 'TRANG 9', 'pw.pg9name': '🛡️ Bền Vững 90 Ngày',
+        'pw.pg10num': 'TRANG 10', 'pw.pg10name': '🩺 Cận Lâm Sàng & Bác Sĩ Duyệt',
+        'pw.priceOld': '299.000đ', 'pw.priceNew': '99.000đ', 'pw.priceTag': '🎁 Ra mắt ưu đãi · Trọn bộ 10 trang + Lời dặn Bác sĩ',
+        'pw.bank': 'Ngân hàng', 'pw.acct': 'Số TK', 'pw.name': 'Tên TK', 'pw.ref': 'Nội dung', 'pw.amount': 'Số tiền',
+        'pw.qrNote': '📱 Quét mã QR hoặc chuyển khoản<br>Nhận báo cáo qua Zalo trong 30 phút',
+        'pw.guarTitle': 'Cam Kết Hoàn Tiền 100% Trong 24 Giờ', 'pw.guarDesc': 'Nếu báo cáo không cá nhân hóa đúng với thông tin bạn đã cung cấp, chúng tôi hoàn tiền ngay lập tức.',
+        'pw.btnPay': '💳 Tôi Đã Chuyển Khoản — Nhận Báo Cáo Ngay', 'pw.btnZalo': 'Liên hệ hỗ trợ qua Zalo',
+        'pw.zalo': '📞 Vui lòng chuyển khoản trước. Chúng tôi sẽ liên hệ qua Zalo!',
+        's4.title': 'Cảm Ơn Bạn Đã Tin Tưởng!', 's4.sub': 'Chúng tôi đã nhận được thông báo. Bác sĩ sẽ kiểm duyệt và gửi qua Zalo trong 30 phút.',
+        's4.pkg': '📦 Gói Hồ Sơ 10 Trang Sẽ Bao Gồm:', 's4.pkgSub': 'Được Bác sĩ kiểm duyệt và cá nhân hóa riêng',
+        's4.p14': 'Trang 1–4: Preview Sức Khỏe Tổng Thể', 's4.p14d': 'Đã xem · Radar chart, điểm mạnh và điểm yếu',
+        's4.p5': 'Trang 5: Bản Đồ Phân Tầng Nguy Cơ', 's4.p5d': '4 cụm: Kháng Insulin, Vi mạch não, Cột sống, NK cells',
+        's4.p6': 'Trang 6: Top 5 Ưu Tiên Cải Thiện', 's4.p6d': '5 hành động xếp theo thứ tự khẩn cấp cá nhân',
+        's4.p7': 'Trang 7: Kế Hoạch 30 Ngày', 's4.p7d': 'Lịch 24 giờ · Mục tiêu đo lường cụ thể',
+        's4.p8': 'Trang 8: Phục Hồi 60 Ngày', 's4.p8d': 'Dinh dưỡng chống oxy hóa, mạc cơ Sol/Gel',
+        's4.p9': 'Trang 9: Bền Vững 90 Ngày', 's4.p9d': 'Củng cố Chính Khí, chu kỳ thanh lọc, Re-test Delta',
+        's4.p10': 'Trang 10: Cận Lâm Sàng & Lời Bác Sĩ', 's4.p10d': 'Bộ xét nghiệm cụ thể + Lời dặn riêng từ Bác sĩ',
+        's4.fu': '📅 Lịch Chăm Sóc Tự Động Tiếp Theo',
+        's4.fu7': 'Ngày T+7: Check-in — Bạn đã áp dụng bài tập xả kẹp 2 phút chưa?',
+        's4.fu14': 'Ngày T+14: Cẩm nang thở Đan Điền kích hoạt phó giao cảm',
+        's4.fu25': 'Ngày T+25: Thông báo "Chỉ còn 5 ngày hoàn thành chặng 1"',
+        's4.fu30': 'Ngày T+30: 🔄 Re-test nhanh 1 phút đo Delta cải thiện',
+        's4.restart': 'Muốn làm bài test cho người thân?', 's4.btnRestart': '↩️ Bắt Đầu Lại Bài Test Mới',
+        'toast.incomplete': '⚠️ Vui lòng trả lời tất cả 18 câu', 'toast.fillInfo': '⚠️ Vui lòng điền đầy đủ thông tin', 'toast.badYear': '⚠️ Năm sinh không hợp lệ',
+        'tinh': 'TINH', 'khi': 'KHÍ', 'than': 'THẦN',
+      },
+      en: {
+        'meta.title': 'Tam Bao Biological Risk Assessment | Integrative Medicine',
+        's0.badge': '🏥 Personalized Health Assessment System · Free',
+        's0.h1': 'Decode Your <span class="highlight">Biological Risk</span><br>with the Tam Bao Matrix',
+        's0.sub': 'An 18-question test based on East–West integrative medicine to help you understand your <strong>Essence–Qi–Spirit</strong> status and latent chronic disease risks.',
+        's0.cta1': '🚀 Start Free Assessment', 's0.cta2': 'Learn More ↓', 's0.cta3': '✨ Get Free Health Report Now',
+        's0.stat1': 'Clinical criteria', 's0.stat2': 'Tam Bao tiers', 's0.stat3': 'Report pages', 's0.stat4': 'Time to complete',
+        's0.proof': 'Developed by a team of integrative medicine physicians · Clinically validated',
+        'p.tinh.name': 'ESSENCE', 'p.tinh.desc': 'Cellular materials & metabolism. Interstitium, mitochondria, hormones, lipid metabolism', 'p.tinh.t1': 'Nutrition', 'p.tinh.t2': 'Liver & Kidney', 'p.tinh.t3': 'Blood lipids',
+        'p.khi.name': 'QI', 'p.khi.desc': 'Microcirculation & fascia. Blood flow, cellular oxygen, bioelectrical field', 'p.khi.t1': 'Circulation', 'p.khi.t2': 'Spine', 'p.khi.t3': 'Microvasculature',
+        'p.than.name': 'SPIRIT', 'p.than.desc': 'Nervous system & sleep. Gut–brain axis, DMN, cortisol, biological clock', 'p.than.t1': 'Sleep', 'p.than.t2': 'Stress', 'p.than.t3': 'Brain',
+        's1.step': 'Step 1/3 · Personal Information', 's1.title': 'Personalize Your<br>Health Profile', 's1.sub': 'Your data is only used to generate your profile code. Nothing is sent to any server.',
+        's1.f.name': 'Full Name', 's1.f.namePh': 'John Smith', 's1.f.year': 'Birth Year', 's1.f.gender': 'Gender',
+        's1.f.genderPh': '-- Select --', 's1.f.male': 'Male', 's1.f.female': 'Female', 's1.f.other': 'Other',
+        's1.f.occ': 'Occupation Group', 's1.f.occPh': '-- Select closest group --',
+        's1.f.occ1': 'Office / Computer work', 's1.f.occ2': 'Manager / Executive', 's1.f.occ3': 'Driver / Transportation', 's1.f.occ4': 'Healthcare', 's1.f.occ5': 'Teacher / Lecturer', 's1.f.occ6': 'Business / Sales', 's1.f.occ7': 'Manual labor / Factory', 's1.f.occ8': 'Homemaker / Freelance', 's1.f.occ9': 'Other',
+        's1.privacy': 'Your information is only stored locally in this session and is never sent to any server.', 's1.submit': 'Continue → Start Assessment', 's1.back': '← Back',
+        's2.step': 'Step 2/3 · 18-Criteria Assessment', 's2.progress': 'Completion progress', 's2.answered': 'Answered:', 's2.btnCalc': 'View Results →',
+        'g.tinh.title': 'ESSENCE TIER — Materials & Metabolism', 'g.tinh.sub': 'Cellular nutrition, metabolism, and interstitium',
+        'g.khi.title': 'QI TIER — Microcirculation & Fascia', 'g.khi.sub': 'Blood flow, tissue oxygen, and fascial bioelectrics',
+        'g.than.title': 'SPIRIT TIER — Nervous System & Sleep', 'g.than.sub': 'Autonomic balance, HPA axis, and deep sleep quality', 'g.count': '6 questions',
+        'ans.never': 'Never / Not at all', 'ans.sometimes': 'Sometimes (1–2×/week)', 'ans.often': 'Often (≥3×/week)',
+        'ans.score0': '0 pts', 'ans.score1': '1 pt', 'ans.score2': '2 pts', 'rf.label': '🚩 Key indicator',
+        's3.step': 'Step 3/3 · Personal Health Report', 's3.title': 'Biological Risk Profile',
+        's3.sub': 'First 4 pages free · Pages 5–10 unlock full recovery protocol', 'free': '✓ Free',
+        'r1.title': 'Cover & Clinical Introduction', 'r1.coverTitle': 'BIOLOGICAL RISK DECODING PROFILE & FOUNDATIONAL REGULATION',
+        'r1.coverSub': 'TAM BAO MATRIX (ESSENCE – QI – SPIRIT)',
+        'r1.disc': '<strong>⚕️ Medical Disclaimer:</strong> This document serves as lifestyle medicine and nutritional advisory only. It does not replace emergency hospital diagnosis.',
+        'r1.drLabel': 'Message from the Attending Physician:', 'r1.drMsg': 'The human body is a self-regulating ecosystem. Symptoms like neck fatigue, poor sleep, or belly fat gain are warning signals that mitochondria and blood vessels are overloaded. This report is a roadmap to support proactive lifestyle adjustment.',
+        'r2.title': 'Overall Tam Bao Biological Profile', 'r2.scoreLabel': 'Total biological waste accumulation score',
+        'r3.title': 'Body Strengths — Preserved Biological Capital', 'r3.note1': 'Significance:', 'r3.note2': 'Well-preserved areas form the foundation of internal resources for recovery. When blockages are addressed correctly, these areas will amplify recovery exponentially.',
+        'r4.title': 'Root Weaknesses & Primary Blockages',
+        'zone.xanh': '🟢 GREEN ZONE', 'zone.vang': '🟡 YELLOW ZONE', 'zone.cam': '🟠 ORANGE ZONE', 'zone.do': '🔴 RED ZONE',
+        'zone.xanh.desc': 'Vital Qi Strong – Good self-regulation capacity, clean interstitium. Maintain preventive lifestyle.',
+        'zone.vang.desc': 'Latent Qi Stagnation – Beginning to accumulate microinflammation and local fascial rigidity. Early intervention needed.',
+        'zone.cam.desc': 'Chronic Progression – Obvious insulin resistance, cerebral microvascular compression, declining NK immune cells.',
+        'zone.do.desc': 'Event Alert – Deep interstitial acidosis, risk of local ischemic stroke or tissue degeneration.',
+        'rpt.axis': 'Highest load tier:', 'rpt.high': '⚠️ This tier requires priority intervention.', 'rpt.ok': 'Load level within manageable range.',
+        'rpt.summ': '📊 Overall Assessment:', 'rpt.no_strength': 'All criteria have scores. Prioritize recovering the highest-load tier first.',
+        'rpt.no_weak': '🎉 No significant blockages found! Your body is in good shape.',
+        'rpt.pri1': 'PRIORITY 1', 'rpt.pri2': 'PRIORITY 2', 'rpt.pri3': 'PRIORITY 3', 'rpt.rf': '🚩 Red Flag',
+        'rpt.frequent': '⚠️ High frequency – biological mechanism is actively operating. Early intervention needed.',
+        'rpt.occasional': '⚡ Periodic symptoms – accumulation phase. This is the ideal time for lifestyle intervention.',
+        'rpt.mech': '⚗️ Biological mechanism:',
+        'cov.name': 'Full Name', 'cov.age': 'Age', 'cov.gender': 'Gender', 'cov.occ': 'Occupation', 'cov.code': 'Profile Code', 'cov.date': 'Assessment Date',
+        'pw.p5title': 'Disease Risk Stratification Map', 'pw.p6title': '30/60/90-Day Action Protocol',
+        'pw.title': 'Your Physician Has Completed Your Personal Protocol',
+        'pw.desc': 'Based on your <strong style="color:var(--text-bright)">actual biological scores</strong>, the 10-page dossier includes a 30/60/90-day recovery roadmap, Top 5 priority actions, and clinical lab guidance.',
+        'pw.pg5num': 'PAGE 5', 'pw.pg5name': '🗺️ Disease Risk Map',
+        'pw.pg6num': 'PAGE 6', 'pw.pg6name': '🏆 Top 5 Priority Actions',
+        'pw.pg7num': 'PAGE 7', 'pw.pg7name': '📅 30-Day Plan',
+        'pw.pg8num': 'PAGE 8', 'pw.pg8name': '⚡ 60-Day Recovery',
+        'pw.pg9num': 'PAGE 9', 'pw.pg9name': '🛡️ 90-Day Sustain',
+        'pw.pg10num': 'PAGE 10', 'pw.pg10name': '🩺 Labs & Physician Notes',
+        'pw.priceOld': '$15.00', 'pw.priceNew': '$4.99', 'pw.priceTag': '🎁 Launch offer · Complete 10-page + Physician notes',
+        'pw.bank': 'Bank', 'pw.acct': 'Account No.', 'pw.name': 'Account Name', 'pw.ref': 'Reference', 'pw.amount': 'Amount',
+        'pw.qrNote': '📱 Scan QR or bank transfer<br>Receive report via Zalo within 30 minutes',
+        'pw.guarTitle': '100% Money-Back Guarantee Within 24 Hours', 'pw.guarDesc': 'If the report is not personalized to the information you provided, we will refund immediately.',
+        'pw.btnPay': '💳 I Have Paid — Send My Report Now', 'pw.btnZalo': 'Contact support via Zalo',
+        'pw.zalo': '📞 Please complete payment first. We will contact you via Zalo!',
+        's4.title': 'Thank You for Trusting Us!', 's4.sub': 'We have received your notification and are preparing your dossier. Your physician will review and send it via Zalo within 30 minutes.',
+        's4.pkg': '📦 Your 10-Page Health Dossier Will Include:', 's4.pkgSub': 'Physician-reviewed and personally tailored',
+        's4.p14': 'Pages 1–4: Overall Health Preview', 's4.p14d': 'Already viewed · Radar chart, strengths and weaknesses',
+        's4.p5': 'Page 5: Disease Risk Stratification Map', 's4.p5d': '4 clusters: Insulin resistance, Brain microvasculature, Spine, NK cells',
+        's4.p6': 'Page 6: Top 5 Priority Improvements', 's4.p6d': '5 actions ranked by personal urgency order',
+        's4.p7': 'Page 7: 30-Day Plan', 's4.p7d': '24-hour schedule · Specific measurable goals',
+        's4.p8': 'Page 8: 60-Day Recovery', 's4.p8d': 'Antioxidant nutrition, fascia Sol/Gel transition',
+        's4.p9': 'Page 9: 90-Day Sustainability', 's4.p9d': 'Consolidate Vital Qi, cleanse cycles, Delta re-test',
+        's4.p10': 'Page 10: Clinical Labs & Physician Notes', 's4.p10d': 'Specific test panel + personalized physician message',
+        's4.fu': '📅 Upcoming Automated Care Schedule',
+        's4.fu7': 'Day T+7: Check-in — Have you started the 2-minute decompression exercise?',
+        's4.fu14': 'Day T+14: Dan Tian breathing guide to activate parasympathetic nervous system',
+        's4.fu25': 'Day T+25: Alert "Only 5 days left to complete phase 1"',
+        's4.fu30': 'Day T+30: 🔄 Quick 1-minute re-test to measure Delta improvement',
+        's4.restart': 'Want to take the test for a family member?', 's4.btnRestart': '↩️ Start a New Assessment',
+        'toast.incomplete': '⚠️ Please answer all 18 questions', 'toast.fillInfo': '⚠️ Please fill in all required fields', 'toast.badYear': '⚠️ Invalid birth year',
+        'tinh': 'ESSENCE', 'khi': 'QI', 'than': 'SPIRIT',
+      },
+      zh: {
+        'meta.title': '三宝健康风险评估 | 中西整合医学',
+        's0.badge': '🏥 个性化健康评估系统 · 免费',
+        's0.h1': '解码您的<span class="highlight">生物学风险</span><br>三宝矩阵（精·气·神）',
+        's0.sub': '基于东西方整合医学的18题测试，帮助您了解<strong>精·气·神</strong>状态，发现潜在慢性病风险。',
+        's0.cta1': '🚀 免费开始评估', 's0.cta2': '了解更多 ↓', 's0.cta3': '✨ 立即获取免费健康报告',
+        's0.stat1': '临床评估指标', 's0.stat2': '三宝层级', 's0.stat3': '报告页数', 's0.stat4': '完成时间',
+        's0.proof': '由整合医学医师团队开发 · 临床验证',
+        'p.tinh.name': '精', 'p.tinh.desc': '物质与细胞代谢。组织间液、线粒体、激素、脂质代谢', 'p.tinh.t1': '营养', 'p.tinh.t2': '肝肾', 'p.tinh.t3': '血脂',
+        'p.khi.name': '气', 'p.khi.desc': '微循环与筋膜。血流、细胞氧合、生物电场', 'p.khi.t1': '循环', 'p.khi.t2': '脊柱', 'p.khi.t3': '微血管',
+        'p.than.name': '神', 'p.than.desc': '神经系统与睡眠。肠脑轴、DMN、皮质醇、生物钟', 'p.than.t1': '睡眠', 'p.than.t2': '压力', 'p.than.t3': '大脑',
+        's1.step': '第1步/共3步 · 个人信息', 's1.title': '个性化<br>健康档案', 's1.sub': '您的信息仅用于生成档案编码，不会发送到任何服务器。',
+        's1.f.name': '姓名', 's1.f.namePh': '张三', 's1.f.year': '出生年份', 's1.f.gender': '性别',
+        's1.f.genderPh': '-- 请选择 --', 's1.f.male': '男', 's1.f.female': '女', 's1.f.other': '其他',
+        's1.f.occ': '职业类别', 's1.f.occPh': '-- 选择最接近的类别 --',
+        's1.f.occ1': '办公室 / 电脑工作', 's1.f.occ2': '管理 / 领导层', 's1.f.occ3': '驾驶 / 运输', 's1.f.occ4': '医疗 / 健康护理', 's1.f.occ5': '教师 / 讲师', 's1.f.occ6': '商业 / 销售', 's1.f.occ7': '体力劳动 / 工人', 's1.f.occ8': '家庭主妇 / 自由职业', 's1.f.occ9': '其他',
+        's1.privacy': '您的信息仅在本次会话中存储，不会发送到任何服务器。', 's1.submit': '继续 → 开始测试', 's1.back': '← 返回',
+        's2.step': '第2步/共3步 · 18项评估', 's2.progress': '完成进度', 's2.answered': '已完成：', 's2.btnCalc': '查看结果 →',
+        'g.tinh.title': '精层 — 物质与代谢', 'g.tinh.sub': '细胞营养、代谢与组织间液',
+        'g.khi.title': '气层 — 微循环与筋膜', 'g.khi.sub': '血流、组织氧合与筋膜生物电',
+        'g.than.title': '神层 — 神经系统与睡眠', 'g.than.sub': '自主神经平衡、HPA轴与深度睡眠质量', 'g.count': '6题',
+        'ans.never': '从不 / 没有', 'ans.sometimes': '偶尔 (每周1–2次)', 'ans.often': '经常 (每周≥3次)',
+        'ans.score0': '0分', 'ans.score1': '1分', 'ans.score2': '2分', 'rf.label': '🚩 关键指标',
+        's3.step': '第3步/共3步 · 个人健康报告', 's3.title': '生物学风险档案',
+        's3.sub': '前4页免费 · 第5–10页需解锁以获取完整调理方案', 'free': '✓ 免费',
+        'r1.title': '封面与专业导言', 'r1.coverTitle': '生物学风险解码档案与基础调节报告',
+        'r1.coverSub': '三宝矩阵（精 – 气 – 神）',
+        'r1.disc': '<strong>⚕️ 医疗声明：</strong>本文件仅作为生活方式医学和营养辅助咨询，不替代医院紧急诊断。',
+        'r1.drLabel': '主治医师寄语：', 'r1.drMsg': '人体是一个自我调节的生态系统。颈部疲劳、睡眠不佳或腹部脂肪积累是线粒体和血管过载的警告信号。这份报告是您主动调整生活方式的路线图。',
+        'r2.title': '三宝生物学综合档案', 'r2.scoreLabel': '生物废物积累总分',
+        'r3.title': '身体优势 — 保存完好的生物资本', 'r3.note1': '意义：', 'r3.note2': '保存完好的区域是身体恢复的内在基础。当正确干预堵塞点时，这些区域将呈指数级放大恢复效果。',
+        'r4.title': '根本弱点与主要堵塞点',
+        'zone.xanh': '🟢 绿色区域', 'zone.vang': '🟡 黄色区域', 'zone.cam': '🟠 橙色区域', 'zone.do': '🔴 红色区域',
+        'zone.xanh.desc': '正气充足 – 自我调节能力强，组织间液清洁。保持预防性生活方式。',
+        'zone.vang.desc': '潜在气滞 – 开始积累微炎症和局部筋膜僵硬。需要尽早疏解。',
+        'zone.cam.desc': '慢性进展 – 明显胰岛素抵抗，脑微血管受压，NK免疫细胞功能下降。',
+        'zone.do.desc': '事件预警 – 深层组织间液酸化，局灶性缺血性卒中或组织变性风险。',
+        'rpt.axis': '负荷最大层级：', 'rpt.high': '⚠️ 该层级需要优先干预。', 'rpt.ok': '负荷水平在可管理范围内。',
+        'rpt.summ': '📊 综合评估：', 'rpt.no_strength': '所有指标均有得分。优先恢复负荷最高的层级。',
+        'rpt.no_weak': '🎉 未发现明显堵塞点！您的身体状态良好。',
+        'rpt.pri1': '优先级 1', 'rpt.pri2': '优先级 2', 'rpt.pri3': '优先级 3', 'rpt.rf': '🚩 红旗警告',
+        'rpt.frequent': '⚠️ 高频率出现 – 生物学机制正在积极运作。需要尽早干预。',
+        'rpt.occasional': '⚡ 周期性症状 – 积累阶段。这是生活方式干预的理想时机。',
+        'rpt.mech': '⚗️ 生物学机制：',
+        'cov.name': '姓名', 'cov.age': '年龄', 'cov.gender': '性别', 'cov.occ': '职业', 'cov.code': '档案编码', 'cov.date': '评估日期',
+        'pw.p5title': '疾病风险分层地图', 'pw.p6title': '30/60/90天行动方案',
+        'pw.title': '医生已完成您的个性化调理方案',
+        'pw.desc': '基于您的<strong style="color:var(--text-bright)">实际生物学指标</strong>，10页档案包含30/60/90天恢复路线图、5大优先行动和临床检查指引。',
+        'pw.pg5num': '第5页', 'pw.pg5name': '🗺️ 疾病风险地图',
+        'pw.pg6num': '第6页', 'pw.pg6name': '🏆 Top 5优先改善',
+        'pw.pg7num': '第7页', 'pw.pg7name': '📅 30天计划',
+        'pw.pg8num': '第8页', 'pw.pg8name': '⚡ 60天恢复',
+        'pw.pg9num': '第9页', 'pw.pg9name': '🛡️ 90天持续',
+        'pw.pg10num': '第10页', 'pw.pg10name': '🩺 检查建议与医生批注',
+        'pw.priceOld': '299,000越南盾', 'pw.priceNew': '99,000越南盾', 'pw.priceTag': '🎁 上线优惠 · 完整10页 + 医生寄语',
+        'pw.bank': '银行', 'pw.acct': '账号', 'pw.name': '账户名', 'pw.ref': '备注', 'pw.amount': '金额',
+        'pw.qrNote': '📱 扫描二维码或银行转账<br>30分钟内通过Zalo收到报告',
+        'pw.guarTitle': '24小时内100%退款保证', 'pw.guarDesc': '如果报告未能根据您提供的信息进行个性化，我们将立即退款。',
+        'pw.btnPay': '💳 我已付款 — 立即发送报告', 'pw.btnZalo': '通过Zalo联系支持',
+        'pw.zalo': '📞 请先完成付款，我们将通过Zalo联系您！',
+        's4.title': '感谢您的信任！', 's4.sub': '我们已收到您的通知，正在准备您的档案。医生将在30分钟内审阅并通过Zalo发送。',
+        's4.pkg': '📦 您的10页健康档案将包含：', 's4.pkgSub': '由医生审阅并个性化定制',
+        's4.p14': '第1–4页：健康总览预览', 's4.p14d': '已查看 · 雷达图、优势与劣势',
+        's4.p5': '第5页：疾病风险分层地图', 's4.p5d': '4大集群：胰岛素抵抗、脑微血管、脊柱、NK细胞',
+        's4.p6': '第6页：Top 5优先改善', 's4.p6d': '按个人紧迫程度排序的5项行动',
+        's4.p7': '第7页：30天计划', 's4.p7d': '24小时日程 · 具体可量化目标',
+        's4.p8': '第8页：60天恢复', 's4.p8d': '抗氧化营养，筋膜Sol/Gel转换',
+        's4.p9': '第9页：90天持续', 's4.p9d': '巩固正气，净化周期，Delta复测',
+        's4.p10': '第10页：临床检查与医生批注', 's4.p10d': '具体检查套餐 + 医生个性化寄语',
+        's4.fu': '📅 后续自动化关怀计划',
+        's4.fu7': 'T+7天：回访 — 您开始2分钟减压练习了吗？',
+        's4.fu14': 'T+14天：丹田呼吸激活副交感神经系统指南',
+        's4.fu25': 'T+25天：提醒"距完成第1阶段还有5天"',
+        's4.fu30': 'T+30天：🔄 1分钟快速复测，测量Delta改善值',
+        's4.restart': '想为家人做测试？', 's4.btnRestart': '↩️ 开始新的测试',
+        'toast.incomplete': '⚠️ 请回答所有18个问题', 'toast.fillInfo': '⚠️ 请填写所有必填信息', 'toast.badYear': '⚠️ 出生年份无效',
+        'tinh': '精', 'khi': '气', 'than': '神',
+      }
+    };
+
+    // ============================================================
+    // QUESTION DATA (multilingual)
+    // ============================================================
+    const QS_DATA = {
+      vi: [
+        { id: 'T1', g: 'tinh', w: 1.0, rf: false, txt: 'Bạn có thường xuyên ăn đồ ngọt, nước ngọt, đồ chiên rán dầu mỡ biến tính, thực phẩm chế biến sẵn?', mech: 'Axit hóa gian bào, vi viêm AGEs (sản phẩm glycation bền vững)', sl: 'Chế độ ăn uống lành mạnh', sd: 'Cơ thể không bị tích lũy AGEs và vi viêm mãn tính. Tế bào gian bào đang ở môi trường kiềm tính tốt.' },
+        { id: 'T2', g: 'tinh', w: 1.2, rf: false, txt: 'Bạn có thói quen hễ mệt/đau/ốm là tự mua thuốc giảm đau, hạ sốt, kháng sinh hoặc thuốc sủi uống ngay?', mech: 'Quá tải gan thận, ức chế ti thể, phá hủy hệ vi sinh đường ruột', sl: 'Gan thận chưa bị quá tải hóa chất', sd: 'Chức năng giải độc gan thận đang trong ngưỡng bình thường. Ti thể chưa bị ức chế bởi thuốc tổng hợp liều cao.' },
+        { id: 'T3', g: 'tinh', w: 1.3, rf: false, txt: 'Sau bữa trưa/tối bạn có bị thèm ngọt, buồn ngủ gà gật, và vòng bụng dưới có xu hướng tích mỡ nhanh?', mech: 'Kháng Insulin tiềm ẩn, Đàm trọc trệ, rối loạn chu trình đường huyết sau ăn', sl: 'Nhạy cảm Insulin còn tốt', sd: 'Cơ thể vẫn xử lý đường huyết hiệu quả sau bữa ăn. Không có dấu hiệu kháng Insulin – lợi thế phòng ngừa tiểu đường type 2.' },
+        { id: 'T4', g: 'tinh', w: 1.4, rf: false, txt: 'Bạn đã từng được chẩn đoán (hoặc nghi ngờ): Men gan cao, gan nhiễm mỡ, mỡ máu cao (Triglyceride/LDL-c)?', mech: 'Rối loạn chuyển hóa Lipid – gan tích lũy mỡ nội tạng, tăng nguy cơ xơ vữa động mạch', sl: 'Chuyển hóa Lipid chưa có bất thường', sd: 'Chưa có tiền sử rối loạn mỡ máu hoặc gan nhiễm mỡ. Hệ thống xử lý Lipid đang hoạt động bình thường.' },
+        { id: 'T5', g: 'tinh', w: 1.1, rf: false, txt: 'Bạn có hay bị nhức mỏi âm ỉ các khớp (ngón chân, cổ chân, đầu gối) sau các bữa ăn nhiều đạm hoặc bia rượu?', mech: 'Lắng đọng Urat, toan gian bào – pH mô bị axit hóa gây viêm khớp vi tinh thể', sl: 'Không có lắng đọng Urat', sd: 'Khớp xương chưa có dấu hiệu lắng đọng axit uric. pH gian bào đang trong ngưỡng kiềm tính bảo vệ sụn khớp.' },
+        { id: 'T6', g: 'tinh', w: 1.5, rf: true, txt: 'Da bạn có hay xuất hiện vết bầm tím không rõ va chạm, mụn nhọt lâu lành, có tiền sử polyp/u xơ/hạch sần?', mech: 'Huyết ứ, suy giảm miễn dịch mô – tế bào NK giảm hoạt tính, môi trường thúc đẩy biến tính tế bào', sl: 'Miễn dịch mô còn mạnh', sd: 'Không có dấu hiệu suy giảm miễn dịch tế bào cục bộ. Tế bào NK (Natural Killer) duy trì chức năng giám sát phân bào tốt.' },
+        { id: 'K1', g: 'khi', w: 1.1, rf: false, txt: 'Bạn có hay thấy cơ thể uể oải, nói nhiều thì hụt hơi, leo 2–3 tầng cầu thang là thở dốc, dễ cảm vặt?', mech: 'Khí hư, Vệ Khí suy giảm – tim phổi thiếu công suất dự trữ, hệ miễn dịch bề mặt yếu', sl: 'Vệ Khí và sức đề kháng còn tốt', sd: 'Hệ hô hấp và tim mạch dự trữ đang trong ngưỡng tốt. Vệ Khí bảo vệ bề mặt cơ thể chưa bị suy giảm đáng kể.' },
+        { id: 'K2', g: 'khi', w: 1.5, rf: true, txt: 'Cổ vai gáy bạn có bị căng cứng, nhức mỏi vùng chẩm sau đầu, quay cổ thấy vướng hoặc hoa mắt chóng mặt nhẹ?', mech: 'Co kẹp động mạch đốt sống V1–V4 – thiếu máu não sau, nguy cơ đột quỵ vi mạch và suy thoái Glymphatic', sl: 'Vi tuần hoàn não sau còn thông suốt', sd: 'Không có dấu hiệu co kẹp động mạch đốt sống. Lưu lượng máu não sau đang cung cấp đầy đủ cho tiểu não và thân não.' },
+        { id: 'K3', g: 'khi', w: 1.0, rf: false, txt: 'Bạn có thói quen ngồi liên tục trên 50 phút không vận động (dân văn phòng, ngồi máy tính, lái xe)?', mech: 'Khí trệ chuỗi mạc cơ vận động – dịch mạc cơ đóng gel, tế bào cơ thiếu oxy cục bộ', sl: 'Vận động thường xuyên, chuỗi mạc cơ linh hoạt', sd: 'Bạn có thói quen vận động tốt. Dịch mạc cơ duy trì trạng thái Sol (lỏng linh hoạt), tế bào cơ được tưới dưỡng chất liên tục.' },
+        { id: 'K4', g: 'khi', w: 1.3, rf: false, txt: 'Lưng dưới/thắt lưng của bạn có hay bị lạnh mỏi, bàn chân/tay lạnh, sợ gió lạnh hoặc sợ ngồi máy lạnh?', mech: 'Thận Dương hư, Mệnh Môn hỏa suy – nền nhiệt cơ thể thấp, chuyển hóa năng lượng ti thể giảm', sl: 'Thận Dương và Mệnh Môn vững', sd: 'Nền nhiệt cơ thể đang tốt. Chức năng Thận Dương duy trì quá trình chuyển hóa năng lượng ti thể hiệu quả.' },
+        { id: 'K5', g: 'khi', w: 1.2, rf: false, txt: 'Về chiều tối, bắp chân hoặc bàn chân bạn có cảm giác nặng trịch như đeo chì, đi giày thấy chật hơn buổi sáng?', mech: 'Ứ trệ dịch gian bào (pha Gel) – bạch huyết chi dưới không dẫn lưu được, phù nề mô mạc', sl: 'Tuần hoàn bạch huyết chi dưới thông thoáng', sd: 'Không có dấu hiệu ứ trệ dịch gian bào chi dưới. Mạng lưới bạch huyết đang dẫn lưu hiệu quả.' },
+        { id: 'K6', g: 'khi', w: 1.0, rf: false, txt: 'Bạn thường làm việc phòng kín, có thói quen thở nông ở lồng ngực (không hít thở sâu bụng/Đan Điền)?', mech: 'Tế bào thiếu Oxy mãn tính – hiệu ứng Warburg: tế bào chuyển sang chuyển hóa đường kỵ khí', sl: 'Hô hấp sâu – Tế bào đủ Oxy', sd: 'Thói quen thở bụng/Đan Điền giúp duy trì áp suất oxy mô cao, ức chế hiệu ứng Warburg – cơ chế nền của biến tính tế bào.' },
+        { id: 'S1', g: 'than', w: 1.2, rf: false, txt: 'Bạn có thường cảm thấy bí bách, ngột ngạt ngực sườn, hay thở dài vô thức, dễ bực bội cáu gắt?', mech: 'Can khí uất kết – co thắt cơ hoành mãn tính, ức chế phản xạ thở sâu và thần kinh phế vị', sl: 'Can khí thư thái, cơ hoành thư giãn', sd: 'Không có dấu hiệu Can khí uất kết. Cơ hoành hoạt động tự do, hỗ trợ nhịp thở sâu và kích hoạt hệ phó giao cảm.' },
+        { id: 'S2', g: 'than', w: 1.3, rf: false, txt: 'Đầu óc bạn có chạy liên tục, hay nghĩ ngợi miên man quá khứ/tương lai, khó tĩnh tâm để thư giãn hoàn toàn?', mech: 'Mạng lưới DMN vỏ não quá nhiệt – tiêu hao năng lượng não bộ liên tục, không vào được trạng thái phục hồi sâu', sl: 'DMN não ổn định – Tâm trí không bị chiếm đóng', sd: 'Mạng lưới Default Mode Network (DMN) không ở trạng thái quá tải. Não bộ có khả năng nghỉ ngơi và phục hồi năng lượng thần kinh hiệu quả.' },
+        { id: 'S3', g: 'than', w: 1.5, rf: true, txt: 'Bạn có hay bị tim đập nhanh hồi hộp bất chợt, người luôn trong trạng thái căng thẳng, huyết áp dao động?', mech: 'Quá tải Cortisol/HPA, cường giao cảm mãn tính – co thắt mạch máu, viêm nội mô, nguy cơ biến cố tim mạch', sl: 'Trục HPA cân bằng – Tim mạch ổn định', sd: 'Trục Hạ đồi – Tuyến yên – Thượng thận (HPA) duy trì cân bằng tốt. Không có dấu hiệu cường giao cảm mãn tính.' },
+        { id: 'S4', g: 'than', w: 1.4, rf: false, txt: 'Bạn mất trên 30 phút mới vào được giấc, ngủ chập chờn hay mê, sáng dậy đầu óc nặng trịch như chưa ngủ?', mech: 'Tắc chu trình thải độc Glymphatic – não không thể xả độc tố beta-amyloid và tau protein ban đêm', sl: 'Giấc ngủ sâu – Glymphatic hoạt động tốt', sd: 'Chu trình Glymphatic (thải độc não) đang hoạt động đầy đủ. Não bộ được làm sạch beta-amyloid và tau protein trong giấc ngủ sâu mỗi đêm.' },
+        { id: 'S5', g: 'than', w: 1.3, rf: false, txt: 'Bạn có hay bị giật mình thức giấc vào khung giờ 1h–3h sáng và sau đó trằn trọc rất khó ngủ lại?', mech: 'Can hỏa bùng phát giờ Can–Đởm – gan và túi mật quá tải giải độc ban đêm, cortisol bùng phát sớm', sl: 'Can Đởm giải độc ban đêm hiệu quả', sd: 'Không có dấu hiệu Can hỏa bùng phát giờ Can–Đởm (1–3h). Gan và túi mật thực hiện chức năng giải độc ban đêm trơn tru.' },
+        { id: 'S6', g: 'than', w: 1.1, rf: false, txt: 'Bạn có dùng điện thoại, xem màn hình trên giường trong vòng 30 phút ngay trước khi nhắm mắt ngủ?', mech: 'Nhiễm độc ánh sáng xanh – ức chế melatonin, lệch pha nhịp sinh học 24 giờ, giảm chất lượng giấc ngủ sâu NREM', sl: 'Nhịp sinh học ánh sáng không bị xáo trộn', sd: 'Không có thói quen dùng màn hình trước ngủ. Melatonin tự nhiên được tiết bình thường, nhịp sinh học 24 giờ (circadian) ổn định.' },
+      ],
+      en: [
+        { id: 'T1', g: 'tinh', w: 1.0, rf: false, txt: 'Do you regularly eat sweets, sodas, fried foods in rancid oil, or highly processed foods?', mech: 'Interstitial acidification, micro-inflammation via AGEs (advanced glycation end-products)', sl: 'Healthy dietary habits', sd: 'Your body is not accumulating AGEs or chronic micro-inflammation through diet. The interstitial environment is well-maintained in an alkaline state.' },
+        { id: 'T2', g: 'tinh', w: 1.2, rf: false, txt: 'Do you habitually take painkillers, fever reducers, antibiotics or effervescent tablets at the first sign of fatigue, pain, or illness?', mech: 'Liver-kidney overload, mitochondrial suppression, gut microbiome disruption', sl: 'Liver & kidney not chemically overloaded', sd: 'Liver-kidney detoxification function is within normal range. Mitochondria have not been suppressed by high-dose synthetic drugs.' },
+        { id: 'T3', g: 'tinh', w: 1.3, rf: false, txt: 'After lunch or dinner, do you crave sweets, feel drowsy, and notice rapid accumulation of fat around your lower abdomen?', mech: 'Latent insulin resistance, Phlegm-Damp stagnation, disrupted post-meal blood glucose cycle', sl: 'Good insulin sensitivity', sd: 'Your body still efficiently processes blood sugar after meals. No signs of insulin resistance – a key advantage in type 2 diabetes prevention.' },
+        { id: 'T4', g: 'tinh', w: 1.4, rf: false, txt: 'Have you ever been diagnosed with (or suspected of having): elevated liver enzymes, fatty liver, high blood lipids (Triglycerides/LDL-c)?', mech: 'Lipid metabolism disorder – visceral fat accumulation in the liver, increased atherosclerosis risk', sl: 'Lipid metabolism has no abnormalities', sd: 'No history of dyslipidemia or fatty liver. The lipid processing system is functioning normally.' },
+        { id: 'T5', g: 'tinh', w: 1.1, rf: false, txt: 'Do you often experience dull aching in joints (toes, ankles, knees) after high-protein meals or alcohol consumption?', mech: 'Urate crystal deposition, interstitial acidosis – tissue pH acidification causing microcrystalline joint inflammation', sl: 'No urate crystal deposition', sd: 'Joints show no signs of uric acid crystal deposition. Interstitial pH is within an alkaline range that protects cartilage.' },
+        { id: 'T6', g: 'tinh', w: 1.5, rf: true, txt: 'Does your skin frequently show unexplained bruising, slow-healing sores, or do you have a history of polyps/fibroids/lymph nodes?', mech: 'Blood stasis, tissue immune impairment – reduced NK cell activity, environment promotes cellular degeneration', sl: 'Tissue immunity remains strong', sd: 'No signs of localized cellular immune deficiency. Natural Killer (NK) cells are maintaining good cell division surveillance function.' },
+        { id: 'K1', g: 'khi', w: 1.1, rf: false, txt: 'Do you often feel sluggish, run out of breath when talking at length, get winded climbing 2–3 flights of stairs, or catch minor illnesses easily?', mech: 'Qi deficiency, Wei Qi decline – reduced cardiopulmonary reserve capacity, weak surface immune defense', sl: 'Wei Qi and resistance still strong', sd: 'Respiratory and cardiovascular reserve systems are within good range. Wei Qi surface protection has not significantly declined.' },
+        { id: 'K2', g: 'khi', w: 1.5, rf: true, txt: 'Do you have chronic neck-shoulder-upper back stiffness, occipital pain, restricted neck rotation, or mild dizziness when turning your head?', mech: 'Vertebral artery V1–V4 compression – posterior brain ischemia, risk of microvascular stroke and Glymphatic deterioration', sl: 'Posterior cerebral microcirculation is clear', sd: 'No signs of vertebral artery compression. Posterior cerebral blood flow is adequately supplying the cerebellum and brainstem.' },
+        { id: 'K3', g: 'khi', w: 1.0, rf: false, txt: 'Do you habitually sit for more than 50 consecutive minutes without movement (office work, computer use, driving)?', mech: 'Qi stagnation in the kinetic myofascial chain – fascial fluid gels, localized muscle cell oxygen deficiency', sl: 'Regular movement, flexible myofascial chain', sd: 'You have good movement habits. Fascial fluid maintains a Sol (liquid and flexible) state, providing continuous nutrient supply to muscle cells.' },
+        { id: 'K4', g: 'khi', w: 1.3, rf: false, txt: 'Does your lower back/lumbar region often feel cold and fatigued, do your hands/feet get cold easily, or are you sensitive to cold wind or air conditioning?', mech: 'Kidney Yang deficiency, Ming Men fire decline – low basal body temperature, decreased mitochondrial energy metabolism', sl: 'Kidney Yang and Ming Men are strong', sd: 'Basal body temperature is good. Kidney Yang function maintains efficient mitochondrial energy metabolism.' },
+        { id: 'K5', g: 'khi', w: 1.2, rf: false, txt: 'In the late afternoon/evening, do your calves or feet feel heavy like lead weights, and do shoes feel tighter than in the morning?', mech: 'Interstitial fluid stagnation (Gel phase) – lower limb lymphatic drainage failure, fascial edema', sl: 'Lower limb lymphatic circulation is clear', sd: 'No signs of lower limb interstitial fluid stagnation. The lymphatic network is effectively draining.' },
+        { id: 'K6', g: 'khi', w: 1.0, rf: false, txt: 'Do you typically work in enclosed spaces and habitually breathe shallowly into the chest (rather than deep abdominal/Dan Tian breathing)?', mech: 'Chronic cellular oxygen deficiency – Warburg effect: cells shift to anaerobic glucose metabolism', sl: 'Deep breathing – cells have adequate oxygen', sd: 'Abdominal/Dan Tian breathing habits maintain high tissue oxygen pressure, suppressing the Warburg effect – the foundational mechanism of cellular degeneration.' },
+        { id: 'S1', g: 'than', w: 1.2, rf: false, txt: 'Do you often feel emotionally congested, chest tightness in the rib area, unconsciously sigh frequently, or become easily irritable?', mech: 'Liver Qi stagnation – chronic diaphragm spasm, inhibited deep breathing reflex and vagus nerve function', sl: 'Liver Qi is flowing freely, diaphragm relaxed', sd: 'No signs of Liver Qi stagnation. The diaphragm moves freely, supporting deep breathing and activating the parasympathetic nervous system.' },
+        { id: 'S2', g: 'than', w: 1.3, rf: false, txt: 'Does your mind run constantly, with rumination about the past or future, making it hard to fully relax and achieve mental quiet?', mech: 'Cortical DMN network overheating – continuous brain energy consumption, unable to enter deep recovery states', sl: 'Stable DMN – mind not chronically occupied', sd: 'The Default Mode Network (DMN) is not in an overloaded state. The brain can rest and effectively recover neural energy.' },
+        { id: 'S3', g: 'than', w: 1.5, rf: true, txt: 'Do you experience sudden palpitations, feel constantly tensed up, or notice fluctuating blood pressure?', mech: 'Cortisol/HPA overload, chronic sympathetic dominance – vascular spasm, endothelial inflammation, cardiovascular event risk', sl: 'HPA axis balanced – cardiovascular stability', sd: 'The Hypothalamus–Pituitary–Adrenal (HPA) axis is well-balanced. No signs of chronic sympathetic dominance or blood pressure fluctuation.' },
+        { id: 'S4', g: 'than', w: 1.4, rf: false, txt: 'Does it take you more than 30 minutes to fall asleep, do you sleep fitfully with many dreams, or wake up feeling unrefreshed?', mech: 'Glymphatic detox cycle blockage – the brain cannot clear beta-amyloid and tau protein waste at night', sl: 'Deep sleep – Glymphatic system functioning well', sd: 'The Glymphatic cycle (brain detoxification) is fully operational. Beta-amyloid and tau proteins are being cleared during deep sleep each night.' },
+        { id: 'S5', g: 'than', w: 1.3, rf: false, txt: 'Do you startle awake between 1–3 AM and then toss and turn, unable to fall back asleep?', mech: 'Liver Fire flare during Liver-Gallbladder hours – liver and gallbladder overloaded with overnight detox, early cortisol surge', sl: 'Liver-Gallbladder overnight detox is effective', sd: 'No signs of Liver Fire flare during the Liver-Gallbladder window (1–3 AM). Liver and gallbladder are performing overnight detoxification smoothly.' },
+        { id: 'S6', g: 'than', w: 1.1, rf: false, txt: 'Do you use your phone or watch screens in bed within 30 minutes before closing your eyes to sleep?', mech: 'Blue light toxicity – melatonin suppression, circadian rhythm phase disruption, reduced NREM deep sleep quality', sl: 'Light-based circadian rhythm undisturbed', sd: 'No habit of screen use before sleep. Natural melatonin secretion is normal and the 24-hour circadian rhythm is stable.' },
+      ],
+      zh: [
+        { id: 'T1', g: 'tinh', w: 1.0, rf: false, txt: '您是否经常食用甜食、含糖饮料、变性油脂油炸食品或深度加工食品？', mech: '组织间液酸化，AGE晚期糖基化终产物引起的微炎症', sl: '饮食习惯健康', sd: '身体未积累AGE或慢性微炎症。细胞间质环境处于良好的碱性状态。' },
+        { id: 'T2', g: 'tinh', w: 1.2, rf: false, txt: '您是否有一疲劳/疼痛/生病就立即自行购买止痛药、退烧药、抗生素或泡腾片服用的习惯？', mech: '肝肾过载，线粒体抑制，肠道菌群破坏', sl: '肝肾未受化学品过载', sd: '肝肾解毒功能处于正常范围。线粒体未受高剂量合成药物抑制。' },
+        { id: 'T3', g: 'tinh', w: 1.3, rf: false, txt: '午餐或晚餐后，您是否会渴望甜食、昏昏欲睡，且下腹部容易快速积累脂肪？', mech: '潜在胰岛素抵抗，痰浊内滞，餐后血糖周期紊乱', sl: '胰岛素敏感性良好', sd: '餐后血糖处理仍然高效。无胰岛素抵抗迹象——这是预防2型糖尿病的关键优势。' },
+        { id: 'T4', g: 'tinh', w: 1.4, rf: false, txt: '您是否曾被诊断出（或怀疑有）：肝酶升高、脂肪肝、血脂偏高（甘油三酯/低密度脂蛋白胆固醇）？', mech: '脂质代谢紊乱——肝脏内脏脂肪积累，动脉粥样硬化风险增加', sl: '脂质代谢无异常', sd: '无血脂异常或脂肪肝病史。脂质处理系统功能正常。' },
+        { id: 'T5', g: 'tinh', w: 1.1, rf: false, txt: '高蛋白饮食或饮酒后，您是否常感到关节（脚趾、踝关节、膝关节）持续隐痛？', mech: '尿酸盐沉积，组织间液酸化——pH酸化引起微晶体关节炎', sl: '无尿酸盐沉积', sd: '关节无尿酸晶体沉积迹象。间质pH处于保护软骨的碱性范围。' },
+        { id: 'T6', g: 'tinh', w: 1.5, rf: true, txt: '您的皮肤是否经常出现不明原因的瘀青、伤口愈合缓慢，或有息肉/纤维瘤/淋巴结病史？', mech: '血瘀，组织免疫受损——NK细胞活性降低，细胞变性环境', sl: '组织免疫力仍然强健', sd: '无局部细胞免疫缺陷迹象。自然杀伤(NK)细胞维持良好的细胞分裂监测功能。' },
+        { id: 'K1', g: 'khi', w: 1.1, rf: false, txt: '您是否经常感到身体疲软、说话多了气短、爬2-3层楼梯就喘不过气，或容易反复感冒？', mech: '气虚，卫气衰退——心肺储备能力下降，体表免疫防御薄弱', sl: '卫气与抵抗力仍然强健', sd: '呼吸和心血管储备系统处于良好范围。卫气体表保护功能未显著下降。' },
+        { id: 'K2', g: 'khi', w: 1.5, rf: true, txt: '您的颈肩部是否长期僵硬，枕部后侧疼痛酸沉，转头有阻感，或有轻度头晕目眩？', mech: '椎动脉V1-V4受压——后脑缺血，微血管卒中风险及类淋巴系统退化', sl: '后脑微循环畅通', sd: '无椎动脉受压迹象。后脑血流充分供应小脑和脑干。' },
+        { id: 'K3', g: 'khi', w: 1.0, rf: false, txt: '您是否习惯连续坐超过50分钟不活动（办公室人员、电脑工作、驾驶）？', mech: '运动筋膜链气滞——筋膜液凝胶化，局部肌肉细胞缺氧', sl: '规律运动，肌筋膜链灵活', sd: '您有良好的运动习惯。筋膜液维持溶胶（液态柔软）状态，持续为肌肉细胞提供营养。' },
+        { id: 'K4', g: 'khi', w: 1.3, rf: false, txt: '您的腰背部是否经常感到寒冷酸痛，手脚容易发冷，怕冷风或空调？', mech: '肾阳虚，命门火衰——基础体温偏低，线粒体能量代谢下降', sl: '肾阳与命门充足', sd: '基础体温良好。肾阳功能维持高效的线粒体能量代谢。' },
+        { id: 'K5', g: 'khi', w: 1.2, rf: false, txt: '傍晚时分，您的小腿或脚部是否感到沉重如铅，鞋子比早上更紧？', mech: '组织间液滞留（凝胶相）——下肢淋巴引流障碍，筋膜组织水肿', sl: '下肢淋巴循环畅通', sd: '无下肢组织间液滞留迹象。淋巴网络引流有效。' },
+        { id: 'K6', g: 'khi', w: 1.0, rf: false, txt: '您通常在密闭环境中工作，习惯进行胸式浅呼吸（而非腹式/丹田深呼吸）？', mech: '慢性细胞缺氧——沃堡效应：细胞转向无氧葡萄糖代谢', sl: '深度呼吸——细胞氧气充足', sd: '腹式/丹田呼吸习惯有助于维持高组织氧压，抑制沃堡效应——细胞变性的基础机制。' },
+        { id: 'S1', g: 'than', w: 1.2, rf: false, txt: '您是否经常感到情绪郁闷、胸胁闷胀、无意识地叹气，或容易烦躁发火？', mech: '肝气郁结——慢性膈肌痉挛，深呼吸反射和迷走神经功能受抑', sl: '肝气舒畅，膈肌放松', sd: '无肝气郁结迹象。膈肌自由运动，支持深呼吸并激活副交感神经系统。' },
+        { id: 'S2', g: 'than', w: 1.3, rf: false, txt: '您的思维是否持续运转，对过去或未来反复思虑，难以完全放松和平静下来？', mech: '皮质DMN网络过热——持续脑能耗，无法进入深度恢复状态', sl: 'DMN稳定——思维未被持续占据', sd: '默认模式网络(DMN)未处于过载状态。大脑能够休息并有效恢复神经能量。' },
+        { id: 'S3', g: 'than', w: 1.5, rf: true, txt: '您是否经常突发心悸惊慌，长期处于紧绷状态，或血压波动不稳？', mech: '皮质醇/HPA轴过载，慢性交感神经亢进——血管痉挛、内皮炎症、心血管事件风险', sl: 'HPA轴平衡——心血管稳定', sd: '下丘脑-垂体-肾上腺(HPA)轴保持良好平衡。无慢性交感神经亢进或血压波动迹象。' },
+        { id: 'S4', g: 'than', w: 1.4, rf: false, txt: '您是否需要超过30分钟才能入睡，睡眠浅而多梦，早晨醒来头脑沉重如未曾入睡？', mech: '类淋巴系统解毒循环阻塞——大脑夜间无法清除β-淀粉样蛋白和tau蛋白废物', sl: '深度睡眠——类淋巴系统运作良好', sd: '类淋巴循环（大脑解毒）完全正常运作。每晚深度睡眠中清除β-淀粉样蛋白和tau蛋白。' },
+        { id: 'S5', g: 'than', w: 1.3, rf: false, txt: '您是否经常在凌晨1-3点惊醒，之后辗转反侧难以再入睡？', mech: '肝胆时辰肝火上炎——肝胆夜间解毒过载，皮质醇过早激增', sl: '肝胆夜间解毒有效', sd: '无肝胆时辰(凌晨1-3点)肝火上炎迹象。肝胆夜间解毒功能顺畅运行。' },
+        { id: 'S6', g: 'than', w: 1.1, rf: false, txt: '您是否在睡前30分钟内在床上使用手机或观看屏幕？', mech: '蓝光毒性——褪黑素抑制，昼夜节律相位紊乱，NREM深度睡眠质量下降', sl: '光照昼夜节律未受干扰', sd: '无睡前使用屏幕的习惯。自然褪黑素分泌正常，24小时昼夜节律稳定。' },
+      ]
+    };
+
+    // ============================================================
+    // APP STATE
+    // ============================================================
+    let lang = localStorage.getItem('tambao_lang') || 'vi';
+    let theme = localStorage.getItem('tambao_theme') || 'dark';
+    let user = {}, ans = {}, res = {};
+    let QS = QS_DATA[lang];
+
+    // ============================================================
+    // I18N
+    // ============================================================
+    function T(key) {
+      return (I18N[lang] && I18N[lang][key]) || (I18N.vi[key]) || key;
+    }
+
+    function applyLang(l) {
+      lang = l;
+      QS = QS_DATA[lang];
+      localStorage.setItem('tambao_lang', l);
+      document.documentElement.lang = l;
+      document.title = T('meta.title');
+
+      // Update lang button states
+      ['VI', 'EN', 'ZH'].forEach(code => {
+        const id = 'lang' + code;
+        const el = document.getElementById(id);
+        if (el) el.classList.toggle('active', l === code.toLowerCase());
+      });
+      // Fix ZH button
+      document.getElementById('langZH').classList.toggle('active', l === 'zh');
+
+      // Translate all data-i18n elements
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        el.textContent = T(key);
+      });
+      document.querySelectorAll('[data-i18n-html]').forEach(el => {
+        const key = el.getAttribute('data-i18n-html');
+        el.innerHTML = T(key);
+      });
+      document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+        const key = el.getAttribute('data-i18n-placeholder');
+        el.placeholder = T(key);
+      });
+
+      // Re-render test questions if on that screen
+      if (document.getElementById('q-tinh').innerHTML) {
+        renderTest();
+      }
+
+      // Re-render report if visible
+      if (res.tot !== undefined) {
+        renderReport();
+      }
+    }
+
+    function setLang(l) { applyLang(l); }
+
+    // ============================================================
+    // THEME
+    // ============================================================
+    function applyTheme(t) {
+      theme = t;
+      localStorage.setItem('tambao_theme', t);
+      document.documentElement.setAttribute('data-theme', t);
+      document.getElementById('themeToggle').textContent = t === 'dark' ? '🌙' : '☀️';
+    }
+
+    function toggleTheme() {
+      applyTheme(theme === 'dark' ? 'light' : 'dark');
+      // Redraw radar with new theme context
+      if (res.sT !== undefined) drawRadar(res.sT, res.sK, res.sS);
+    }
+
+    // ============================================================
+    // NAVIGATION
+    // ============================================================
+    function goTo(n) {
+      document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+      document.getElementById('screen-' + n).classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      document.getElementById('gProg').style.width = (n / 4 * 100) + '%';
+
+      // GA4 Event Tracking
+      if (n === 1) trackEvent('begin_assessment');
+      if (n === 2) trackEvent('start_questions');
+      if (n === 3) trackEvent('view_paywall', { value: 99000, currency: 'VND' });
+      if (n === 4) trackEvent('purchase', { value: 99000, currency: 'VND', transaction_id: (user && user.hs) || ('TB-' + Date.now()) });
+    }
+
+    // ============================================================
+    // SCREEN 1 – SUBMIT
+    // ============================================================
+    function submitInfo() {
+      const name = document.getElementById('inp-name').value.trim();
+      const year = document.getElementById('inp-year').value.trim();
+      const gender = document.getElementById('inp-gender').value;
+      const occ = document.getElementById('inp-occ').value;
+      if (!name || !year || !gender || !occ) { toast(T('toast.fillInfo')); return; }
+      const y = parseInt(year);
+      if (y < 1930 || y > 2010) { toast(T('toast.badYear')); return; }
+      const hs = 'TB-' + Math.floor(1000 + Math.random() * 9000);
+      user = { name, year: y, age: new Date().getFullYear() - y, gender, occ, hs };
+      document.getElementById('payNote').textContent = 'TAMBAO-' + hs.split('-')[1];
+      ans = {};
+      renderTest();
+      goTo(2);
+    }
+
+    // ============================================================
+    // SCREEN 2 – TEST
+    // ============================================================
+    function renderTest() {
+      QS = QS_DATA[lang];
+      ['tinh', 'khi', 'than'].forEach(g => {
+        document.getElementById('q-' + g).innerHTML = QS.filter(q => q.g === g).map(q => renderQ(q)).join('');
+      });
+      updateProg();
+    }
+
+    function renderQ(q) {
+      const n = QS.findIndex(x => x.id === q.id) + 1;
+      const rf = q.rf ? `<span class="rf-badge">${T('rf.label')}</span>` : '';
+      const alreadyAnswered = ans[q.id] !== undefined;
+      return `<div class="q-card${alreadyAnswered ? ' answered' : ''}" id="card-${q.id}">
+    <div class="q-head">
+      <div class="q-num">${n}</div>
+      <div class="q-text">${q.txt}</div>${rf}
+    </div>
+    <div class="ans-opts">
+      <div class="ans-opt"><input type="radio" name="${q.id}" id="${q.id}_0" value="0" onchange="onAns('${q.id}',0)"${ans[q.id] === 0 ? ' checked' : ''}><label class="ans-lbl" for="${q.id}_0"><span class="ans-icon">😊</span><span class="ans-txt">${T('ans.never')}</span><span class="ans-sc">${T('ans.score0')}</span></label></div>
+      <div class="ans-opt"><input type="radio" name="${q.id}" id="${q.id}_1" value="1" onchange="onAns('${q.id}',1)"${ans[q.id] === 1 ? ' checked' : ''}><label class="ans-lbl" for="${q.id}_1"><span class="ans-icon">😐</span><span class="ans-txt">${T('ans.sometimes')}</span><span class="ans-sc">${T('ans.score1')}</span></label></div>
+      <div class="ans-opt"><input type="radio" name="${q.id}" id="${q.id}_2" value="2" onchange="onAns('${q.id}',2)"${ans[q.id] === 2 ? ' checked' : ''}><label class="ans-lbl" for="${q.id}_2"><span class="ans-icon">😟</span><span class="ans-txt">${T('ans.often')}</span><span class="ans-sc">${T('ans.score2')}</span></label></div>
+    </div>
+  </div>`;
+    }
+
+    function onAns(id, v) {
+      ans[id] = v;
+      document.getElementById('card-' + id).classList.add('answered');
+      updateProg();
+    }
+
+    function updateProg() {
+      const n = Object.keys(ans).length;
+      document.getElementById('ansCnt').textContent = n;
+      document.getElementById('progTxt').textContent = n + ' / 18';
+      document.getElementById('testFill').style.width = (n / 18 * 100) + '%';
+      document.getElementById('btnCalc').disabled = n < 18;
+    }
+
+    // ============================================================
+    // SCREEN 3 – CALCULATE
+    // ============================================================
+    function calcResults() {
+      if (Object.keys(ans).length < 18) { toast(T('toast.incomplete')); return; }
+      QS = QS_DATA[lang];
+      const sT = ['T1', 'T2', 'T3', 'T4', 'T5', 'T6'].reduce((s, id) => s + (ans[id] || 0), 0);
+      const sK = ['K1', 'K2', 'K3', 'K4', 'K5', 'K6'].reduce((s, id) => s + (ans[id] || 0), 0);
+      const sS = ['S1', 'S2', 'S3', 'S4', 'S5', 'S6'].reduce((s, id) => s + (ans[id] || 0), 0);
+      const tot = sT + sK + sS, pct = Math.round(tot / 36 * 100);
+      let zone, zcls;
+      if (tot <= 8) { zone = 'xanh'; zcls = 'zone-xanh'; }
+      else if (tot <= 16) { zone = 'vang'; zcls = 'zone-vang'; }
+      else if (tot <= 25) { zone = 'cam'; zcls = 'zone-cam'; }
+      else { zone = 'do'; zcls = 'zone-do'; }
+      const pri = QS_DATA['vi'].map((q, i) => ({ ...QS[i], raw: ans[q.id] || 0, pi: (ans[q.id] || 0) * q.w, id: q.id, rf: q.rf }));
+      const rf2 = pri.filter(q => q.rf && q.raw === 2).sort((a, b) => b.pi - a.pi);
+      const rest = pri.filter(q => !(q.rf && q.raw === 2)).sort((a, b) => b.pi - a.pi);
+      const top5 = [...rf2, ...rest].filter(q => q.raw > 0).slice(0, 5);
+      const strengths = QS.filter(q => (ans[q.id] || 0) === 0);
+      res = { sT, sK, sS, tot, pct, zone, zcls, top5, strengths };
+      trackEvent('complete_assessment', { total_score: tot, pct: pct, zone: zone });
+      renderReport();
+      goTo(3);
+    }
+
+    function renderReport() {
+      if (res.tot === undefined) return;
+      const { sT, sK, sS, tot, pct, zone, zcls, top5, strengths } = res;
+      const u = user;
+
+      // Cover
+      document.getElementById('coverGrid').innerHTML = `
+    <div class="info-item"><div class="ii-label">${T('cov.name')}</div><div class="ii-val">${u.name}</div></div>
+    <div class="info-item"><div class="ii-label">${T('cov.age')}</div><div class="ii-val">${u.age} (${u.year})</div></div>
+    <div class="info-item"><div class="ii-label">${T('cov.gender')}</div><div class="ii-val">${u.gender}</div></div>
+    <div class="info-item"><div class="ii-label">${T('cov.occ')}</div><div class="ii-val">${u.occ}</div></div>
+    <div class="info-item"><div class="ii-label">${T('cov.code')}</div><div class="ii-val" style="color:var(--jade-light);font-family:var(--font-head)">${u.hs}</div></div>
+    <div class="info-item"><div class="ii-label">${T('cov.date')}</div><div class="ii-val">${new Date().toLocaleDateString(lang === 'zh' ? 'zh-CN' : lang === 'en' ? 'en-US' : 'vi-VN')}</div></div>
+  `;
+
+      // Scores
+      document.getElementById('scoreNum').textContent = tot;
+      const zb = document.getElementById('zoneBadge');
+      zb.className = 'zone-badge ' + zcls;
+      document.getElementById('zoneText').textContent = T('zone.' + zone);
+      document.getElementById('lTinh').textContent = sT + '/12';
+      document.getElementById('lKhi').textContent = sK + '/12';
+      document.getElementById('lThan').textContent = sS + '/12';
+      setTimeout(() => {
+        document.getElementById('barTinh').style.width = (sT / 12 * 100) + '%';
+        document.getElementById('barKhi').style.width = (sK / 12 * 100) + '%';
+        document.getElementById('barThan').style.width = (sS / 12 * 100) + '%';
+      }, 300);
+
+      const tiers = [{ n: T('tinh'), s: sT }, { n: T('khi'), s: sK }, { n: T('than'), s: sS }].sort((a, b) => b.s - a.s);
+      document.getElementById('assessSumm').innerHTML = `<strong style="color:var(--jade-light)">${T('rpt.summ')}</strong> ${T('zone.' + zone + '.desc')}<br><br><strong>${T('rpt.axis')}</strong> ${tiers[0].n} (${tiers[0].s}/12). ${tiers[0].s >= 8 ? T('rpt.high') : T('rpt.ok')}`;
+
+      drawRadar(sT, sK, sS);
+
+      // Strengths
+      const sg = document.getElementById('strGrid');
+      if (!strengths.length) {
+        sg.innerHTML = `<div style="text-align:center;color:var(--text-muted);padding:20px">${T('rpt.no_strength')}</div>`;
+      } else {
+        sg.innerHTML = strengths.slice(0, 6).map(q => `<div class="str-item"><div class="str-icon">✅</div><div class="str-body"><h4>${q.sl}</h4><p>${q.sd}</p></div></div>`).join('');
+      }
+
+      // Weaknesses top 3
+      const wl = document.getElementById('wkList');
+      const top3 = top5.slice(0, 3);
+      if (!top3.length) {
+        wl.innerHTML = `<div style="text-align:center;color:var(--safe);padding:20px">${T('rpt.no_weak')}</div>`;
+      } else {
+        wl.innerHTML = top3.map((q, i) => {
+          const cls = ['wk-r1', 'wk-r2', 'wk-r3'][i];
+          const pc = ['pri-1', 'pri-2', 'pri-3'][i];
+          const pl = [T('rpt.pri1'), T('rpt.pri2'), T('rpt.pri3')][i];
+          const gn = q.g === 'tinh' ? T('tinh') : q.g === 'khi' ? T('khi') : T('than');
+          const rf = q.rf ? `<span class="wk-rf">${T('rpt.rf')}</span>` : '';
+          const col = q.raw === 2 ? 'color:var(--red)' : 'color:var(--orange)';
+          const rawTxt = q.raw === 1 ? T('ans.sometimes') : T('ans.often');
+          return `<div class="wk-item ${cls}">
+        <div class="wk-hdr"><span class="wk-pri ${pc}">${pl}</span><span class="wk-name">[${gn}–${q.id}] <span style="${col};font-weight:700">${rawTxt}</span></span>${rf}</div>
+        <div class="wk-body">
+          <p>${q.txt}</p>
+          <div class="mechanism">${T('rpt.mech')} ${q.mech}</div>
+          <p style="margin-top:10px;font-size:0.82rem;color:var(--text-muted)">${q.raw === 2 ? T('rpt.frequent') : T('rpt.occasional')}</p>
+        </div>
+      </div>`;
+        }).join('');
+      }
+    }
+
+    // ============================================================
+    // RADAR CHART
+    // ============================================================
+    function drawRadar(t, k, s) {
+      const cv = document.getElementById('radarChart');
+      if (!cv) return;
+      const ctx = cv.getContext('2d');
+      const isDark = theme === 'dark';
+      const cx = 120, cy = 120, r = 90, mx = 12;
+      ctx.clearRect(0, 0, 240, 240);
+      const pts = [
+        { lbl: T('tinh'), v: t, a: -Math.PI / 2, c: '#4ade80' },
+        { lbl: T('khi'), v: k, a: -Math.PI / 2 + 2 * Math.PI / 3, c: '#34d399' },
+        { lbl: T('than'), v: s, a: -Math.PI / 2 + 4 * Math.PI / 3, c: '#a78bfa' },
+      ];
+      const gridColor = isDark ? 'hsla(220,20%,30%,0.4)' : 'hsla(220,20%,70%,0.5)';
+      const axisColor = isDark ? 'hsla(220,20%,40%,0.5)' : 'hsla(220,20%,60%,0.4)';
+      [0.25, 0.5, 0.75, 1].forEach(f => {
+        ctx.beginPath(); ctx.strokeStyle = gridColor; ctx.lineWidth = 1;
+        pts.forEach((p, i) => { const x = cx + Math.cos(p.a) * r * f, y = cy + Math.sin(p.a) * r * f; i ? ctx.lineTo(x, y) : ctx.moveTo(x, y) });
+        ctx.closePath(); ctx.stroke();
+      });
+      pts.forEach(p => { ctx.beginPath(); ctx.strokeStyle = axisColor; ctx.lineWidth = 1; ctx.moveTo(cx, cy); ctx.lineTo(cx + Math.cos(p.a) * r, cy + Math.sin(p.a) * r); ctx.stroke() });
+      const dp = pts.map(p => ({ x: cx + Math.cos(p.a) * r * (p.v / mx), y: cy + Math.sin(p.a) * r * (p.v / mx), c: p.c }));
+      const g = ctx.createRadialGradient(cx, cy, 0, cx, cy, r);
+      g.addColorStop(0, 'hsla(168,65%,38%,0.35)'); g.addColorStop(1, 'hsla(265,55%,55%,0.18)');
+      ctx.beginPath(); dp.forEach((p, i) => i ? ctx.lineTo(p.x, p.y) : ctx.moveTo(p.x, p.y));
+      ctx.closePath(); ctx.fillStyle = g; ctx.fill();
+      ctx.strokeStyle = 'hsla(168,65%,55%,0.8)'; ctx.lineWidth = 2; ctx.stroke();
+      dp.forEach((p, i) => { ctx.beginPath(); ctx.arc(p.x, p.y, 6, 0, 2 * Math.PI); ctx.fillStyle = p.c; ctx.fill(); ctx.strokeStyle = isDark ? 'white' : '#333'; ctx.lineWidth = 2; ctx.stroke() });
+      const lblColor = isDark ? undefined : undefined;
+      ctx.font = 'bold 11px Outfit,Noto Sans SC,sans-serif'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+      pts.forEach(p => { const lx = cx + Math.cos(p.a) * (r + 18), ly = cy + Math.sin(p.a) * (r + 18); ctx.fillStyle = p.c; ctx.fillText(p.lbl, lx, ly) });
+      ctx.font = 'bold 9px Outfit,sans-serif';
+      pts.forEach(p => { if (p.v > 0) { const vx = cx + Math.cos(p.a) * r * (p.v / mx) * 0.6, vy = cy + Math.sin(p.a) * r * (p.v / mx) * 0.6; ctx.fillStyle = isDark ? 'white' : '#222'; ctx.fillText(p.v, vx, vy) } });
+    }
+
+    // ============================================================
+    // GOOGLE SHEETS INTEGRATION
+    // ============================================================
+    // HƯỚNG DẪN: Thay 'YOUR_GOOGLE_APPS_SCRIPT_URL' bằng URL Web App thu được từ Google Apps Script
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbysFpv28dRixGYIy9IjgE72bbMzKPPEX5wgOilre0LaRnvhd4RchwxJIkwIDmb1BNKQ/exec';
+
+    function handlePaymentClick() {
+      trackEvent('begin_checkout', { value: 99000, currency: 'VND' });
+      const tranInput = document.getElementById('payTranId');
+      if (tranInput && user && user.hs) {
+        tranInput.value = 'TAMBAO-' + user.hs.split('-')[1];
+      }
+      document.getElementById('paymentModal').classList.add('active');
+    }
+
+    function closePaymentModal() {
+      document.getElementById('paymentModal').classList.remove('active');
+    }
+
+    function submitPaymentForm() {
+      const phone = document.getElementById('payPhone').value.trim();
+      const tranid = document.getElementById('payTranId').value.trim();
+      if (!phone || phone.length < 9) {
+        toast('Vui lòng nhập số điện thoại / Zalo hợp lệ để nhận báo cáo');
+        return;
+      }
+
+      const btn = document.getElementById('btnSubmitPayment');
+      btn.disabled = true;
+      btn.textContent = '⏳ Đang gửi thông tin...';
+
+      const payload = {
+        timestamp: new Date().toLocaleString('vi-VN'),
+        hs: (user && user.hs) || '',
+        name: (user && user.name) || '',
+        year: (user && user.year) || '',
+        age: (user && user.age) || '',
+        gender: (user && user.gender) || '',
+        occ: (user && user.occ) || '',
+        phone: phone,
+        tranid: tranid || (user && user.hs) || '',
+        tinh_pct: res.scores ? res.scores.tinh.pct : (res.pct || 0),
+        khi_pct: res.scores ? res.scores.khi.pct : 0,
+        than_pct: res.scores ? res.scores.than.pct : 0,
+        zone: res.zone || '',
+        top5: res.top5 ? res.top5.map(x => x.txt).join('; ') : ''
+      };
+
+      if (GOOGLE_SCRIPT_URL && GOOGLE_SCRIPT_URL !== 'YOUR_GOOGLE_APPS_SCRIPT_URL') {
+        fetch(GOOGLE_SCRIPT_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        }).catch(err => console.error('Sheet submit error:', err));
+      }
+
+      setTimeout(() => {
+        btn.disabled = false;
+        btn.textContent = '🚀 Xác Nhận & Nhận Báo Cáo Ngay';
+        closePaymentModal();
+        goTo(4);
+      }, 800);
+    }
+
+    // ============================================================
+    // TOAST & RESTART
+    // ============================================================
+    function toast(msg, dur = 3000) {
+      const el = document.getElementById('toast');
+      el.textContent = msg; el.classList.add('show');
+      setTimeout(() => el.classList.remove('show'), dur);
+    }
+    function restart() {
+      user = {}; ans = {}; res = {};
+      ['inp-name', 'inp-year'].forEach(id => document.getElementById(id).value = '');
+      ['inp-gender', 'inp-occ'].forEach(id => document.getElementById(id).value = '');
+      goTo(0);
+    }
+
+    // ============================================================
+    // COUNTDOWN TIMER & EXIT INTENT
+    // ============================================================
+    function initCountdown() {
+      let target = localStorage.getItem('tb_cd_target');
+      if (!target || Date.now() > parseInt(target)) {
+        target = Date.now() + 24 * 3600 * 1000;
+        localStorage.setItem('tb_cd_target', target);
+      }
+      function updateTimer() {
+        const now = Date.now();
+        const diff = Math.max(0, parseInt(target) - now);
+        const h = String(Math.floor(diff / 3600000)).padStart(2, '0');
+        const m = String(Math.floor((diff % 3600000) / 60000)).padStart(2, '0');
+        const s = String(Math.floor((diff % 60000) / 1000)).padStart(2, '0');
+        const el = document.getElementById('cdTimer');
+        if (el) el.textContent = `${h}:${m}:${s}`;
+      }
+      updateTimer();
+      setInterval(updateTimer, 1000);
+    }
+
+    let exitModalShown = false;
+    function initExitIntent() {
+      document.addEventListener('mouseleave', (e) => {
+        if (e.clientY <= 0 && !exitModalShown && document.getElementById('screen-3').classList.contains('active')) {
+          showExitModal();
+        }
+      });
+    }
+
+    function showExitModal() {
+      exitModalShown = true;
+      document.getElementById('exitModal').classList.add('active');
+      trackEvent('show_exit_intent');
+    }
+
+    function closeExitModal() {
+      document.getElementById('exitModal').classList.remove('active');
+    }
+
+    // ============================================================
+    // INIT
+    // ============================================================
+    document.addEventListener('DOMContentLoaded', () => {
+      applyTheme(theme);
+      applyLang(lang);
+      initCountdown();
+      initExitIntent();
+      // Init lang buttons correctly
+      document.getElementById('langVI').classList.toggle('active', lang === 'vi');
+      document.getElementById('langEN').classList.toggle('active', lang === 'en');
+      document.getElementById('langZH').classList.toggle('active', lang === 'zh');
+    });
+  </script>
+
+  <!-- GOOGLE SHEETS / PAYMENT MODAL -->
+  <div class="exit-modal-overlay" id="paymentModal">
+    <div class="exit-modal" style="max-width:480px">
+      <button class="exit-close" onclick="closePaymentModal()">&times;</button>
+      <div style="font-size:2.5rem;margin-bottom:8px">📲</div>
+      <h3 class="exit-title">Xác Nhận Nhận Báo Cáo Qua Zalo</h3>
+      <p class="exit-desc" style="margin-bottom:16px">Bác sĩ sẽ duyệt hồ sơ và gửi **File PDF 10 Trang** trực tiếp qua
+        Zalo của bạn trong 30 phút.</p>
+
+      <div style="text-align:left;margin-bottom:20px">
+        <label style="display:block;font-size:0.82rem;font-weight:600;color:var(--text-bright);margin-bottom:6px">Số
+          Điện Thoại Zalo (*)</label>
+        <input type="tel" id="payPhone" placeholder="Ví dụ: 0987654321"
+          style="width:100%;padding:12px;border-radius:var(--radius-sm);background:var(--bg-dark);border:1px solid var(--border);color:var(--text-bright);font-size:1rem;margin-bottom:12px;box-sizing:border-box">
+
+        <label style="display:block;font-size:0.82rem;font-weight:600;color:var(--text-bright);margin-bottom:6px">Mã
+          Giao Dịch Chuyển Khoản (Nếu có)</label>
+        <input type="text" id="payTranId" placeholder="Ví dụ: TAMBAO-xxxx"
+          style="width:100%;padding:12px;border-radius:var(--radius-sm);background:var(--bg-dark);border:1px solid var(--border);color:var(--text-bright);font-size:1rem;box-sizing:border-box">
+      </div>
+
+      <div class="exit-actions">
+        <button class="btn btn-gold btn-full btn-lg" id="btnSubmitPayment" onclick="submitPaymentForm()">🚀 Gửi Thông
+          Tin & Nhận Báo Cáo Ngay</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- EXIT INTENT MODAL -->
+  <div class="exit-modal-overlay" id="exitModal">
+    <div class="exit-modal">
+      <button class="exit-close" onclick="closeExitModal()">&times;</button>
+      <div class="exit-badge">🎁 ƯU ĐÃI ĐẶC BIỆT CHỈ LẦN NÀY</div>
+      <h3 class="exit-title">Đừng Rời Đi Khi Chưa Xem Bản Đồ Nguy Cơ Sinh Học!</h3>
+      <p class="exit-desc">Bác sĩ đã tổng hợp thông số của bạn. Bạn có muốn giữ suất **Ưu Đãi Đặc Biệt: 69.000đ** hoặc
+        liên hệ Bác sĩ tư vấn miễn phí?</p>
+      <div class="exit-actions">
+        <button class="btn btn-gold btn-full btn-lg" onclick="closeExitModal(); handlePaymentClick();">⚡ Nhận Báo Cáo Ưu
+          Đãi 69.000đ</button>
+        <button class="btn btn-secondary btn-full" onclick="closeExitModal(); toast(T('pw.zalo'));"
+          style="background:var(--bg-dark);border:1px solid var(--border);color:var(--text-main);padding:12px;border-radius:var(--radius-sm)">💬
+          Giữ Hồ Sơ - Hỗ Trợ Qua Zalo</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
