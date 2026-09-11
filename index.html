@@ -745,6 +745,204 @@
     }
 
     /* ============================================================
+       OFFICE WORKER FOCUS & DOCTOR PROFILE
+    ============================================================ */
+    .office-focus-sec {
+      margin-top: 44px;
+      width: 100%;
+      text-align: left
+    }
+
+    .office-focus-title {
+      font-family: var(--font-head);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text-bright);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px
+    }
+
+    .office-focus-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-bottom: 36px
+    }
+
+    @media(max-width:640px) {
+      .office-focus-grid {
+        grid-template-columns: 1fr
+      }
+    }
+
+    .focus-card {
+      background: var(--bg-glass);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 18px 20px;
+      transition: transform var(--transition), border-color var(--transition)
+    }
+
+    .focus-card:hover {
+      border-color: var(--border-glow);
+      transform: translateY(-3px)
+    }
+
+    .focus-icon {
+      font-size: 1.6rem;
+      margin-bottom: 8px;
+      display: block
+    }
+
+    .focus-h {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--text-bright);
+      margin-bottom: 6px
+    }
+
+    .focus-p {
+      font-size: 0.83rem;
+      color: var(--text-muted);
+      line-height: 1.55
+    }
+
+    .doctor-card {
+      margin-top: 40px;
+      margin-bottom: 24px;
+      background: linear-gradient(135deg, hsla(168, 40%, 15%, 0.4), hsla(265, 35%, 15%, 0.4));
+      border: 1px solid var(--border-glow);
+      border-radius: var(--radius-lg);
+      padding: 28px 24px;
+      text-align: left;
+      backdrop-filter: blur(20px);
+      box-shadow: 0 12px 40px hsla(220, 30%, 4%, 0.5)
+    }
+
+    [data-theme="light"] .doctor-card {
+      background: linear-gradient(135deg, hsla(168, 50%, 94%, 0.8), hsla(265, 45%, 94%, 0.8))
+    }
+
+    .doctor-badge-top {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--jade-glow);
+      background: hsla(168, 65%, 38%, 0.15);
+      border: 1px solid var(--border-glow);
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin-bottom: 18px
+    }
+
+    .doctor-header-flex {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      margin-bottom: 20px
+    }
+
+    .doctor-avatar-box {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--jade), var(--violet));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.2rem;
+      flex-shrink: 0;
+      border: 3px solid var(--border-glow);
+      box-shadow: 0 0 20px hsla(168, 65%, 38%, 0.3)
+    }
+
+    .doctor-meta-name {
+      font-family: var(--font-head);
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--text-bright);
+      line-height: 1.25
+    }
+
+    .doctor-meta-sub {
+      font-size: 0.88rem;
+      color: var(--jade-light);
+      font-weight: 600;
+      margin-top: 2px
+    }
+
+    .doctor-license-tag {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+      display: flex;
+      align-items: center;
+      gap: 4px
+    }
+
+    .doctor-stats-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-bottom: 20px;
+      background: var(--bg-glass);
+      padding: 12px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border)
+    }
+
+    .d-stat-box {
+      text-align: center
+    }
+
+    .d-stat-num {
+      font-family: var(--font-head);
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--gold)
+    }
+
+    .d-stat-lbl {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      font-weight: 500
+    }
+
+    .doctor-quote-box {
+      border-left: 3px solid var(--jade-light);
+      padding-left: 14px;
+      margin-bottom: 18px;
+      font-size: 0.88rem;
+      color: var(--text-main);
+      line-height: 1.65;
+      font-style: italic
+    }
+
+    .doctor-skills-flex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px
+    }
+
+    .d-skill-pill {
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 5px 13px;
+      border-radius: 16px;
+      background: hsla(220, 20%, 25%, 0.4);
+      color: var(--text-main);
+      border: 1px solid var(--border)
+    }
+
+    [data-theme="light"] .d-skill-pill {
+      background: hsla(220, 20%, 85%, 0.5)
+    }
+
+    /* ============================================================
        SCREEN 1 – INFO
     ============================================================ */
     #screen-1 {
@@ -2149,32 +2347,56 @@
   <!-- ===== SCREEN 0 – LANDING ===== -->
   <section class="screen active" id="screen-0">
     <div class="hero">
-      <div class="hero-badge" data-i18n="s0.badge">🏥 Hệ Thống Đánh Giá Sức Khỏe Cá Nhân Hóa · Miễn Phí</div>
-      <h1 data-i18n-html="s0.h1">Giải Mã <span class="highlight">Nguy Cơ Sinh Học</span><br>Theo Ma Trận Tam Bảo</h1>
-      <p class="hero-sub" data-i18n-html="s0.sub">Bài test 18 câu theo y học tích hợp Đông–Tây giúp bạn hiểu rõ tình
-        trạng <strong>Tinh – Khí – Thần</strong> và nguy cơ bệnh mãn tính tiềm ẩn chưa có triệu chứng rõ ràng.</p>
+      <div class="hero-badge" data-i18n="s0.badge">🏥 Khảo Sát Sức Khỏe · Miễn Phí</div>
+      <h1 data-i18n-html="s0.h1">Giải Mã <span class="highlight">Sức Khỏe & Điểm Nghẽn Sinh Học</span><br>Theo Ma Trận Tam Bảo</h1>
+      <p class="hero-sub" data-i18n-html="s0.sub">Bài khảo sát 18 chỉ số chuẩn Y Học Tích Hợp Đông–Tây giúp bạn nhận diện sớm nguyên nhân gây mệt mỏi mạn tính, co cứng cổ vai gáy, sương mù não và sụt giảm năng lượng mà không lạm dụng thuốc.</p>
       <div class="hero-cta">
-        <button class="btn btn-primary btn-lg" onclick="goTo(1)" data-i18n="s0.cta1">🚀 Bắt Đầu Đánh Giá Miễn
-          Phí</button>
-        <button class="btn btn-ghost" onclick="document.getElementById('pillars').scrollIntoView({behavior:'smooth'})"
+        <button class="btn btn-primary btn-lg" onclick="goTo(1)" data-i18n="s0.cta1">🚀 Bắt Đầu Đánh Giá Miễn Phí (~5')</button>
+        <button class="btn btn-ghost" onclick="document.getElementById('office-focus').scrollIntoView({behavior:'smooth'})"
           data-i18n="s0.cta2">Tìm Hiểu Thêm ↓</button>
       </div>
       <div class="hero-stats">
-        <div class="stat-item"><span class="stat-value">18</span><span class="stat-label" data-i18n="s0.stat1">Tiêu chí
-            lâm sàng</span></div>
-        <div class="stat-item"><span class="stat-value">3</span><span class="stat-label" data-i18n="s0.stat2">Tầng Tam
-            Bảo</span></div>
-        <div class="stat-item"><span class="stat-value">10</span><span class="stat-label" data-i18n="s0.stat3">Trang báo
-            cáo</span></div>
-        <div class="stat-item"><span class="stat-value">~5'</span><span class="stat-label" data-i18n="s0.stat4">Thời
-            gian làm bài</span></div>
+        <div class="stat-item"><span class="stat-value">18</span><span class="stat-label" data-i18n="s0.stat1">Tiêu chí sinh học</span></div>
+        <div class="stat-item"><span class="stat-value">3</span><span class="stat-label" data-i18n="s0.stat2">Tầng Tam Bảo</span></div>
+        <div class="stat-item"><span class="stat-value">10</span><span class="stat-label" data-i18n="s0.stat3">Trang báo cáo</span></div>
+        <div class="stat-item"><span class="stat-value">8+</span><span class="stat-label" data-i18n="s0.stat4">Năm y học tích hợp</span></div>
       </div>
+
+      <!-- Office Worker Pain Points Grid -->
+      <div class="office-focus-sec" id="office-focus">
+        <div class="office-focus-title">
+          <span>🎯</span> <span data-i18n="off.title">4 Vấn Đề Gốc Rễ Phổ Biến Ở Dân Văn Phòng (25–35 Tuổi)</span>
+        </div>
+        <div class="office-focus-grid">
+          <div class="focus-card">
+            <span class="focus-icon">💻</span>
+            <div class="focus-h" data-i18n="off.c1.h">Co Kẹp Cổ Vai Gáy & Vi Mạch Não</div>
+            <p class="focus-p" data-i18n="off.c1.p">Ngồi máy tính >8 tiếng/ngày làm co cứng Fascia cơ chẩm cổ (V1–V4), giảm 30-40% lưu lượng máu nuôi não sau gây hoa mắt, nhức đầu.</p>
+          </div>
+          <div class="focus-card">
+            <span class="focus-icon">⚡</span>
+            <div class="focus-h" data-i18n="off.c2.h">Sụt Năng Lượng Chiều & Thèm Ngọt</div>
+            <p class="focus-p" data-i18n="off.c2.p">Biến động Glucose đường huyết sau ăn, tích tụ vi viêm AGEs gian bào làm ti thể thiếu nguyên liệu tạo năng lượng ATP.</p>
+          </div>
+          <div class="focus-card">
+            <span class="focus-icon">🧠</span>
+            <div class="focus-h" data-i18n="off.c3.h">Sương Mù Não & Khó Ngủ Sâu</div>
+            <p class="focus-p" data-i18n="off.c3.p">Mạng lưới DMN vỏ não quá tải do căng thẳng liên tục, chu trình Glymphatic đêm tắc nghẽn làm não không thải sạch rác thần kinh.</p>
+          </div>
+          <div class="focus-card">
+            <span class="focus-icon">🌱</span>
+            <div class="focus-h" data-i18n="off.c4.h">Lộ Trình Phục Hồi 80/20 Tự Nhiên</div>
+            <p class="focus-p" data-i18n="off.c4.p">Không lạm dụng thuốc tổng hợp. Bài tập xả kẹp mạc cơ 2-5 phút & dinh dưỡng cân bằng thực hiện ngay tại bàn làm việc.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pillars Section -->
       <div class="pillars" id="pillars">
         <div class="pillar pillar-tinh">
           <span class="pillar-icon">🌿</span>
           <div class="pillar-name" data-i18n="p.tinh.name">TINH</div>
-          <p class="pillar-desc" data-i18n="p.tinh.desc">Vật liệu & Chuyển hóa tế bào. Gian bào, ti thể, nội tiết tố,
-            chuyển hóa Lipid</p>
+          <p class="pillar-desc" data-i18n="p.tinh.desc">Vật liệu & Chuyển hóa tế bào. Gian bào, ti thể, nội tiết tố, chuyển hóa Lipid</p>
           <div class="pillar-tags"><span class="pillar-tag" data-i18n="p.tinh.t1">Dinh dưỡng</span><span
               class="pillar-tag" data-i18n="p.tinh.t2">Gan thận</span><span class="pillar-tag" data-i18n="p.tinh.t3">Mỡ
               máu</span></div>
@@ -2182,8 +2404,7 @@
         <div class="pillar pillar-khi">
           <span class="pillar-icon">💨</span>
           <div class="pillar-name" data-i18n="p.khi.name">KHÍ</div>
-          <p class="pillar-desc" data-i18n="p.khi.desc">Vi tuần hoàn & Mạc cơ. Lưu thông máu, oxy tế bào, điện sinh học
-            mô</p>
+          <p class="pillar-desc" data-i18n="p.khi.desc">Vi tuần hoàn & Mạc cơ. Lưu thông máu, oxy tế bào, điện sinh học mô</p>
           <div class="pillar-tags"><span class="pillar-tag" data-i18n="p.khi.t1">Tuần hoàn</span><span
               class="pillar-tag" data-i18n="p.khi.t2">Cột sống</span><span class="pillar-tag" data-i18n="p.khi.t3">Vi
               mạch</span></div>
@@ -2191,13 +2412,51 @@
         <div class="pillar pillar-than">
           <span class="pillar-icon">🧠</span>
           <div class="pillar-name" data-i18n="p.than.name">THẦN</div>
-          <p class="pillar-desc" data-i18n="p.than.desc">Thần kinh & Giấc ngủ. Trục não–ruột, DMN, cortisol, đồng hồ
-            sinh học</p>
+          <p class="pillar-desc" data-i18n="p.than.desc">Thần kinh & Giấc ngủ. Trục não–ruột, DMN, cortisol, đồng hồ sinh học</p>
           <div class="pillar-tags"><span class="pillar-tag" data-i18n="p.than.t1">Giấc ngủ</span><span
-              class="pillar-tag" data-i18n="p.than.t2">Stress</span><span class="pillar-tag" data-i18n="p.than.t3">Não
-              bộ</span></div>
+              class="pillar-tag" data-i18n="p.than.t2">Stress</span><span class="pillar-tag" data-i18n="p.than.t3">Não bộ</span></div>
         </div>
       </div>
+
+      <!-- Doctor Profile Card -->
+      <div class="doctor-card">
+        <div class="doctor-badge-top">
+          <span>📜</span> <span data-i18n="doc.badge">BÁC SĨ PHỤ TRÁCH & THẨM ĐỊNH CHUYÊN MÔN</span>
+        </div>
+        <div class="doctor-header-flex">
+          <div class="doctor-avatar-box">👨‍⚕️</div>
+          <div>
+            <div class="doctor-meta-name">BS. TRẦN THĂNG LONG</div>
+            <div class="doctor-meta-sub" data-i18n="doc.sub">Bác sĩ Y Học Tích Hợp Đông – Tây Y</div>
+            <div class="doctor-license-tag">
+              <span>📜 Chứng chỉ Hành nghề Y tế chính thức do Bộ/Sở Y tế cấp</span>
+            </div>
+          </div>
+        </div>
+        <div class="doctor-stats-row">
+          <div class="d-stat-box">
+            <div class="d-stat-num">8+ Năm</div>
+            <div class="d-stat-lbl" data-i18n="doc.s1">Kinh nghiệm lâm sàng</div>
+          </div>
+          <div class="d-stat-box">
+            <div class="d-stat-num">CCHN</div>
+            <div class="d-stat-lbl" data-i18n="doc.s2">Bộ/Sở Y tế cấp</div>
+          </div>
+          <div class="d-stat-box">
+            <div class="d-stat-num">2.000+</div>
+            <div class="d-stat-lbl" data-i18n="doc.s3">Hồ sơ đã thẩm định</div>
+          </div>
+        </div>
+        <div class="doctor-quote-box">
+          <span data-i18n="doc.quote">"Trong hơn 8 năm khám và tư vấn lâm sàng, tôi thấy hơn 85% dân văn phòng 25–35 tuổi gặp tình trạng co cứng cơ sọ cổ, mỏi mệt mạn tính và mất ngủ nhưng kết quả xét nghiệm máu tổng quát thường trả về 'bình thường'. Hệ thống Tam Bảo giúp giải mã chính xác các điểm nghẽn sinh học khởi phát để bạn chủ động cân bằng lối sống ngay từ sớm."</span>
+        </div>
+        <div class="doctor-skills-flex">
+          <span class="d-skill-pill" data-i18n="doc.sk1">✓ Đánh giá thể tạng Tinh-Khí-Thần</span>
+          <span class="d-skill-pill" data-i18n="doc.sk2">✓ Cơ sinh học Mạc cơ (Fascia) Cổ-Vai-Gáy</span>
+          <span class="d-skill-pill" data-i18n="doc.sk3">✓ Nhịp sinh học & Năng lượng ti thể</span>
+        </div>
+      </div>
+
       <div class="social-proof" style="margin-top:32px">
         <div class="avatar-stack">
           <div class="avatar">👨‍⚕️</div>
@@ -2205,9 +2464,9 @@
           <div class="avatar">🧑</div>
           <div class="avatar">👴</div>
         </div>
-        <span data-i18n="s0.proof">Phát triển bởi đội ngũ bác sĩ y học tích hợp · Chuẩn lâm sàng</span>
+        <span data-i18n="s0.proof">Phát triển & Thẩm định bởi Bác sĩ Y Học Tích Hợp (CCHN Y Tế)</span>
       </div>
-      <button class="btn btn-primary btn-lg btn-full" style="max-width:400px;margin-top:36px" onclick="goTo(1)"
+      <button class="btn btn-primary btn-lg btn-full" style="max-width:420px;margin-top:36px" onclick="goTo(1)"
         data-i18n="s0.cta3">✨ Nhận Báo Cáo Sức Khỏe Miễn Phí Ngay</button>
     </div>
   </section>
@@ -2360,8 +2619,7 @@
           </div>
           <div class="info-grid" id="coverGrid"></div>
           <div class="disc-box" data-i18n-html="r1.disc">
-            <strong>⚕️ Tuyên Bố Y Tế:</strong> Tài liệu mang tính chất tham vấn y học lối sống và dinh dưỡng bổ trợ.
-            Không thay thế chẩn đoán cấp cứu của bệnh viện.
+            <strong>⚕️ Tuyên Bố Tư Vấn Sức Khỏe:</strong> Báo cáo mang tính chất tham vấn y học lối sống và cân bằng thể tạng Tinh–Khí–Thần chủ động. Báo cáo không nhằm mục đích chẩn đoán bệnh lý cấp cứu hoặc thay thế khám trực tiếp tại cơ sở y tế.
           </div>
           <div class="bg-inline" style="margin-top:20px">
             <strong style="color:var(--jade-light)" data-i18n="r1.drLabel">Thông điệp từ Bác sĩ phụ trách:</strong><br>
@@ -2609,7 +2867,7 @@
         <div class="fp-row">
           <div class="fp-check">✓</div>
           <div class="fp-text">
-            <h4 data-i18n="s4.p10">Trang 10: Cận Lâm Sàng & Lời Bác Sĩ</h4>
+            <h4 data-i18n="s4.p10">Trang 10: Gợi Ý Cận Lâm Sàng & Lời Bác Sĩ</h4>
             <p data-i18n="s4.p10d">Bộ xét nghiệm cụ thể + Lời dặn riêng từ Bác sĩ</p>
           </div>
         </div>
@@ -2617,20 +2875,16 @@
       <div class="fu-card">
         <div class="fu-title" data-i18n="s4.fu">📅 Lịch Chăm Sóc Tự Động Tiếp Theo</div>
         <div class="fu-item">
-          <div class="fu-dot"></div><span data-i18n="s4.fu7">Ngày T+7: Check-in — Bạn đã áp dụng bài tập xả kẹp 2 phút
-            chưa?</span>
+          <div class="fu-dot"></div><span data-i18n="s4.fu7">Ngày T+7: Check-in — Bạn đã áp dụng bài tập xả kẹp 2 phút chưa?</span>
         </div>
         <div class="fu-item">
-          <div class="fu-dot"></div><span data-i18n="s4.fu14">Ngày T+14: Cẩm nang thở Đan Điền kích hoạt phó giao
-            cảm</span>
+          <div class="fu-dot"></div><span data-i18n="s4.fu14">Ngày T+14: Cẩm nang thở Đan Điền kích hoạt phó giao cảm</span>
         </div>
         <div class="fu-item">
-          <div class="fu-dot"></div><span data-i18n="s4.fu25">Ngày T+25: Thông báo "Chỉ còn 5 ngày hoàn thành chặng
-            1"</span>
+          <div class="fu-dot"></div><span data-i18n="s4.fu25">Ngày T+25: Thông báo "Chỉ còn 5 ngày hoàn thành chặng 1"</span>
         </div>
         <div class="fu-item">
-          <div class="fu-dot" style="background:var(--gold)"></div><span data-i18n="s4.fu30">Ngày T+30: 🔄 Re-test nhanh
-            1 phút đo Delta cải thiện</span>
+          <div class="fu-dot" style="background:var(--gold)"></div><span data-i18n="s4.fu30">Ngày T+30: 🔄 Re-test nhanh 1 phút đo Delta cải thiện</span>
         </div>
       </div>
       <div class="restart-sec">
@@ -2647,12 +2901,30 @@
     const I18N = {
       vi: {
         'meta.title': 'Giải Mã Nguy Cơ Sinh Học Tam Bảo | Y Học Tích Hợp',
-        's0.badge': '🏥 Hệ Thống Đánh Giá Sức Khỏe Cá Nhân Hóa · Miễn Phí',
-        's0.h1': 'Giải Mã <span class="highlight">Nguy Cơ Sinh Học</span><br>Theo Ma Trận Tam Bảo',
-        's0.sub': 'Bài test 18 câu theo y học tích hợp Đông–Tây giúp bạn hiểu rõ tình trạng <strong>Tinh – Khí – Thần</strong> và nguy cơ bệnh mãn tính tiềm ẩn.',
-        's0.cta1': '🚀 Bắt Đầu Đánh Giá Miễn Phí', 's0.cta2': 'Tìm Hiểu Thêm ↓', 's0.cta3': '✨ Nhận Báo Cáo Sức Khỏe Miễn Phí Ngay',
-        's0.stat1': 'Tiêu chí lâm sàng', 's0.stat2': 'Tầng Tam Bảo', 's0.stat3': 'Trang báo cáo', 's0.stat4': 'Thời gian làm bài',
-        's0.proof': 'Phát triển bởi đội ngũ bác sĩ y học tích hợp · Chuẩn lâm sàng',
+        's0.badge': '🏥 Khảo Sát Sức Khỏe · Miễn Phí',
+        's0.h1': 'Giải Mã <span class="highlight">Sức Khỏe & Điểm Nghẽn Sinh Học</span><br>Theo Ma Trận Tam Bảo',
+        's0.sub': 'Bài khảo sát 18 chỉ số chuẩn Y Học Tích Hợp Đông–Tây giúp bạn nhận diện sớm nguyên nhân gây mệt mỏi mạn tính, co cứng cổ vai gáy, sương mù não và sụt giảm năng lượng mà không lạm dụng thuốc.',
+        's0.cta1': '🚀 Bắt Đầu Đánh Giá Miễn Phí (~5\')', 's0.cta2': 'Tìm Hiểu Thêm ↓', 's0.cta3': '✨ Nhận Báo Cáo Sức Khỏe Miễn Phí Ngay',
+        's0.stat1': 'Tiêu chí sinh học', 's0.stat2': 'Tầng Tam Bảo', 's0.stat3': 'Trang báo cáo', 's0.stat4': 'Năm y học tích hợp',
+        's0.proof': 'Phát triển & Thẩm định bởi Bác sĩ Y Học Tích Hợp (CCHN Y Tế)',
+        'off.title': '4 Vấn Đề Gốc Rễ Phổ Biến Ở Dân Văn Phòng (25–35 Tuổi)',
+        'off.c1.h': 'Co Kẹp Cổ Vai Gáy & Vi Mạch Não',
+        'off.c1.p': 'Ngồi máy tính >8 tiếng/ngày làm co cứng Fascia cơ chẩm cổ (V1–V4), giảm 30-40% lưu lượng máu nuôi não sau gây hoa mắt, nhức đầu.',
+        'off.c2.h': 'Sụt Năng Lượng Chiều & Thèm Ngọt',
+        'off.c2.p': 'Biến động Glucose đường huyết sau ăn, tích tụ vi viêm AGEs gian bào làm ti thể thiếu nguyên liệu tạo năng lượng ATP.',
+        'off.c3.h': 'Sương Mù Não & Khó Ngủ Sâu',
+        'off.c3.p': 'Mạng lưới DMN vỏ não quá tải do căng thẳng liên tục, chu trình Glymphatic đêm tắc nghẽn làm não không thải sạch rác thần kinh.',
+        'off.c4.h': 'Lộ Trình Phục Hồi 80/20 Tự Nhiên',
+        'off.c4.p': 'Không lạm dụng thuốc tổng hợp. Bài tập xả kẹp mạc cơ 2-5 phút & dinh dưỡng cân bằng thực hiện ngay tại bàn làm việc.',
+        'doc.badge': 'BÁC SĨ PHỤ TRÁCH & THẨM ĐỊNH CHUYÊN MÔN',
+        'doc.sub': 'Bác sĩ Y Học Tích Hợp Đông – Tây Y',
+        'doc.s1': 'Kinh nghiệm lâm sàng',
+        'doc.s2': 'Bộ/Sở Y tế cấp CCHN',
+        'doc.s3': 'Hồ sơ đã thẩm định',
+        'doc.quote': '"Trong hơn 8 năm khám và tư vấn lâm sàng, tôi thấy hơn 85% dân văn phòng 25–35 tuổi gặp tình trạng co cứng cơ sọ cổ, mỏi mệt mạn tính và mất ngủ nhưng kết quả xét nghiệm máu tổng quát thường trả về \'bình thường\'. Hệ thống Tam Bảo giúp giải mã chính xác các điểm nghẽn sinh học khởi phát để bạn chủ động cân bằng lối sống ngay từ sớm."',
+        'doc.sk1': '✓ Đánh giá thể tạng Tinh-Khí-Thần',
+        'doc.sk2': '✓ Cơ sinh học Mạc cơ (Fascia) Cổ-Vai-Gáy',
+        'doc.sk3': '✓ Nhịp sinh học & Năng lượng ti thể',
         'p.tinh.name': 'TINH', 'p.tinh.desc': 'Vật liệu & Chuyển hóa tế bào. Gian bào, ti thể, nội tiết tố, chuyển hóa Lipid', 'p.tinh.t1': 'Dinh dưỡng', 'p.tinh.t2': 'Gan thận', 'p.tinh.t3': 'Mỡ máu',
         'p.khi.name': 'KHÍ', 'p.khi.desc': 'Vi tuần hoàn & Mạc cơ. Lưu thông máu, oxy tế bào, điện sinh học mô', 'p.khi.t1': 'Tuần hoàn', 'p.khi.t2': 'Cột sống', 'p.khi.t3': 'Vi mạch',
         'p.than.name': 'THẦN', 'p.than.desc': 'Thần kinh & Giấc ngủ. Trục não–ruột, DMN, cortisol, đồng hồ sinh học', 'p.than.t1': 'Giấc ngủ', 'p.than.t2': 'Stress', 'p.than.t3': 'Não bộ',
@@ -2672,7 +2944,7 @@
         's3.sub': '4 trang đầu miễn phí · Trang 5–10 cần mở khóa để nhận phác đồ hoàn chỉnh', 'free': '✓ Miễn Phí',
         'r1.title': 'Bìa & Lời Mở Đầu Chuyên Môn', 'r1.coverTitle': 'HỒ SƠ GIẢI MÃ NGUY CƠ SINH HỌC & ĐIỀU HÒA NỀN TẢNG',
         'r1.coverSub': 'MA TRẬN TAM BẢO (TINH – KHÍ – THẦN)',
-        'r1.disc': '<strong>⚕️ Tuyên Bố Y Tế:</strong> Tài liệu mang tính chất tham vấn y học lối sống và dinh dưỡng bổ trợ. Không thay thế chẩn đoán cấp cứu của bệnh viện.',
+        'r1.disc': '<strong>⚕️ Tuyên Bố Tư Vấn Sức Khỏe:</strong> Báo cáo mang tính chất tham vấn y học lối sống và cân bằng thể tạng Tinh–Khí–Thần chủ động. Báo cáo không nhằm mục đích chẩn đoán bệnh lý cấp cứu hoặc thay thế khám trực tiếp tại cơ sở y tế.',
         'r1.drLabel': 'Thông điệp từ Bác sĩ phụ trách:', 'r1.drMsg': 'Cơ thể con người là một hệ sinh thái tự điều chỉnh. Triệu chứng mỏi cổ, khó ngủ hay tăng mỡ bụng là tín hiệu báo động khi ti thể và mạch máu bị quá tải. Báo cáo này là bản đồ dẫn đường hỗ trợ điều chỉnh lối sống chủ động.',
         'r2.title': 'Hồ Sơ Sinh Học Tam Bảo Tổng Thể', 'r2.scoreLabel': 'Tổng điểm tích tụ rác sinh học',
         'r3.title': 'Điểm Mạnh Cơ Thể — Vốn Sinh Học Bảo Tồn', 'r3.note1': 'Ý nghĩa:', 'r3.note2': 'Những vùng còn bảo tồn tốt là nền tảng nội lực để cơ thể phục hồi. Nếu can thiệp đúng vào điểm nghẽn, các vùng này sẽ khuếch đại hiệu quả phục hồi theo cấp số nhân.',
@@ -2680,25 +2952,25 @@
         'zone.xanh': '🟢 VÙNG XANH', 'zone.vang': '🟡 VÙNG VÀNG', 'zone.cam': '🟠 VÙNG CAM', 'zone.do': '🔴 VÙNG ĐỎ',
         'zone.xanh.desc': 'Chính Khí Vững – Khả năng tự điều hòa tốt, gian bào sạch. Duy trì lối sống phòng ngừa.',
         'zone.vang.desc': 'Khí Trệ Tiềm Ẩn – Bắt đầu tích lũy vi viêm và co cứng mạc cơ cục bộ. Cần giải tỏa sớm.',
-        'zone.cam.desc': 'Tiến Triển Mạn Tính – Kháng Insulin rõ nét, co kẹp mạch máu não, suy giảm tế bào miễn dịch NK.',
-        'zone.do.desc': 'Báo Động Biến Cố – Toan hóa gian bào sâu, nguy cơ đột quỵ thiếu máu não cục bộ hoặc biến tính mô.',
+        'zone.cam.desc': 'Tiến Triển Mạn Tính – Kháng Insulin rõ nét, co kẹp mạch máu brain sau, suy giảm tế bào miễn dịch NK.',
+        'zone.do.desc': 'Báo Động Biến Cố – Toan hóa gian bào sâu, nguy cơ thiếu máu cục bộ hoặc biến tính mô.',
         'rpt.axis': 'Trục chịu tải lớn nhất:', 'rpt.high': '⚠️ Tầng này cần ưu tiên can thiệp trước.', 'rpt.ok': 'Mức tải ở ngưỡng quản lý được.',
         'rpt.summ': '📊 Nhận Định Tổng Thể:', 'rpt.no_strength': 'Tất cả tiêu chí đều có điểm. Ưu tiên phục hồi tầng cao nhất trước.',
         'rpt.no_weak': '🎉 Không có điểm nghẽn đáng kể! Cơ thể đang trong trạng thái tốt.',
         'rpt.pri1': 'ƯU TIÊN 1', 'rpt.pri2': 'ƯU TIÊN 2', 'rpt.pri3': 'ƯU TIÊN 3', 'rpt.rf': '🚩 Cờ Đỏ',
-        'rpt.frequent': '⚠️ Tần suất thường xuyên – cơ chế bệnh sinh đang hoạt động tích cực. Cần can thiệp sớm.',
+        'rpt.frequent': '⚠️ Tần suất thường xuyên – cơ chế sinh học đang hoạt động tích cực. Cần can thiệp sớm.',
         'rpt.occasional': '⚡ Triệu chứng xuất hiện định kỳ – giai đoạn tích lũy. Đây là thời điểm lý tưởng để can thiệp lối sống.',
         'rpt.mech': '⚗️ Cơ chế sinh học:',
         'cov.name': 'Họ và Tên', 'cov.age': 'Tuổi', 'cov.gender': 'Giới Tính', 'cov.occ': 'Nghề Nghiệp', 'cov.code': 'Mã Hồ Sơ', 'cov.date': 'Ngày Đánh Giá',
-        'pw.p5title': 'Bản Đồ Phân Tầng Nguy Cơ Bệnh Lý', 'pw.p6title': 'Phác Đồ Hành Động 30/60/90 Ngày',
+        'pw.p5title': 'Bản Đồ Phân Tầng Chỉ Số & Điểm Nghẽn Sinh Học', 'pw.p6title': 'Phác Đồ Hành Động 30/60/90 Ngày',
         'pw.title': 'Bác Sĩ Đã Hoàn Thiện Phác Đồ Cá Nhân Của Bạn',
         'pw.desc': 'Dựa trên <strong style="color:var(--text-bright)">chỉ số sinh học thực tế</strong> vừa đánh giá, hồ sơ 10 trang bao gồm lộ trình phục hồi 30/60/90 ngày, Top 5 hành động ưu tiên và chỉ dẫn cận lâm sàng.',
-        'pw.pg5num': 'TRANG 5', 'pw.pg5name': '🗺️ Bản Đồ Nguy Cơ Bệnh Lý',
+        'pw.pg5num': 'TRANG 5', 'pw.pg5name': '🗺️ Bản Đồ Điểm Nghẽn Sinh Học',
         'pw.pg6num': 'TRANG 6', 'pw.pg6name': '🏆 Top 5 Ưu Tiên Cải Thiện',
         'pw.pg7num': 'TRANG 7', 'pw.pg7name': '📅 Kế Hoạch 30 Ngày',
         'pw.pg8num': 'TRANG 8', 'pw.pg8name': '⚡ Phục Hồi 60 Ngày',
         'pw.pg9num': 'TRANG 9', 'pw.pg9name': '🛡️ Bền Vững 90 Ngày',
-        'pw.pg10num': 'TRANG 10', 'pw.pg10name': '🩺 Cận Lâm Sàng & Bác Sĩ Duyệt',
+        'pw.pg10num': 'TRANG 10', 'pw.pg10name': '🩺 Gợi Ý Cận Lâm Sàng & Lời Dặn Bác Sĩ',
         'pw.priceOld': '299.000đ', 'pw.priceNew': '99.000đ', 'pw.priceTag': '🎁 Ra mắt ưu đãi · Trọn bộ 10 trang + Lời dặn Bác sĩ',
         'pw.bank': 'Ngân hàng', 'pw.acct': 'Số TK', 'pw.name': 'Tên TK', 'pw.ref': 'Nội dung', 'pw.amount': 'Số tiền',
         'pw.qrNote': '📱 Quét mã QR hoặc chuyển khoản<br>Nhận báo cáo qua Zalo trong 30 phút',
@@ -2708,12 +2980,12 @@
         's4.title': 'Cảm Ơn Bạn Đã Tin Tưởng!', 's4.sub': 'Chúng tôi đã nhận được thông báo. Bác sĩ sẽ kiểm duyệt và gửi qua Zalo trong 30 phút.',
         's4.pkg': '📦 Gói Hồ Sơ 10 Trang Sẽ Bao Gồm:', 's4.pkgSub': 'Được Bác sĩ kiểm duyệt và cá nhân hóa riêng',
         's4.p14': 'Trang 1–4: Preview Sức Khỏe Tổng Thể', 's4.p14d': 'Đã xem · Radar chart, điểm mạnh và điểm yếu',
-        's4.p5': 'Trang 5: Bản Đồ Phân Tầng Nguy Cơ', 's4.p5d': '4 cụm: Kháng Insulin, Vi mạch não, Cột sống, NK cells',
+        's4.p5': 'Trang 5: Bản Đồ Phân Tầng Điểm Nghẽn Sinh Học', 's4.p5d': '4 cụm: Kháng Insulin, Vi mạch brain, Cột sống, NK cells',
         's4.p6': 'Trang 6: Top 5 Ưu Tiên Cải Thiện', 's4.p6d': '5 hành động xếp theo thứ tự khẩn cấp cá nhân',
         's4.p7': 'Trang 7: Kế Hoạch 30 Ngày', 's4.p7d': 'Lịch 24 giờ · Mục tiêu đo lường cụ thể',
         's4.p8': 'Trang 8: Phục Hồi 60 Ngày', 's4.p8d': 'Dinh dưỡng chống oxy hóa, mạc cơ Sol/Gel',
         's4.p9': 'Trang 9: Bền Vững 90 Ngày', 's4.p9d': 'Củng cố Chính Khí, chu kỳ thanh lọc, Re-test Delta',
-        's4.p10': 'Trang 10: Cận Lâm Sàng & Lời Bác Sĩ', 's4.p10d': 'Bộ xét nghiệm cụ thể + Lời dặn riêng từ Bác sĩ',
+        's4.p10': 'Trang 10: Gợi Ý Cận Lâm Sàng & Lời Dặn Bác Sĩ', 's4.p10d': 'Bộ xét nghiệm cụ thể + Lời dặn riêng từ Bác sĩ',
         's4.fu': '📅 Lịch Chăm Sóc Tự Động Tiếp Theo',
         's4.fu7': 'Ngày T+7: Check-in — Bạn đã áp dụng bài tập xả kẹp 2 phút chưa?',
         's4.fu14': 'Ngày T+14: Cẩm nang thở Đan Điền kích hoạt phó giao cảm',
@@ -2725,12 +2997,30 @@
       },
       en: {
         'meta.title': 'Tam Bao Biological Risk Assessment | Integrative Medicine',
-        's0.badge': '🏥 Personalized Health Assessment System · Free',
-        's0.h1': 'Decode Your <span class="highlight">Biological Risk</span><br>with the Tam Bao Matrix',
-        's0.sub': 'An 18-question test based on East–West integrative medicine to help you understand your <strong>Essence–Qi–Spirit</strong> status and latent chronic disease risks.',
-        's0.cta1': '🚀 Start Free Assessment', 's0.cta2': 'Learn More ↓', 's0.cta3': '✨ Get Free Health Report Now',
-        's0.stat1': 'Clinical criteria', 's0.stat2': 'Tam Bao tiers', 's0.stat3': 'Report pages', 's0.stat4': 'Time to complete',
-        's0.proof': 'Developed by a team of integrative medicine physicians · Clinically validated',
+        's0.badge': '💻 Office Worker Health Assessment (Ages 25–35) · Free',
+        's0.h1': 'Decode Your <span class="highlight">Health & Biological Blockages</span><br>with the Tam Bao Matrix',
+        's0.sub': 'An 18-criterion test based on East–West integrative medicine to help you identify root causes of chronic fatigue, neck-shoulder tightness, brain fog, and energy slumps without overusing synthetic drugs.',
+        's0.cta1': '🚀 Start Free Assessment (~5m)', 's0.cta2': 'Learn More ↓', 's0.cta3': '✨ Get Free Health Report Now',
+        's0.stat1': 'Biological criteria', 's0.stat2': 'Tam Bao tiers', 's0.stat3': 'Report pages', 's0.stat4': 'Years in practice',
+        's0.proof': 'Developed & validated by Certified Integrative Medicine Physicians',
+        'off.title': '4 Root Health Issues in Office Workers (Ages 25–35)',
+        'off.c1.h': 'Neck-Shoulder Stiffness & Brain Microcirculation',
+        'off.c1.p': 'Sitting >8 hrs/day causes fascial rigidity in occipital neck muscles (V1–V4), reducing posterior brain blood flow.',
+        'off.c2.h': 'Afternoon Energy Slump & Sugar Cravings',
+        'off.c2.p': 'Post-meal glucose spikes and interstitial AGEs microinflammation deprive mitochondria of ATP energy building blocks.',
+        'off.c3.h': 'Brain Fog & Sleep Disruption',
+        'off.c3.p': 'Cortical DMN network overload and nocturnal Glymphatic blockage prevent clearing neural metabolic waste.',
+        'off.c4.h': 'Natural 80/20 Recovery Protocol',
+        'off.c4.p': 'No reliance on synthetic drugs. Simple 2-5 min fascial release & balanced nutrition right at your desk.',
+        'doc.badge': 'ATTENDING PHYSICIAN & MEDICAL REVIEWER',
+        'doc.sub': 'Integrative East–West Medicine Physician',
+        'doc.s1': 'Clinical Experience',
+        'doc.s2': 'Certified Practice License',
+        'doc.s3': 'Dossiers Reviewed',
+        'doc.quote': '"Over 8 years of clinical consultation, I noticed >85% of office workers aged 25–35 suffer from occipital tension, chronic fatigue, and poor sleep, yet standard blood tests show \'normal\'. The Tam Bao System decodes early biological blockages so you can take control of your lifestyle proactive wellness."',
+        'doc.sk1': '✓ Essence-Qi-Spirit Constitution Profile',
+        'doc.sk2': '✓ Myofascial Biomechanics (Neck & Spine)',
+        'doc.sk3': '✓ Circadian Rhythms & Mitochondrial Health',
         'p.tinh.name': 'ESSENCE', 'p.tinh.desc': 'Cellular materials & metabolism. Interstitium, mitochondria, hormones, lipid metabolism', 'p.tinh.t1': 'Nutrition', 'p.tinh.t2': 'Liver & Kidney', 'p.tinh.t3': 'Blood lipids',
         'p.khi.name': 'QI', 'p.khi.desc': 'Microcirculation & fascia. Blood flow, cellular oxygen, bioelectrical field', 'p.khi.t1': 'Circulation', 'p.khi.t2': 'Spine', 'p.khi.t3': 'Microvasculature',
         'p.than.name': 'SPIRIT', 'p.than.desc': 'Nervous system & sleep. Gut–brain axis, DMN, cortisol, biological clock', 'p.than.t1': 'Sleep', 'p.than.t2': 'Stress', 'p.than.t3': 'Brain',
@@ -2750,7 +3040,7 @@
         's3.sub': 'First 4 pages free · Pages 5–10 unlock full recovery protocol', 'free': '✓ Free',
         'r1.title': 'Cover & Clinical Introduction', 'r1.coverTitle': 'BIOLOGICAL RISK DECODING PROFILE & FOUNDATIONAL REGULATION',
         'r1.coverSub': 'TAM BAO MATRIX (ESSENCE – QI – SPIRIT)',
-        'r1.disc': '<strong>⚕️ Medical Disclaimer:</strong> This document serves as lifestyle medicine and nutritional advisory only. It does not replace emergency hospital diagnosis.',
+        'r1.disc': '<strong>⚕️ Health Advisory Disclaimer:</strong> This document serves as lifestyle medicine and wellness consultation. It does not replace emergency hospital diagnosis.',
         'r1.drLabel': 'Message from the Attending Physician:', 'r1.drMsg': 'The human body is a self-regulating ecosystem. Symptoms like neck fatigue, poor sleep, or belly fat gain are warning signals that mitochondria and blood vessels are overloaded. This report is a roadmap to support proactive lifestyle adjustment.',
         'r2.title': 'Overall Tam Bao Biological Profile', 'r2.scoreLabel': 'Total biological waste accumulation score',
         'r3.title': 'Body Strengths — Preserved Biological Capital', 'r3.note1': 'Significance:', 'r3.note2': 'Well-preserved areas form the foundation of internal resources for recovery. When blockages are addressed correctly, these areas will amplify recovery exponentially.',
@@ -2768,15 +3058,15 @@
         'rpt.occasional': '⚡ Periodic symptoms – accumulation phase. This is the ideal time for lifestyle intervention.',
         'rpt.mech': '⚗️ Biological mechanism:',
         'cov.name': 'Full Name', 'cov.age': 'Age', 'cov.gender': 'Gender', 'cov.occ': 'Occupation', 'cov.code': 'Profile Code', 'cov.date': 'Assessment Date',
-        'pw.p5title': 'Disease Risk Stratification Map', 'pw.p6title': '30/60/90-Day Action Protocol',
+        'pw.p5title': 'Biological Blockage Stratification Map', 'pw.p6title': '30/60/90-Day Action Protocol',
         'pw.title': 'Your Physician Has Completed Your Personal Protocol',
         'pw.desc': 'Based on your <strong style="color:var(--text-bright)">actual biological scores</strong>, the 10-page dossier includes a 30/60/90-day recovery roadmap, Top 5 priority actions, and clinical lab guidance.',
-        'pw.pg5num': 'PAGE 5', 'pw.pg5name': '🗺️ Disease Risk Map',
+        'pw.pg5num': 'PAGE 5', 'pw.pg5name': '🗺️ Biological Blockage Map',
         'pw.pg6num': 'PAGE 6', 'pw.pg6name': '🏆 Top 5 Priority Actions',
         'pw.pg7num': 'PAGE 7', 'pw.pg7name': '📅 30-Day Plan',
         'pw.pg8num': 'PAGE 8', 'pw.pg8name': '⚡ 60-Day Recovery',
         'pw.pg9num': 'PAGE 9', 'pw.pg9name': '🛡️ 90-Day Sustain',
-        'pw.pg10num': 'PAGE 10', 'pw.pg10name': '🩺 Labs & Physician Notes',
+        'pw.pg10num': 'PAGE 10', 'pw.pg10name': '🩺 Clinical Lab Guidance & Doctor Notes',
         'pw.priceOld': '$15.00', 'pw.priceNew': '$4.99', 'pw.priceTag': '🎁 Launch offer · Complete 10-page + Physician notes',
         'pw.bank': 'Bank', 'pw.acct': 'Account No.', 'pw.name': 'Account Name', 'pw.ref': 'Reference', 'pw.amount': 'Amount',
         'pw.qrNote': '📱 Scan QR or bank transfer<br>Receive report via Zalo within 30 minutes',
@@ -2786,12 +3076,12 @@
         's4.title': 'Thank You for Trusting Us!', 's4.sub': 'We have received your notification and are preparing your dossier. Your physician will review and send it via Zalo within 30 minutes.',
         's4.pkg': '📦 Your 10-Page Health Dossier Will Include:', 's4.pkgSub': 'Physician-reviewed and personally tailored',
         's4.p14': 'Pages 1–4: Overall Health Preview', 's4.p14d': 'Already viewed · Radar chart, strengths and weaknesses',
-        's4.p5': 'Page 5: Disease Risk Stratification Map', 's4.p5d': '4 clusters: Insulin resistance, Brain microvasculature, Spine, NK cells',
+        's4.p5': 'Page 5: Biological Blockage Stratification Map', 's4.p5d': '4 clusters: Insulin resistance, Brain microvasculature, Spine, NK cells',
         's4.p6': 'Page 6: Top 5 Priority Improvements', 's4.p6d': '5 actions ranked by personal urgency order',
         's4.p7': 'Page 7: 30-Day Plan', 's4.p7d': '24-hour schedule · Specific measurable goals',
         's4.p8': 'Page 8: 60-Day Recovery', 's4.p8d': 'Antioxidant nutrition, fascia Sol/Gel transition',
         's4.p9': 'Page 9: 90-Day Sustainability', 's4.p9d': 'Consolidate Vital Qi, cleanse cycles, Delta re-test',
-        's4.p10': 'Page 10: Clinical Labs & Physician Notes', 's4.p10d': 'Specific test panel + personalized physician message',
+        's4.p10': 'Page 10: Clinical Lab Guidance & Physician Notes', 's4.p10d': 'Specific test panel + personalized physician message',
         's4.fu': '📅 Upcoming Automated Care Schedule',
         's4.fu7': 'Day T+7: Check-in — Have you started the 2-minute decompression exercise?',
         's4.fu14': 'Day T+14: Dan Tian breathing guide to activate parasympathetic nervous system',
@@ -2803,12 +3093,30 @@
       },
       zh: {
         'meta.title': '三宝健康风险评估 | 中西整合医学',
-        's0.badge': '🏥 个性化健康评估系统 · 免费',
-        's0.h1': '解码您的<span class="highlight">生物学风险</span><br>三宝矩阵（精·气·神）',
-        's0.sub': '基于东西方整合医学的18题测试，帮助您了解<strong>精·气·神</strong>状态，发现潜在慢性病风险。',
-        's0.cta1': '🚀 免费开始评估', 's0.cta2': '了解更多 ↓', 's0.cta3': '✨ 立即获取免费健康报告',
-        's0.stat1': '临床评估指标', 's0.stat2': '三宝层级', 's0.stat3': '报告页数', 's0.stat4': '完成时间',
-        's0.proof': '由整合医学医师团队开发 · 临床验证',
+        's0.badge': '💻 白领办公人群健康评估（25–35岁）· 免费',
+        's0.h1': '解码您的<span class="highlight">健康与生物学堵塞</span><br>三宝矩阵（精·气·神）',
+        's0.sub': '基于中西整合医学的18项指标评估，帮助您早期识别慢性疲劳、颈肩僵硬、大脑雾化和精力衰退的根源。',
+        's0.cta1': '🚀 免费开始评估 (~5分钟)', 's0.cta2': '了解更多 ↓', 's0.cta3': '✨ 立即获取免费健康报告',
+        's0.stat1': '生物学评估指标', 's0.stat2': '三宝层级', 's0.stat3': '报告页数', 's0.stat4': '整合医学经验',
+        's0.proof': '由具有执业医师资格的中西整合医学专家团队开发与审核',
+        'off.title': '25–35岁办公人群4大根源健康问题',
+        'off.c1.h': '颈肩僵硬与脑微循环',
+        'off.c1.p': '每日久坐>8小时导致枕颈部肌筋膜（V1–V4）紧张，减少后脑血流量。',
+        'off.c2.h': '下午精力衰退与渴望甜食',
+        'off.c2.p': '餐后血糖波动与组织间液AGEs微炎症抑制线粒体ATP能量生成。',
+        'off.c3.h': '大脑雾化与深度睡眠障碍',
+        'off.c3.p': '皮层DMN网络过载与夜间类淋巴系统堵塞阻碍脑部代谢废物清除。',
+        'off.c4.h': '天然80/20恢复方案',
+        'off.c4.p': '无需依赖合成药物。在办公桌前即可完成2-5分钟筋膜松解与营养调节。',
+        'doc.badge': '主治医师与专业审核',
+        'doc.sub': '中西整合医学医师',
+        'doc.s1': '临床经验',
+        'doc.s2': '卫生部门颁发执业证书',
+        'doc.s3': '已审阅档案',
+        'doc.quote': '"在8年多的临床咨询中，我发现85%以上的25–35岁白领存在枕颈部紧张、慢性疲劳和睡眠障碍，但常规化验往往显示\'正常\'。三宝系统帮助解码早期生物学堵塞，让您主动掌控健康生活方式。"',
+        'doc.sk1': '✓ 精-气-神体质评估',
+        'doc.sk2': '✓ 颈肩肌筋膜生物力学',
+        'doc.sk3': '✓ 昼夜节律与线粒体能量',
         'p.tinh.name': '精', 'p.tinh.desc': '物质与细胞代谢。组织间液、线粒体、激素、脂质代谢', 'p.tinh.t1': '营养', 'p.tinh.t2': '肝肾', 'p.tinh.t3': '血脂',
         'p.khi.name': '气', 'p.khi.desc': '微循环与筋膜。血流、细胞氧合、生物电场', 'p.khi.t1': '循环', 'p.khi.t2': '脊柱', 'p.khi.t3': '微血管',
         'p.than.name': '神', 'p.than.desc': '神经系统与睡眠。肠脑轴、DMN、皮质醇、生物钟', 'p.than.t1': '睡眠', 'p.than.t2': '压力', 'p.than.t3': '大脑',
@@ -2828,7 +3136,7 @@
         's3.sub': '前4页免费 · 第5–10页需解锁以获取完整调理方案', 'free': '✓ 免费',
         'r1.title': '封面与专业导言', 'r1.coverTitle': '生物学风险解码档案与基础调节报告',
         'r1.coverSub': '三宝矩阵（精 – 气 – 神）',
-        'r1.disc': '<strong>⚕️ 医疗声明：</strong>本文件仅作为生活方式医学和营养辅助咨询，不替代医院紧急诊断。',
+        'r1.disc': '<strong>⚕️ 健康咨询声明：</strong>本文件仅作为生活方式医学与体质调节咨询，不作为医院紧急诊断。',
         'r1.drLabel': '主治医师寄语：', 'r1.drMsg': '人体是一个自我调节的生态系统。颈部疲劳、睡眠不佳或腹部脂肪积累是线粒体和血管过载的警告信号。这份报告是您主动调整生活方式的路线图。',
         'r2.title': '三宝生物学综合档案', 'r2.scoreLabel': '生物废物积累总分',
         'r3.title': '身体优势 — 保存完好的生物资本', 'r3.note1': '意义：', 'r3.note2': '保存完好的区域是身体恢复的内在基础。当正确干预堵塞点时，这些区域将呈指数级放大恢复效果。',
@@ -2846,10 +3154,10 @@
         'rpt.occasional': '⚡ 周期性症状 – 积累阶段。这是生活方式干预的理想时机。',
         'rpt.mech': '⚗️ 生物学机制：',
         'cov.name': '姓名', 'cov.age': '年龄', 'cov.gender': '性别', 'cov.occ': '职业', 'cov.code': '档案编码', 'cov.date': '评估日期',
-        'pw.p5title': '疾病风险分层地图', 'pw.p6title': '30/60/90天行动方案',
+        'pw.p5title': '生物学堵塞分层地图', 'pw.p6title': '30/60/90天行动方案',
         'pw.title': '医生已完成您的个性化调理方案',
         'pw.desc': '基于您的<strong style="color:var(--text-bright)">实际生物学指标</strong>，10页档案包含30/60/90天恢复路线图、5大优先行动和临床检查指引。',
-        'pw.pg5num': '第5页', 'pw.pg5name': '🗺️ 疾病风险地图',
+        'pw.pg5num': '第5页', 'pw.pg5name': '🗺️ 生物学堵塞地图',
         'pw.pg6num': '第6页', 'pw.pg6name': '🏆 Top 5优先改善',
         'pw.pg7num': '第7页', 'pw.pg7name': '📅 30天计划',
         'pw.pg8num': '第8页', 'pw.pg8name': '⚡ 60天恢复',
@@ -2864,7 +3172,7 @@
         's4.title': '感谢您的信任！', 's4.sub': '我们已收到您的通知，正在准备您的档案。医生将在30分钟内审阅并通过Zalo发送。',
         's4.pkg': '📦 您的10页健康档案将包含：', 's4.pkgSub': '由医生审阅并个性化定制',
         's4.p14': '第1–4页：健康总览预览', 's4.p14d': '已查看 · 雷达图、优势与劣势',
-        's4.p5': '第5页：疾病风险分层地图', 's4.p5d': '4大集群：胰岛素抵抗、脑微血管、脊柱、NK细胞',
+        's4.p5': '第5页：生物学堵塞分层地图', 's4.p5d': '4大集群：胰岛素抵抗、脑微血管、脊柱、NK细胞',
         's4.p6': '第6页：Top 5优先改善', 's4.p6d': '按个人紧迫程度排序的5项行动',
         's4.p7': '第7页：30天计划', 's4.p7d': '24小时日程 · 具体可量化目标',
         's4.p8': '第8页：60天恢复', 's4.p8d': '抗氧化营养，筋膜Sol/Gel转换',
@@ -2889,11 +3197,11 @@
         { id: 'T1', g: 'tinh', w: 1.0, rf: false, txt: 'Bạn có thường xuyên ăn đồ ngọt, nước ngọt, đồ chiên rán dầu mỡ biến tính, thực phẩm chế biến sẵn?', mech: 'Axit hóa gian bào, vi viêm AGEs (sản phẩm glycation bền vững)', sl: 'Chế độ ăn uống lành mạnh', sd: 'Cơ thể không bị tích lũy AGEs và vi viêm mãn tính. Tế bào gian bào đang ở môi trường kiềm tính tốt.' },
         { id: 'T2', g: 'tinh', w: 1.2, rf: false, txt: 'Bạn có thói quen hễ mệt/đau/ốm là tự mua thuốc giảm đau, hạ sốt, kháng sinh hoặc thuốc sủi uống ngay?', mech: 'Quá tải gan thận, ức chế ti thể, phá hủy hệ vi sinh đường ruột', sl: 'Gan thận chưa bị quá tải hóa chất', sd: 'Chức năng giải độc gan thận đang trong ngưỡng bình thường. Ti thể chưa bị ức chế bởi thuốc tổng hợp liều cao.' },
         { id: 'T3', g: 'tinh', w: 1.3, rf: false, txt: 'Sau bữa trưa/tối bạn có bị thèm ngọt, buồn ngủ gà gật, và vòng bụng dưới có xu hướng tích mỡ nhanh?', mech: 'Kháng Insulin tiềm ẩn, Đàm trọc trệ, rối loạn chu trình đường huyết sau ăn', sl: 'Nhạy cảm Insulin còn tốt', sd: 'Cơ thể vẫn xử lý đường huyết hiệu quả sau bữa ăn. Không có dấu hiệu kháng Insulin – lợi thế phòng ngừa tiểu đường type 2.' },
-        { id: 'T4', g: 'tinh', w: 1.4, rf: false, txt: 'Bạn đã từng được chẩn đoán (hoặc nghi ngờ): Men gan cao, gan nhiễm mỡ, mỡ máu cao (Triglyceride/LDL-c)?', mech: 'Rối loạn chuyển hóa Lipid – gan tích lũy mỡ nội tạng, tăng nguy cơ xơ vữa động mạch', sl: 'Chuyển hóa Lipid chưa có bất thường', sd: 'Chưa có tiền sử rối loạn mỡ máu hoặc gan nhiễm mỡ. Hệ thống xử lý Lipid đang hoạt động bình thường.' },
+        { id: 'T4', g: 'tinh', w: 1.4, rf: false, txt: 'Bạn từng có chỉ số kiểm tra hoặc nghi ngờ: Men gan tăng, gan tích mỡ, mỡ máu (Triglyceride/LDL-c) vượt ngưỡng?', mech: 'Rối loạn chuyển hóa Lipid – gan tích lũy mỡ nội tạng, tăng nguy cơ xơ vữa động mạch', sl: 'Chuyển hóa Lipid chưa có bất thường', sd: 'Chưa có tiền sử rối loạn mỡ máu hoặc gan nhiễm mỡ. Hệ thống xử lý Lipid đang hoạt động bình thường.' },
         { id: 'T5', g: 'tinh', w: 1.1, rf: false, txt: 'Bạn có hay bị nhức mỏi âm ỉ các khớp (ngón chân, cổ chân, đầu gối) sau các bữa ăn nhiều đạm hoặc bia rượu?', mech: 'Lắng đọng Urat, toan gian bào – pH mô bị axit hóa gây viêm khớp vi tinh thể', sl: 'Không có lắng đọng Urat', sd: 'Khớp xương chưa có dấu hiệu lắng đọng axit uric. pH gian bào đang trong ngưỡng kiềm tính bảo vệ sụn khớp.' },
         { id: 'T6', g: 'tinh', w: 1.5, rf: true, txt: 'Da bạn có hay xuất hiện vết bầm tím không rõ va chạm, mụn nhọt lâu lành, có tiền sử polyp/u xơ/hạch sần?', mech: 'Huyết ứ, suy giảm miễn dịch mô – tế bào NK giảm hoạt tính, môi trường thúc đẩy biến tính tế bào', sl: 'Miễn dịch mô còn mạnh', sd: 'Không có dấu hiệu suy giảm miễn dịch tế bào cục bộ. Tế bào NK (Natural Killer) duy trì chức năng giám sát phân bào tốt.' },
         { id: 'K1', g: 'khi', w: 1.1, rf: false, txt: 'Bạn có hay thấy cơ thể uể oải, nói nhiều thì hụt hơi, leo 2–3 tầng cầu thang là thở dốc, dễ cảm vặt?', mech: 'Khí hư, Vệ Khí suy giảm – tim phổi thiếu công suất dự trữ, hệ miễn dịch bề mặt yếu', sl: 'Vệ Khí và sức đề kháng còn tốt', sd: 'Hệ hô hấp và tim mạch dự trữ đang trong ngưỡng tốt. Vệ Khí bảo vệ bề mặt cơ thể chưa bị suy giảm đáng kể.' },
-        { id: 'K2', g: 'khi', w: 1.5, rf: true, txt: 'Cổ vai gáy bạn có bị căng cứng, nhức mỏi vùng chẩm sau đầu, quay cổ thấy vướng hoặc hoa mắt chóng mặt nhẹ?', mech: 'Co kẹp động mạch đốt sống V1–V4 – thiếu máu não sau, nguy cơ đột quỵ vi mạch và suy thoái Glymphatic', sl: 'Vi tuần hoàn não sau còn thông suốt', sd: 'Không có dấu hiệu co kẹp động mạch đốt sống. Lưu lượng máu não sau đang cung cấp đầy đủ cho tiểu não và thân não.' },
+        { id: 'K2', g: 'khi', w: 1.5, rf: true, txt: 'Cổ vai gáy bạn có bị căng cứng, nhức mỏi vùng chẩm sau đầu, quay cổ thấy vướng hoặc hoa mắt chóng mặt nhẹ?', mech: 'Co kẹp động mạch đốt sống V1–V4 – thiếu máu não sau, cản trở vi tuần hoàn não và suy thoái Glymphatic', sl: 'Vi tuần hoàn não sau còn thông suốt', sd: 'Không có dấu hiệu co kẹp động mạch đốt sống. Lưu lượng máu não sau đang cung cấp đầy đủ cho tiểu não và thân não.' },
         { id: 'K3', g: 'khi', w: 1.0, rf: false, txt: 'Bạn có thói quen ngồi liên tục trên 50 phút không vận động (dân văn phòng, ngồi máy tính, lái xe)?', mech: 'Khí trệ chuỗi mạc cơ vận động – dịch mạc cơ đóng gel, tế bào cơ thiếu oxy cục bộ', sl: 'Vận động thường xuyên, chuỗi mạc cơ linh hoạt', sd: 'Bạn có thói quen vận động tốt. Dịch mạc cơ duy trì trạng thái Sol (lỏng linh hoạt), tế bào cơ được tưới dưỡng chất liên tục.' },
         { id: 'K4', g: 'khi', w: 1.3, rf: false, txt: 'Lưng dưới/thắt lưng của bạn có hay bị lạnh mỏi, bàn chân/tay lạnh, sợ gió lạnh hoặc sợ ngồi máy lạnh?', mech: 'Thận Dương hư, Mệnh Môn hỏa suy – nền nhiệt cơ thể thấp, chuyển hóa năng lượng ti thể giảm', sl: 'Thận Dương và Mệnh Môn vững', sd: 'Nền nhiệt cơ thể đang tốt. Chức năng Thận Dương duy trì quá trình chuyển hóa năng lượng ti thể hiệu quả.' },
         { id: 'K5', g: 'khi', w: 1.2, rf: false, txt: 'Về chiều tối, bắp chân hoặc bàn chân bạn có cảm giác nặng trịch như đeo chì, đi giày thấy chật hơn buổi sáng?', mech: 'Ứ trệ dịch gian bào (pha Gel) – bạch huyết chi dưới không dẫn lưu được, phù nề mô mạc', sl: 'Tuần hoàn bạch huyết chi dưới thông thoáng', sd: 'Không có dấu hiệu ứ trệ dịch gian bào chi dưới. Mạng lưới bạch huyết đang dẫn lưu hiệu quả.' },
@@ -3269,6 +3577,37 @@
       const khi_pct = res.sK !== undefined ? Math.round(res.sK / 12 * 100) : 0;
       const than_pct = res.sS !== undefined ? Math.round(res.sS / 12 * 100) : 0;
 
+      const SYMPTOM_SHORT = {
+        'T1': 'Ăn nhiều đường / đồ mỡ biến tính (Tích vi viêm AGEs gian bào)',
+        'T2': 'Lạm dụng thuốc giảm đau / hạ sốt / kháng sinh',
+        'T3': 'Kháng Insulin tiềm ẩn / Thèm ngọt buồn ngủ sau ăn',
+        'T4': 'Rối loạn chuyển hóa Lipid / Men gan tăng / Gan tích mỡ',
+        'T5': 'Toan gian bào / Lắng đọng Axit Uric khớp',
+        'T6': 'Huyết ứ / Suy giảm miễn dịch tế bào NK',
+        'K1': 'Khí hư / Thở dốc hụt hơi / Đề kháng bề mặt yếu',
+        'K2': 'Co kẹp động mạch đốt sống V1-V4 Cổ-Vai-Gáy',
+        'K3': 'Khí trệ chuỗi mạc cơ / Ngồi liên tục >50 phút',
+        'K4': 'Thận Dương hư / Lạnh thắt lưng & tay chân',
+        'K5': 'Ứ trệ dịch gian bào / Bạch huyết chi dưới',
+        'K6': 'Thở nông lồng ngực / Tế bào thiếu Oxy mạn tính',
+        'S1': 'Can khí uất kết / Bí bách ngực sườn',
+        'S2': 'Mạng DMN vỏ não quá nhiệt / Căng suy nghĩ',
+        'S3': 'Cường giao cảm / Quá tải Cortisol HPA',
+        'S4': 'Tắc chu trình Glymphatic thải độc não ban đêm',
+        'S5': 'Can hỏa bùng phát 1h-3h sáng / Trằn trọc',
+        'S6': 'Nhiễm độc ánh sáng xanh / Ức chế Melatonin'
+      };
+
+      const ZONE_NAMES = {
+        'xanh': 'Xanh (Chính Khí Vững)',
+        'vang': 'Vàng (Khí Trệ Tiềm Ẩn)',
+        'cam': 'Cam (Tiến Triển Mạn Tính)',
+        'do': 'Đỏ (Báo Động Biến Cố)'
+      };
+
+      const zoneText = ZONE_NAMES[res.zone] || res.zone || 'Vàng (Khí Trệ Tiềm Ẩn)';
+      const top5Text = res.top5 ? res.top5.map(x => SYMPTOM_SHORT[x.id] || x.sl || x.txt).join('; ') : '';
+
       const payload = {
         timestamp: new Date().toLocaleString('vi-VN'),
         hs: (user && user.hs) || '',
@@ -3282,8 +3621,8 @@
         tinh_pct: tinh_pct,
         khi_pct: khi_pct,
         than_pct: than_pct,
-        zone: res.zone || '',
-        top5: res.top5 ? res.top5.map(x => x.txt).join('; ') : ''
+        zone: zoneText,
+        top5: top5Text
       };
 
       if (GOOGLE_SCRIPT_URL && GOOGLE_SCRIPT_URL !== 'YOUR_GOOGLE_APPS_SCRIPT_URL') {

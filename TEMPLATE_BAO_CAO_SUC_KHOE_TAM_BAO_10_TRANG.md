@@ -31,18 +31,29 @@ SỐ ĐIỆN THOẠI: {{SO_DIEN_THOAI}} (Zalo)
 ## 📊 TRANG 2: TỔNG QUAN CHỈ SỐ SINH HỌC TAM BẢO (TINH – KHÍ – THẦN)
 
 ### 2.1 Bảng Điểm Chỉ Số Sinh Học
-| Trục Sinh Học | Nội Dung Đánh Giá | Điểm Số Raw | Tỷ Lệ Nguy Cơ (%) | Trạng Thái Lâm Sàng |
+| Trục Sinh Học | Nội Dung Đánh Giá | Điểm Số (Raw) | Tỷ Lệ (%) | Trạng Thái |
 | :--- | :--- | :---: | :---: | :--- |
-| **TINH (Cơ thể & Chuyển hóa)** | Cơ xương khớp, Fascia, Viêm mãn tính | `{{DIEM_TINH}}/12` | `{{PCT_TINH}}%` | `{{STT_TINH}}` *(Tốt / Chú ý / Nguy cơ)* |
-| **KHÍ (Năng lượng & Thần kinh)** | Thần kinh thực vật, Hô hấp, Ty thể | `{{DIEM_KHI}}/12` | `{{PCT_KHI}}%` | `{{STT_KHI}}` *(Tốt / Chú ý / Nguy cơ)* |
-| **THẦN (Tâm trí & Giấc ngủ)** | Trục HPA, Giấc ngủ DMN, Căng thẳng | `{{DIEM_THAN}}/12` | `{{PCT_THAN}}%` | `{{STT_THAN}}` *(Tốt / Chú ý / Nguy cơ)* |
+| **TINH (Cơ thể & Chuyển hóa)** | Cơ xương khớp, Mạc cơ, Gian bào | `{{TINH_RAW}}/12` | `{{TINH_PCT}}` | `{{TINH_STATUS}}` |
+| **KHÍ (Năng lượng & Vi mạch)** | Hô hấp, Ti thể, Động mạch V1-V4 | `{{KHI_RAW}}/12` | `{{KHI_PCT}}` | `{{KHI_STATUS}}` |
+| **THẦN (Tâm trí & Giấc ngủ)** | Trục HPA, Thải độc não, DMN | `{{THAN_RAW}}/12` | `{{THAN_PCT}}` | `{{THAN_STATUS}}` |
 
-### 2.2 Kết Luận Phân Tầng Nguy Cơ Tổng Thể
+### 2.2 Giải Thích Dân Dã Dễ Hiểu Cho Khách Hàng
+- 🌿 **Về Trục TINH (Cơ thể & Tích tụ rác sinh học):**
+  {{LY_GIAI_TINH}}
+
+- ⚡ **Về Trục KHÍ (Sinh lực & Lưu thông vi mạch):**
+  {{LY_GIAI_KHI}}
+
+- 🌊 **Về Trục THẦN (Tâm trí & Giấc ngủ sâu):**
+  {{LY_GIAI_THAN}}
+
+### 2.3 Kết Luận Phân Tầng Nguy Cơ Tổng Thể
 - **TỔNG ĐIỂM NGUY CƠ:** `{{TONG_DIEM}}/36` (`{{PCT_TONG}}%`)
 - **PHÂN TẦNG VÙNG NGUY CƠ:** `[{{VUNG_NGUY_CO}}]` *(Xanh: An toàn / Vàng: Chú ý / Cam: Cảnh báo / Đỏ: Nguy cơ cao)*
 - **KẾT LUẬN TÓM TẮT CỦA BÁC SĨ:**
-  > `[SỰ THẬT ĐÃ ĐƯỢC CHỨNG MINH]`: Thể trạng hiện tại thể hiện sự mất cân bằng rõ rệt giữa tải trọng tâm thần thần kinh và khả năng phục hồi của hệ chuyển hóa.
-  > `[GIẢ THUYẾT KẾT NỐI]`: Sự kết hợp giữa giảm thông khí phế nang (Khí trệ) và co thắt dải cơ Fascia vùng cổ gáy (Tinh trệ) đang cản trở máu nuôi não, gây ức chế trục HPA dẫn đến mất ngủ (Thần suy).
+  > **[SỰ THẬT ĐÃ ĐƯỢC CHỨNG MINH]:** Thể trạng hiện tại thể hiện sự mất cân bằng giữa áp lực công việc, căng thẳng thần kinh và khả năng tự phục hồi chuyển hóa của cơ thể.
+  > **[GIẢ THUYẾT KẾT NỐI]:** Sự kết hợp giữa cổ vai gáy bị co cứng (Tinh trệ) và thở nông thiếu oxy (Khí trệ) đang cản trở máu nuôi lên vỏ não, làm não không ngắt được suy nghĩ đêm dẫn tới mất ngủ (Thần suy).
+
 
 ---
 
